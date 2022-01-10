@@ -1,0 +1,128 @@
+@import "../base/mixins";
+@import "../base/extends";
+
+.header__nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    div{
+        .navbar-toggler{
+            @include w-h-pad(35px,30px, 0);
+            position: relative;
+            transition: .5 ease-in-out;
+            right: 5px;
+            top: 5px;
+            // right: 20px;  MQ LARGE
+            // top: 20px; MQ LARGE
+            outline: none;
+            box-shadow: none;
+            border: 0;
+            /*
+            @media screen and (width: 1224px){
+                @include w-h-pad(60px, 60px, 0);
+            }
+            */
+            &:focus{
+                outline: none;
+                box-shadow: none;
+                border: 0;
+            }
+            &:active{
+                outline: none;
+                box-shadow: none;
+                border: 0;
+            }
+            .toggler-icon{
+                @include w-h-pad(100%, 3px, 0);
+                margin: 0;
+                display: block;
+                position: absolute;
+                background-color: rgba(241, 184, 211, 1);
+                border-radius: 1px;
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border: 0;
+                }
+            }
+            .middle-bar{
+                margin-top: 0px;
+            }
+            .top-bar {
+                position:absolute;
+                margin-top: 0px;
+                transform: rotate(135deg);
+            }
+            
+            .middle-bar{
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+            
+            .bottom-bar {
+                margin-top: 0;
+                transform: rotate(-135deg);
+            }    
+        }
+        /* Estado cuando el navbar está colapsado*/
+        .collapsed {
+            .top-bar {
+                margin-top: -20px;    
+                // margin-top: -40px; MQ LARGE
+                transform: rotate(0deg);
+            }
+            .middle-bar {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+            .bottom-bar {
+                margin-top: 20px;
+                // margin-top: 40px; MQ LARGE
+                transform: rotate(0deg);
+            }    
+        }
+        .nav__linkcontainer{
+            background-color: rgba(199, 75, 75, 0.8);
+            border-radius: 30px;
+            .nav__links{
+                .nav__item{
+                    padding: 15px;
+                    &:hover{
+                        transition: .5s ease-in;
+                    }
+                    .nav__link{
+                        @extend %nav__link-lg;
+                        &:hover{
+                            background-color: rgba(220, 101, 231, 0.8);
+                            border: .5px solid white;
+                            color: rgb(255, 255, 255);
+                            transition: 
+                            border .5s ease-in,
+                            background-color .3s ease-in,
+                            color .5s ease-in-out .1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

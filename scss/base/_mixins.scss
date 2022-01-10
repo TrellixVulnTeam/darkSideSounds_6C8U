@@ -1,0 +1,6 @@
+@mixin w-h-pad($w, $h, $pad){
+    width: $w;
+    height: $h;
+    padding: $pad;
+}
+
