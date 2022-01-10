@@ -4,60 +4,89 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    .main__title{
+    &__title{
         @extend %brandtitle-small;
-        height: 50px;
+        width: 100vw;
+        height: 60px;
         margin-top: 100px;
     }
-    .main__subtitler{
-        margin-top: 100px;
+    &__subtcontainer{
+        width: 100vw;
+        height: 100px;
+        margin-top: 80px;
         display: grid;
         grid-template-columns: 100px, 1fr, 1fr;
-        grid-template-rows: 80px, 70px;
+        grid-template-rows: 1fr, 1fr, 1fr;
         grid-template-areas: 
         "ms1 ms1 ms1"
         "ms2 ms3 ms3"
         "ms2 slogan slogan";
-        justify-content: center;
+        justify-content: start;
         align-self: flex-start;
-        .main__subtitle1{
-            @extend %titlewhite;
+        padding: 3px;
+        &--subt1{
+            @extend %subtitlewhite;
             grid-area: ms1;
             grid-column: 1 / 3;
             grid-row: 1;
-            font-size: 2rem;
+            font-size: 1.8rem;
             justify-self: start;
-            margin-left: 10px;
-            letter-spacing: 4px;
+            margin: 10px 0 0 10px;
+            letter-spacing: 1px;
         }
-        .main__subtitle2{
-            @extend %titlewhite;
+        &--subt2{
+            @extend %subtitlewhite;
             grid-area: ms2;
-            font-size: 5rem;
-            grid-row: 1 / 4;
-            margin-top: 14px;       
+            font-size: 3.8rem;
+            grid-row: 2 / 4;
+            grid-column: 1;
+            margin: -15px 0 0 8px;
         }
-        .main__subtitle3{
-            @extend %titlewhite;
+        &--subt3{
+            @extend %subtitlewhite;
             grid-area: ms3;
-            grid-column: 1 / 3;
-            grid-row: 1 / 4;
-            margin-top: 25px;
-            margin-left: 55px;
-            font-size: 3.5rem;
-
+            grid-column: 2 / 4;
+            grid-row: 2;
+            margin: -5px 0 0 0;
+            font-size: 1.65rem;
         }
-        .main__slogan{
-            @extend %titlewhite;
-            font-family: 'Antic Didone';
+        &--slogan{
+            @extend %slogan1;
             grid-area: slogan;
-            grid-column: 1 / 3;
-            grid-row: 2 / 3;
-            margin-top: 40px;
-            margin-left: 60px;
-            font-size: 1.2em;
-            letter-spacing: .3px;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            margin: -10px 0 0 5px;
+            font-size: 1.1rem;
+            letter-spacing: .75px;
         }
+    }
+    &__ico{
+        display: flex;
+        justify-content: space-evenly;
+        width: 250px;
+        align-self: center;
+        margin-top: 180px;
+        &--mod1 {
+            width: 25px;
+        }
+        &--mod {
+            width: 15px;
+        }
+        
     }
 
 }
+
+
+/*
+
+<ul class="main__ico">
+    <img class="main__ico--mod" src="./assets/ico/ps5.svg">
+    <img class="main__ico--mod" src="./assets/ico/wise.svg">
+    <img class="main__ico--mod" src="./assets/ico/xbox.svg">
+    <img class="main__ico--mod" src="./assets/ico/steam.svg">
+    <img class="main__ico--mod" src="./assets/ico/switch.svg">
+    <img class="main__ico--mod" src="./assets/ico/fmod.svg">
+</ul>
+
+*/

@@ -6,10 +6,6 @@
     font-size: 1rem;
     letter-spacing: .4rem;
     text-align: center;
-    -webkit-transform: scale(1, 1.1);
-    -moz-transform: scale(1, 1.1);
-    -o-transform: scale(1, 1.1);
-    transform: scale(1, 1.1);
 }
 %brandtitle-large {
     padding: 10px;
@@ -40,11 +36,16 @@
     text-align: center;
 }
 
-%titlewhite {
+%subtitlewhite {
     font-family: 'Abril Fatface', 'Amiri';
     color: rgb(255, 255, 255);
     font-weight: normal;
-    text-align: center;
+}
+
+%slogan1{
+    font-family:'Amiri';
+    color: rgb(255, 255, 255);
+    font-weight: normal;
 }
 
 %nav__link-lg {

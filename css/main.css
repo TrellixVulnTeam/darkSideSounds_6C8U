@@ -1,10 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,10 +20,7 @@ body {
   background-attachment: fixed;
 }
 
-/* FONT: Abril Fatface*/
-/*FONT: Antic Didone*/
-/*FONT: Amiri*/
-.main .main__title {
+.main__title {
   padding: 10px;
   font-family: "Antic Didone";
   color: white;
@@ -37,17 +28,18 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4rem;
   text-align: center;
-  -webkit-transform: scale(1, 1.1);
-  -moz-transform: scale(1, 1.1);
-  -o-transform: scale(1, 1.1);
-  transform: scale(1, 1.1);
 }
 
-.main .main__subtitler .main__slogan, .main .main__subtitler .main__subtitle3, .main .main__subtitler .main__subtitle2, .main .main__subtitler .main__subtitle1 {
+.main__subtcontainer--subt3, .main__subtcontainer--subt2, .main__subtcontainer--subt1 {
   font-family: "Abril Fatface", "Amiri";
   color: white;
   font-weight: normal;
-  text-align: center;
+}
+
+.main__subtcontainer--slogan {
+  font-family: "Amiri";
+  color: white;
+  font-weight: normal;
 }
 
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
@@ -158,10 +150,7 @@ body {
   transition: border 0.5s ease-in, background-color 0.3s ease-in, color 0.5s ease-in-out 0.1s;
 }
 
-/* FONT: Abril Fatface*/
-/*FONT: Antic Didone*/
-/*FONT: Amiri*/
-.main .main__title {
+.main__title {
   padding: 10px;
   font-family: "Antic Didone";
   color: white;
@@ -169,17 +158,18 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4rem;
   text-align: center;
-  -webkit-transform: scale(1, 1.1);
-  -moz-transform: scale(1, 1.1);
-  -o-transform: scale(1, 1.1);
-  transform: scale(1, 1.1);
 }
 
-.main .main__subtitler .main__slogan, .main .main__subtitler .main__subtitle3, .main .main__subtitler .main__subtitle2, .main .main__subtitler .main__subtitle1 {
+.main__subtcontainer--subt3, .main__subtcontainer--subt2, .main__subtcontainer--subt1 {
   font-family: "Abril Fatface", "Amiri";
   color: white;
   font-weight: normal;
-  text-align: center;
+}
+
+.main__subtcontainer--slogan {
+  font-family: "Amiri";
+  color: white;
+  font-weight: normal;
 }
 
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
@@ -195,51 +185,79 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-.main .main__title {
-  height: 50px;
+.main__title {
+  width: 100vw;
+  height: 60px;
   margin-top: 100px;
 }
-.main .main__subtitler {
-  margin-top: 100px;
+.main__subtcontainer {
+  width: 100vw;
+  height: 100px;
+  margin-top: 80px;
   display: grid;
   grid-template-columns: 100px, 1fr, 1fr;
-  grid-template-rows: 80px, 70px;
+  grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas: "ms1 ms1 ms1" "ms2 ms3 ms3" "ms2 slogan slogan";
-  justify-content: center;
+  justify-content: start;
   align-self: flex-start;
+  padding: 3px;
 }
-.main .main__subtitler .main__subtitle1 {
+.main__subtcontainer--subt1 {
   grid-area: ms1;
   grid-column: 1/3;
   grid-row: 1;
-  font-size: 2rem;
+  font-size: 1.8rem;
   justify-self: start;
-  margin-left: 10px;
-  letter-spacing: 4px;
+  margin: 10px 0 0 10px;
+  letter-spacing: 1px;
 }
-.main .main__subtitler .main__subtitle2 {
+.main__subtcontainer--subt2 {
   grid-area: ms2;
-  font-size: 5rem;
-  grid-row: 1/4;
-  margin-top: 14px;
+  font-size: 3.8rem;
+  grid-row: 2/4;
+  grid-column: 1;
+  margin: -15px 0 0 8px;
 }
-.main .main__subtitler .main__subtitle3 {
+.main__subtcontainer--subt3 {
   grid-area: ms3;
-  grid-column: 1/3;
-  grid-row: 1/4;
-  margin-top: 25px;
-  margin-left: 55px;
-  font-size: 3.5rem;
+  grid-column: 2/4;
+  grid-row: 2;
+  margin: -5px 0 0 0;
+  font-size: 1.65rem;
 }
-.main .main__subtitler .main__slogan {
-  font-family: "Antic Didone";
+.main__subtcontainer--slogan {
   grid-area: slogan;
-  grid-column: 1/3;
-  grid-row: 2/3;
-  margin-top: 40px;
-  margin-left: 60px;
-  font-size: 1.2em;
-  letter-spacing: 0.3px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin: -10px 0 0 5px;
+  font-size: 1.1rem;
+  letter-spacing: 0.75px;
 }
+.main__ico {
+  display: flex;
+  justify-content: space-evenly;
+  width: 250px;
+  align-self: center;
+  margin-top: 180px;
+}
+.main__ico--mod1 {
+  width: 25px;
+}
+.main__ico--mod {
+  width: 15px;
+}
+
+/*
+
+<ul class="main__ico">
+    <img class="main__ico--mod" src="./assets/ico/ps5.svg">
+    <img class="main__ico--mod" src="./assets/ico/wise.svg">
+    <img class="main__ico--mod" src="./assets/ico/xbox.svg">
+    <img class="main__ico--mod" src="./assets/ico/steam.svg">
+    <img class="main__ico--mod" src="./assets/ico/switch.svg">
+    <img class="main__ico--mod" src="./assets/ico/fmod.svg">
+</ul>
+
+*/
 
 /*# sourceMappingURL=main.css.map */
