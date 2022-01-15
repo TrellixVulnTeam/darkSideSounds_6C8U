@@ -21,9 +21,12 @@
         "ms1 ms1 ms1"
         "ms2 ms3 ms3"
         "ms2 slogan slogan";
-        justify-content: start;
+        justify-content: center;
         align-self: flex-start;
         padding: 3px;
+        z-index: 90;
+        
+        
         &--subt1{
             @extend %subtitlewhite;
             grid-area: ms1;
@@ -73,20 +76,5 @@
             width: 15px;
         }
         
-    }
-
+    }    
 }
-
-
-/*
-
-<ul class="main__ico">
-    <img class="main__ico--mod" src="./assets/ico/ps5.svg">
-    <img class="main__ico--mod" src="./assets/ico/wise.svg">
-    <img class="main__ico--mod" src="./assets/ico/xbox.svg">
-    <img class="main__ico--mod" src="./assets/ico/steam.svg">
-    <img class="main__ico--mod" src="./assets/ico/switch.svg">
-    <img class="main__ico--mod" src="./assets/ico/fmod.svg">
-</ul>
-
-*/

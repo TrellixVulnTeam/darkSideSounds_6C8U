@@ -15,9 +15,6 @@ a {
 
 body {
   background-color: black;
-  height: 1000px;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .main__title {
@@ -198,9 +195,10 @@ body {
   grid-template-columns: 100px, 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas: "ms1 ms1 ms1" "ms2 ms3 ms3" "ms2 slogan slogan";
-  justify-content: start;
+  justify-content: center;
   align-self: flex-start;
   padding: 3px;
+  z-index: 90;
 }
 .main__subtcontainer--subt1 {
   grid-area: ms1;
@@ -247,17 +245,152 @@ body {
   width: 15px;
 }
 
-/*
+.slider-container {
+  height: 600px;
+  display: inline-flex;
+  overflow: hidden;
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+.slider-container .slide {
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+}
+.slider-container .slide .card {
+  position: relative;
+  width: 200px;
+  height: 350px;
+  margin-top: 150px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1), inset 10px 10px 50px rgba(129, 107, 59, 0.76);
+  transition: transform 0.3s ease-in-out;
+  user-select: none;
+  overflow: hidden;
+}
+.slider-container .slide .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(-100% + 5px);
+  width: 100%;
+  height: 100%;
+  background-color: #ff56ac;
+  box-shadow: inset 5px 5px 50px rgba(49, 20, 20, 0.76);
+  z-index: 1;
+  transition: bottom 0.5s ease-in-out;
+}
+.slider-container .slide .card:hover::before {
+  bottom: 0;
+}
+.slider-container .slide .card::after {
+  content: "";
+  position: absolute;
+  top: 310px;
+  right: 100px;
+  width: 200%;
+  height: 150px;
+  background: rgba(238, 187, 231, 0.7);
+  box-shadow: 20px 20px 40px white;
+  transform: skewY(40deg);
+  z-index: 4;
+  filter: blur(4px);
+}
+.slider-container .slide .card:hover::after {
+  animation: shiningLove 0.3s ease-in-out 0.5s;
+}
+.slider-container .slide .card__content {
+  padding: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  color: black;
+  z-index: 2;
+  transition: color 0.7s ease-in;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+.slider-container .slide .card__content:hover {
+  color: white;
+}
+.slider-container .slide .card__content--title {
+  font-family: "Amiri";
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 2.2rem;
+  border-top: 2px double black;
+  border-bottom: 2px double black;
+}
+.slider-container .slide .card__content--par {
+  align-self: center;
+  font-family: "Antic Didone";
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+.slider-container .slide .card__content--par2 {
+  align-self: center;
+  font-family: "Antic Didone";
+  margin-top: 3px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+.slider-container .slide .card__content--btn {
+  width: 100px;
+  height: 40px;
+  text-decoration: none;
+  background-color: black;
+  font-family: "Antic Didone";
+  align-self: center;
+  justify-self: baseline;
+  box-shadow: 10px 10px 30px #030303;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  color: white;
+  padding: 6px 10px;
+  font-weight: 600;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  z-index: 10;
+}
 
-<ul class="main__ico">
-    <img class="main__ico--mod" src="./assets/ico/ps5.svg">
-    <img class="main__ico--mod" src="./assets/ico/wise.svg">
-    <img class="main__ico--mod" src="./assets/ico/xbox.svg">
-    <img class="main__ico--mod" src="./assets/ico/steam.svg">
-    <img class="main__ico--mod" src="./assets/ico/switch.svg">
-    <img class="main__ico--mod" src="./assets/ico/fmod.svg">
-</ul>
+.grabbing {
+  cursor: grabbing;
+}
 
-*/
+.grabbing .card {
+  transform: scale(0.9);
+}
+
+@keyframes shiningLove {
+  0% {
+    top: 310px;
+    right: 100px;
+    background: rgba(238, 187, 231, 0.7);
+  }
+  100% {
+    top: -250px;
+    right: -150px;
+    background: white;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
