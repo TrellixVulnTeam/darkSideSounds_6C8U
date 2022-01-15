@@ -1,8 +1,8 @@
 @charset "UTF-8";
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 ul {
@@ -245,16 +245,22 @@ body {
   width: 15px;
 }
 
-.slider-container {
+section {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+section .slider-container {
   height: 600px;
   display: inline-flex;
   overflow: hidden;
+  scrollbar-width: none;
   transform: translateX(0);
   will-change: transform;
   transition: transform 0.3s ease-out;
   cursor: grab;
 }
-.slider-container .slide {
+section .slider-container .slide {
   max-height: 100vh;
   width: 100vw;
   display: flex;
@@ -264,7 +270,12 @@ body {
   user-select: none;
   transition: transform 0.3s ease-in-out;
 }
-.slider-container .slide .card {
+@media (min-width: 1200px) {
+  section .slider-container .slide {
+    padding: 3rem;
+  }
+}
+section .slider-container .slide .card {
   position: relative;
   width: 200px;
   height: 350px;
@@ -275,7 +286,7 @@ body {
   user-select: none;
   overflow: hidden;
 }
-.slider-container .slide .card::before {
+section .slider-container .slide .card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -284,13 +295,12 @@ body {
   height: 100%;
   background-color: #ff56ac;
   box-shadow: inset 5px 5px 50px rgba(49, 20, 20, 0.76);
-  z-index: 1;
   transition: bottom 0.5s ease-in-out;
 }
-.slider-container .slide .card:hover::before {
+section .slider-container .slide .card:hover::before {
   bottom: 0;
 }
-.slider-container .slide .card::after {
+section .slider-container .slide .card::after {
   content: "";
   position: absolute;
   top: 310px;
@@ -303,10 +313,10 @@ body {
   z-index: 4;
   filter: blur(4px);
 }
-.slider-container .slide .card:hover::after {
+section .slider-container .slide .card:hover::after {
   animation: shiningLove 0.3s ease-in-out 0.5s;
 }
-.slider-container .slide .card__content {
+section .slider-container .slide .card__content {
   padding: 20px;
   height: 350px;
   display: flex;
@@ -318,10 +328,10 @@ body {
   transition: color 0.7s ease-in;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-.slider-container .slide .card__content:hover {
+section .slider-container .slide .card__content:hover {
   color: white;
 }
-.slider-container .slide .card__content--title {
+section .slider-container .slide .card__content--title {
   font-family: "Amiri";
   font-weight: 600;
   text-align: center;
@@ -331,7 +341,7 @@ body {
   border-top: 2px double black;
   border-bottom: 2px double black;
 }
-.slider-container .slide .card__content--par {
+section .slider-container .slide .card__content--par {
   align-self: center;
   font-family: "Antic Didone";
   margin-top: 30px;
@@ -341,7 +351,7 @@ body {
   line-height: 18px;
   letter-spacing: 1px;
 }
-.slider-container .slide .card__content--par2 {
+section .slider-container .slide .card__content--par2 {
   align-self: center;
   font-family: "Antic Didone";
   margin-top: 3px;
@@ -352,7 +362,7 @@ body {
   line-height: 18px;
   letter-spacing: 1px;
 }
-.slider-container .slide .card__content--btn {
+section .slider-container .slide .card__content--btn {
   width: 100px;
   height: 40px;
   text-decoration: none;
