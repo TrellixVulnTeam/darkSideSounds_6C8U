@@ -47,6 +47,13 @@ body {
   font-size: 3rem;
 }
 
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
 .header__nav {
   position: fixed;
   top: 0;
@@ -177,6 +184,13 @@ body {
   font-size: 3rem;
 }
 
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -186,6 +200,7 @@ body {
   width: 100vw;
   height: 60px;
   margin-top: 100px;
+  user-select: none;
 }
 .main__subtcontainer {
   width: 100vw;
@@ -199,6 +214,7 @@ body {
   align-self: flex-start;
   padding: 3px;
   z-index: 90;
+  user-select: none;
 }
 .main__subtcontainer--subt1 {
   grid-area: ms1;
@@ -208,6 +224,7 @@ body {
   justify-self: start;
   margin: 10px 0 0 10px;
   letter-spacing: 1px;
+  user-select: none;
 }
 .main__subtcontainer--subt2 {
   grid-area: ms2;
@@ -215,6 +232,7 @@ body {
   grid-row: 2/4;
   grid-column: 1;
   margin: -15px 0 0 8px;
+  user-select: none;
 }
 .main__subtcontainer--subt3 {
   grid-area: ms3;
@@ -222,6 +240,7 @@ body {
   grid-row: 2;
   margin: -5px 0 0 0;
   font-size: 1.65rem;
+  user-select: none;
 }
 .main__subtcontainer--slogan {
   grid-area: slogan;
@@ -230,6 +249,7 @@ body {
   margin: -10px 0 0 5px;
   font-size: 1.1rem;
   letter-spacing: 0.75px;
+  user-select: none;
 }
 .main__ico {
   display: flex;
@@ -250,11 +270,23 @@ section {
   width: 100%;
   overflow: hidden;
 }
+section .grabbing {
+  cursor: grabbing !important;
+}
+section .grabbing .slide {
+  transform: scale(0.9);
+}
 section .slider-container {
   height: 600px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: inline-flex;
   overflow: hidden;
   scrollbar-width: none;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
   transform: translateX(0);
   will-change: transform;
   transition: transform 0.3s ease-out;
@@ -382,14 +414,6 @@ section .slider-container .slide .card__content--btn {
   z-index: 10;
 }
 
-.grabbing {
-  cursor: grabbing;
-}
-
-.grabbing .card {
-  transform: scale(0.9);
-}
-
 @keyframes shiningLove {
   0% {
     top: 310px;
@@ -401,6 +425,108 @@ section .slider-container .slide .card__content--btn {
     right: -150px;
     background: white;
   }
+}
+.main__title {
+  padding: 10px;
+  font-family: "Antic Didone";
+  color: white;
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+}
+
+.main__subtcontainer--subt1, .main__subtcontainer--subt2, .main__subtcontainer--subt3 {
+  font-family: "Abril Fatface", "Amiri";
+  color: white;
+  font-weight: normal;
+}
+
+.main__subtcontainer--slogan {
+  font-family: "Amiri";
+  color: white;
+  font-weight: normal;
+}
+
+.header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
+  font-family: "Abril Fatface", "Amiri";
+  color: pink;
+  letter-spacing: 4px;
+  line-height: 3.2rem;
+  font-size: 3rem;
+}
+
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 50px 1fr 100px;
+  gap: 15px;
+  background-color: black;
+  z-index: 5;
+  grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
+}
+.footer__title {
+  grid-area: titulo;
+  font-family: "Abril Fatface";
+  font-weight: lighter;
+  font-size: 4rem;
+  text-align: center;
+  color: pink;
+  padding: 5px;
+}
+.footer__rrss {
+  grid-area: rrss;
+}
+.footer__rrss .form__ico--img {
+  width: 18px;
+  height: 18px;
+}
+.footer .formulario {
+  grid-area: formulario;
+  height: 400px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.footer .formulario .form__container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.footer .formulario .form__container .form__title {
+  color: pink;
+  font-family: "Antic Didone";
+  letter-spacing: 3px;
+}
+.footer .formulario .form__container .form__fill {
+  height: 30px;
+  width: 200px;
+}
+.footer .formulario .form__container .form__textarea {
+  height: 200px;
+  width: 200px;
+}
+.footer .formulario .form__container div .form__button {
+  background-color: pink;
+  border: none;
+  height: 30px;
+  width: 100px;
+}
+.footer .form__ico--arriba {
+  grid-area: irarriba;
+  justify-self: center;
+}
+.footer .form__ico--arriba .flecha {
+  height: 90px;
 }
 
 /*# sourceMappingURL=main.css.map */

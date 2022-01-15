@@ -3,11 +3,24 @@ section{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    .grabbing {
+        cursor: grabbing !important;
+    }
+    
+    .grabbing .slide {
+        transform: scale(.9);
+    } 
     .slider-container{
         height: 600px;
+        margin-top: 100px;
+        margin-bottom: 100px;
         display: inline-flex;
         overflow: hidden;
         scrollbar-width: none;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
         transform: translateX(0);
         will-change: transform;
         transition: transform .3s ease-out;
@@ -135,12 +148,7 @@ section{
     }     
 }
 
-.grabbing {
-    cursor: grabbing;
-}
-.grabbing .card {
-    transform: scale(.9);
-} 
+
     
 @keyframes shiningLove {
     0%{

@@ -1,0 +1,77 @@
+@import "../base/extends";
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px 1fr 100px;
+    gap: 15px;
+    background-color: rgb(0, 0, 0);
+    z-index: 5;
+    grid-template-areas: 
+    "titulo"
+    "rrss"
+    "formulario"
+    "irarriba"
+    ;
+    &__title{
+        grid-area: titulo;
+        font-family: 'Abril Fatface';
+        font-weight: lighter;
+        font-size: 4rem;
+        text-align: center;
+        color: pink;
+        padding: 5px;
+    }
+    &__rrss{
+        grid-area: rrss;
+        @extend %footer-rrss;       
+        .form__ico--img{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .formulario{
+        grid-area: formulario;
+        height: 400px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        .form__container{
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            .form__title{
+                color:pink;
+                font-family: 'Antic Didone';
+                letter-spacing: 3px;
+            }
+            .form__fill{
+                height: 30px;
+                width: 200px;
+            }               
+            .form__textarea{
+                height: 200px;
+                width: 200px;
+            }
+            div{
+                .form__button{
+                    background-color: pink;
+                    border: none;
+                    height: 30px;
+                    width: 100px;
+                }
+            }    
+        }
+    }    
+    .form__ico--arriba{
+        grid-area: irarriba;
+        justify-self: center;
+        .flecha{
+            height: 90px;
+        }
+    } 
+}
+
+
