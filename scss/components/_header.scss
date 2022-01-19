@@ -1,5 +1,6 @@
 @import "../base/mixins";
 @import "../base/extends";
+@import "../base/variables";
 
 .header__nav{
     position: fixed;
@@ -13,8 +14,8 @@
             transition: .5 ease-in-out;
             right: 5px;
             top: 5px;
-            // right: 20px;  MQ LARGE
-            // top: 20px; MQ LARGE
+            /*right: 20px;  MQ LARGE
+            top: 20px; MQ LARGE */
             outline: none;
             box-shadow: none;
             border: 0;
@@ -71,9 +72,9 @@
         }
         .collapsed {
             .top-bar {
-                /* Estado cuando el navbar está colapsado*/
+                /* Estado cuando el navbar está colapsado*/ 
                 margin-top: -20px;    
-                // margin-top: -40px; MQ LARGE
+                /* margin-top: -40px; MQ LARGE*/
                 transform: rotate(0deg);
             }
             .middle-bar {
@@ -82,9 +83,9 @@
                 filter: alpha(opacity=100);
             }
             .bottom-bar {
-                /* Estado cuando el navbar está colapsado*/
+                /*Estado cuando el navbar está colapsado*/
                 margin-top: 20px;
-                // margin-top: 40px; MQ LARGE
+                /*margin-top: 40px; MQ LARGE*/
                 transform: rotate(0deg);
             }    
         }
@@ -98,7 +99,11 @@
                         transition: .5s ease-in;
                     }
                     .nav__link{
-                        @extend %nav__link-lg;
+                        font-family: 'Abril Fatface', 'Amiri';
+                        color: pink;
+                        letter-spacing: 4px;
+                        line-height: 3.2rem;
+                        font-size: 3rem;
                         &:hover{
                             background-color: rgba(220, 101, 231, 0.8);
                             border: .5px solid white;
@@ -114,19 +119,4 @@
         }
     }
 }
-
-
-
-
-/* Nav bar pages con background-color: black */
-
-
-
-
-
-
-
-
-
-
 

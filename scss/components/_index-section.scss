@@ -1,6 +1,43 @@
 @import "../base/keyframes.scss";
 
 /* Seccion index Article */
+/*
+<section class="presentacion">
+        <h4 class="presentacion__fade">Somos</h4>
+        <h4 class="presentacion__fade">un</h4>
+        <h4 class="presentacion__fade">equipo</h4>
+        <h4 class="presentacion__fade">y</h4>
+        <h4 class="presentacion__fade">amamos</h4>
+        <h4 class="presentacion__fade">contar</h4>
+        <h4 class="presentacion__fade">historias</h4>
+        <h4 class="presentacion__fade">con el sonido</h4>
+</section>
+*/
+
+.presentacion {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 20px;
+    padding: 10px;
+    width: 180px;
+    border: 1px solid hotpink;
+    border-radius: 5%;
+    background-color: #ff56ac;
+    box-shadow: inset 5px 5px 50px rgb(0, 0, 0, .4),
+    inset -5px -5px 50px rgb(0, 0, 0, .4);
+    &__fade{
+        font-family: "Antic Didone";
+        font-size: 20px;
+        font-weight: lighter;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 3px 10px rgb(255, 255, 255, .3);
+        line-height: 10px;
+    }
+
+}
+
 
 .iarticle{
     display: flex;
@@ -9,60 +46,16 @@
     width: 100vw;
     perspective: 1000px;
     /*animation: float 1s ease-in-out infinite;*/
-    &__title1{
-        font-family: '';
-        font-weight: bolder;
-        font-size: 50px;
-        align-self: center;
-        margin-top: -10px;
-        margin-left: 80px;
-        text-shadow: 1px 3px 4px rgba(255, 255, 255, 0.3);
-        color: white;
-    }
-    &__title2{
-        grid-area: title2;
-        align-self: center;
-        justify-self: center;
-        font-size: 50px;
-        font-family: '';
-        font-weight: bolder;
-        text-align: center;
-        color: rgba(235, 116, 229, 0.438);
-        transition: transform 1s ease-in;
-        transform: skew(-20deg);
-        text-shadow: 1px 3px 4px rgba(233, 132, 228, 0.3);
-    }
-    &__title3{
-        grid-area: title2;
-        align-self: center;
-        justify-self: center;
-        font-size: 50px;
-        font-family: '';
-        font-weight: bolder;
-        text-align: center;
-        color: rgba(235, 116, 229, 0.438);
-    }
-    &__title4{
-        grid-area: title2;
-        align-self: center;
-        justify-self: center;
-        font-size: 50px;
-        font-family: '';
-        font-weight: bolder;
-        text-align: center;
-        color: rgba(235, 116, 229, 0.438);
-    }
-    &__description{
-        grid-area: description;
-        align-self: center;
-        font-family: '';
-        font-weight: bolder;
-        font-size: 35px;
-        margin-top: 50px;
-        margin-left: 10px;
-        color: white;
-        line-height: 35px;
-        text-align: center;        
+    &__selector{
+        &--player{
+
+        }
+        &--start{
+
+        }
+        &--select{
+            
+        }
     }
 }
 
