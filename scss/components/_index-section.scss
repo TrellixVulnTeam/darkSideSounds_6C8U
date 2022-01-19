@@ -1,19 +1,104 @@
+@import "../base/keyframes.scss";
 
-section{
+/* Seccion index Article */
+
+.iarticle{
+    display: flex;
+    flex-direction: column;
+    margin: 250px 0;
+    width: 100vw;
+    perspective: 1000px;
+    /*animation: float 1s ease-in-out infinite;*/
+    &__title1{
+        font-family: '';
+        font-weight: bolder;
+        font-size: 50px;
+        align-self: center;
+        margin-top: -10px;
+        margin-left: 80px;
+        text-shadow: 1px 3px 4px rgba(255, 255, 255, 0.3);
+        color: white;
+    }
+    &__title2{
+        grid-area: title2;
+        align-self: center;
+        justify-self: center;
+        font-size: 50px;
+        font-family: '';
+        font-weight: bolder;
+        text-align: center;
+        color: rgba(235, 116, 229, 0.438);
+        transition: transform 1s ease-in;
+        transform: skew(-20deg);
+        text-shadow: 1px 3px 4px rgba(233, 132, 228, 0.3);
+    }
+    &__title3{
+        grid-area: title2;
+        align-self: center;
+        justify-self: center;
+        font-size: 50px;
+        font-family: '';
+        font-weight: bolder;
+        text-align: center;
+        color: rgba(235, 116, 229, 0.438);
+    }
+    &__title4{
+        grid-area: title2;
+        align-self: center;
+        justify-self: center;
+        font-size: 50px;
+        font-family: '';
+        font-weight: bolder;
+        text-align: center;
+        color: rgba(235, 116, 229, 0.438);
+    }
+    &__description{
+        grid-area: description;
+        align-self: center;
+        font-family: '';
+        font-weight: bolder;
+        font-size: 35px;
+        margin-top: 50px;
+        margin-left: 10px;
+        color: white;
+        line-height: 35px;
+        text-align: center;        
+    }
+}
+
+/* Sección index Section - Carrusel de tarjetas */
+
+.isection{
+    margin-top: 120px;
+    background-image: url("https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1792&q=80");
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    .grabbing {
-        cursor: grabbing !important;
+    margin-bottom: 200px;
+    border-radius: 5px;
+    box-shadow: inset 20px 30px 30px rgba(0, 0, 0, 1),
+    inset -25px -40px 30px rgba(0, 0, 0, 1);
+    &__arrowL, &__arrowR{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: space-evenly;
+        position: absolute;
+        color: white;
+        font-size: 35px;
+        margin-top: 250px;
+        opacity: .6;
     }
-    
-    .grabbing .slide {
-        transform: scale(.9);
-    } 
-    .slider-container{
+    &__arrowL{
+        left: 25px;
+    }
+    &__arrowR{
+        right: 25px;
+    }
+    &__slidercontainer{
         height: 600px;
-        margin-top: 100px;
-        margin-bottom: 100px;
         display: inline-flex;
         overflow: hidden;
         scrollbar-width: none;
@@ -22,10 +107,9 @@ section{
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
         transform: translateX(0);
-        will-change: transform;
         transition: transform .3s ease-out;
         cursor: grab;
-        .slide{
+        &--slide{
             max-height: 100vh;
             width: 100vw;
             display: flex;
@@ -37,129 +121,122 @@ section{
             @media(min-width: 1200px){
                 padding: 3rem;
             }
-            .card{
-                position: relative;
-                width: 200px;
-                height: 350px;
-                margin-top: 150px;
-                background-color: white;
-                box-shadow: 0 10px 30px rgba(255, 255, 255, .1),
-                inset 10px 10px 50px rgba(129, 107, 59, 0.76);
-                transition: transform .3s ease-in-out;
-                user-select: none;
-                overflow: hidden;
-                &::before{
-                    content:"";
-                    position: absolute;
-                    left: 0;
-                    bottom: calc(-100% + 5px); 
-                    width: 100%;
-                    height: 100%;
-                    background-color: #ff56ac;
-                    box-shadow: inset 5px 5px 50px rgba(49, 20, 20, 0.76);
-                    transition: bottom .5s ease-in-out;
-                }
-                &:hover::before{
-                    bottom: 0;        
-                }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    top: 310px;
-                    right: 100px;
-                    width: 200%;
-                    height: 150px;
-                    background: rgba(238, 187, 231, .7);
-                    box-shadow: 20px 20px 40px rgb(255, 255, 255);
-                    transform: skewY(40deg);
-                    z-index: 4;
-                    filter: blur(4px);
-                }
-                &:hover::after{
-                    animation: shiningLove .3s ease-in-out .5s;
-                }
-                &__content {
-                    padding:20px;
-                    height: 350px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    position: relative;
-                    color: rgb(0, 0, 0);
-                    z-index: 2;
-                    transition: color .7s ease-in;
-                    text-shadow: 1px 1px 5px rgba(0, 0, 0, .8);
-                    &:hover{
-                        color: rgb(255, 255, 255);  
-                    }
-                    &--title {
-                        font-family: "Amiri";
-                        font-weight: 600;
-                        text-align: center;
-                        margin-bottom: 10px;
-                        margin-top: 20px;
-                        font-size: 2.2rem;
-                        border-top: 2px double black;
-                        border-bottom: 2px double black;
-                    }    
-                    &--par{
-                        align-self: center;
-                        font-family: "Antic Didone";
-                        margin-top: 30px;
-                        margin-bottom: 30px;
-                        font-size: 1rem ;
-                        text-align: center;
-                        line-height: 18px;
-                        letter-spacing: 1px;
-                    }
-                    &--par2{
-                        align-self: center;
-                        font-family: "Antic Didone";
-                        margin-top: 3px;
-                        margin-bottom: 5px;
-                        font-size: 1rem ;
-                        text-align: center;
-                        font-weight: 700;
-                        line-height: 18px;
-                        letter-spacing: 1px;
-                    }   
-                    &--btn{
-                        width: 100px;
-                        height: 40px;
-                        text-decoration: none;
-                        background-color: rgb(0, 0, 0);
-                        font-family: "Antic Didone";
-                        align-self: center;
-                        justify-self: baseline;
-                        box-shadow: 10px 10px 30px rgba(3, 3, 3, 1);
-                        text-transform: uppercase;
-                        letter-spacing: .1rem;
-                        font-size: 14px;
-                        color: rgb(255, 255, 255);
-                        padding: 6px 10px;
-                        font-weight: 600;
-                        border-top-left-radius: 13px;
-                        border-top-right-radius: 13px;
-                        z-index: 10;
-                    }
-                }
-            }
         }
-    }     
-}
-
-
-    
-@keyframes shiningLove {
-    0%{
-    top: 310px;
-    right: 100px;
-    background: rgba(238, 187, 231, .7);
     }
-    100% {
-        top: -250px;
-        right: -150px;
-        background: white;
+}     
+/* clases que se agregan con addClass en Js */
+.grabbing {
+    cursor: grabbing !important;
+}
+.grabbing .slide {
+    transform: scale(.95);
+} 
+/* Tarjetas */ 
+.card{
+    position: relative;
+    width: 200px;
+    height: 350px;
+    background-color: white;
+    box-shadow: 10px 10px 30px rgba(10, 10, 10, 0.95),
+    inset 10px 10px 50px rgba(129, 107, 59, 0.76);
+    transition: transform .3s ease-in-out;
+    user-select: none;
+    overflow: hidden;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    &::before{
+        content:"";
+        position: absolute;
+        left: 0;
+        bottom: calc(-100% + 5px); 
+        width: 100%;
+        height: 100%;
+        background-color: #ff56ac;
+        box-shadow: inset 5px 5px 50px rgba(49, 20, 20, 0.76);
+        transition: bottom .5s ease-in-out;
+    }
+    &:hover::before{
+        bottom: 0;        
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 310px;
+        right: 100px;
+        width: 200%;
+        height: 150px;
+        background: rgba(238, 187, 231, .7);
+        box-shadow: 20px 20px 40px rgb(255, 255, 255);
+        transform: skewY(40deg);
+        z-index: 4;
+        filter: blur(4px);
+    }
+    &:hover::after{
+        animation: shine .3s ease-in-out .5s;
+    }
+    &__content {
+        padding:20px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        color: rgb(0, 0, 0);
+        z-index: 2;
+        transition: color .7s ease-in;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, .8);
+        &:hover{
+            color: rgb(255, 255, 255);  
+        }
+        &--title {
+            font-family: "Amiri";
+            font-weight: 600;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 2.2rem;
+            border-top: 2px double black;
+            border-bottom: 2px double black;
+        }    
+        &--par{
+            align-self: center;
+            font-family: "Antic Didone";
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 1rem ;
+            text-align: center;
+            line-height: 18px;
+            letter-spacing: 1px;
+        }
+        &--par2{
+            align-self: center;
+            font-family: "Antic Didone";
+            margin-top: 3px;
+            margin-bottom: 5px;
+            font-size: 1rem ;
+            text-align: center;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 1px;
+        }   
+        &--btn{
+            width: 100px;
+            height: 40px;
+            text-decoration: none;
+            background-color: rgb(0, 0, 0);
+            font-family: "Antic Didone";
+            align-self: center;
+            justify-self: baseline;
+            box-shadow: 10px 10px 30px rgba(3, 3, 3, 1);
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            padding: 6px 10px;
+            font-weight: 600;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+            z-index: 10;
+        }
     }
 }
 

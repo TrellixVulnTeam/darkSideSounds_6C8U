@@ -1,5 +1,8 @@
-const slider = document.querySelector('.slider-container'),
-  slides = Array.from(document.querySelectorAll('.slide'))
+
+//SLIDER DEL INDEX (<SECTION>TARJETAS)
+
+const slider = document.querySelector('.isection__slidercontainer'),
+  slides = Array.from(document.querySelectorAll('.isection__slidercontainer--slide'))
 
 let isDragging = false,
   startPos = 0,
@@ -81,3 +84,4 @@ function setPositionByIndex() {
 function setSliderPosition() {
   slider.style.transform = `translateX(${currentTranslate}px)`
 }
+

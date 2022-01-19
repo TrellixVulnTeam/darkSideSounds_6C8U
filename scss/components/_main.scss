@@ -11,10 +11,7 @@
         margin-top: 100px;
         user-select: none;
     }
-    &__subtcontainer{
-        width: 100vw;
-        height: 100px;
-        margin-top: 80px;
+    &__sub{
         display: grid;
         grid-template-columns: 100px, 1fr, 1fr;
         grid-template-rows: 1fr, 1fr, 1fr;
@@ -24,12 +21,13 @@
         "ms2 slogan slogan";
         justify-content: center;
         align-self: flex-start;
+        width: 100vw;
+        height: 100px;
         padding: 3px;
+        margin-top: 80px;
         z-index: 90;
         user-select: none;
-        
-        
-        &--subt1{
+        &--1{
             @extend %subtitlewhite;
             grid-area: ms1;
             grid-column: 1 / 3;
@@ -40,7 +38,7 @@
             letter-spacing: 1px;
             user-select: none;
         }
-        &--subt2{
+        &--2{
             @extend %subtitlewhite;
             grid-area: ms2;
             font-size: 3.8rem;
@@ -49,7 +47,7 @@
             margin: -15px 0 0 8px;
             user-select: none;
         }
-        &--subt3{
+        &--3{
             @extend %subtitlewhite;
             grid-area: ms3;
             grid-column: 2 / 4;
@@ -74,13 +72,12 @@
         justify-content: space-evenly;
         width: 250px;
         align-self: center;
-        margin-top: 160px;
+        margin-top: 250px;
         &--mod1 {
-            width: 25px;
-        }
-        &--mod {
             width: 15px;
         }
-        
+        &--mod2 {
+            width: 25px;
+        }
     }    
 }

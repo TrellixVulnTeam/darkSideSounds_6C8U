@@ -27,13 +27,13 @@ body {
   text-align: center;
 }
 
-.main__subtcontainer--subt3, .main__subtcontainer--subt2, .main__subtcontainer--subt1 {
+.main__sub--3, .main__sub--2, .main__sub--1 {
   font-family: "Abril Fatface", "Amiri";
   color: white;
   font-weight: normal;
 }
 
-.main__subtcontainer--slogan {
+.main__sub--slogan {
   font-family: "Amiri";
   color: white;
   font-weight: normal;
@@ -45,13 +45,6 @@ body {
   letter-spacing: 4px;
   line-height: 3.2rem;
   font-size: 3rem;
-}
-
-.footer__rrss {
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-end;
-  padding: 10px;
 }
 
 .header__nav {
@@ -154,6 +147,7 @@ body {
   transition: border 0.5s ease-in, background-color 0.3s ease-in, color 0.5s ease-in-out 0.1s;
 }
 
+/* Nav bar pages con background-color: black */
 .main__title {
   padding: 10px;
   font-family: "Antic Didone";
@@ -164,13 +158,13 @@ body {
   text-align: center;
 }
 
-.main__subtcontainer--subt3, .main__subtcontainer--subt2, .main__subtcontainer--subt1 {
+.main__sub--3, .main__sub--2, .main__sub--1 {
   font-family: "Abril Fatface", "Amiri";
   color: white;
   font-weight: normal;
 }
 
-.main__subtcontainer--slogan {
+.main__sub--slogan {
   font-family: "Amiri";
   color: white;
   font-weight: normal;
@@ -184,13 +178,6 @@ body {
   font-size: 3rem;
 }
 
-.footer__rrss {
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-end;
-  padding: 10px;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -202,21 +189,21 @@ body {
   margin-top: 100px;
   user-select: none;
 }
-.main__subtcontainer {
-  width: 100vw;
-  height: 100px;
-  margin-top: 80px;
+.main__sub {
   display: grid;
   grid-template-columns: 100px, 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas: "ms1 ms1 ms1" "ms2 ms3 ms3" "ms2 slogan slogan";
   justify-content: center;
   align-self: flex-start;
+  width: 100vw;
+  height: 100px;
   padding: 3px;
+  margin-top: 80px;
   z-index: 90;
   user-select: none;
 }
-.main__subtcontainer--subt1 {
+.main__sub--1 {
   grid-area: ms1;
   grid-column: 1/3;
   grid-row: 1;
@@ -226,7 +213,7 @@ body {
   letter-spacing: 1px;
   user-select: none;
 }
-.main__subtcontainer--subt2 {
+.main__sub--2 {
   grid-area: ms2;
   font-size: 3.8rem;
   grid-row: 2/4;
@@ -234,7 +221,7 @@ body {
   margin: -15px 0 0 8px;
   user-select: none;
 }
-.main__subtcontainer--subt3 {
+.main__sub--3 {
   grid-area: ms3;
   grid-column: 2/4;
   grid-row: 2;
@@ -242,7 +229,7 @@ body {
   font-size: 1.65rem;
   user-select: none;
 }
-.main__subtcontainer--slogan {
+.main__sub--slogan {
   grid-area: slogan;
   grid-column: 2/3;
   grid-row: 3/4;
@@ -256,30 +243,135 @@ body {
   justify-content: space-evenly;
   width: 250px;
   align-self: center;
-  margin-top: 160px;
+  margin-top: 250px;
 }
 .main__ico--mod1 {
-  width: 25px;
-}
-.main__ico--mod {
   width: 15px;
 }
+.main__ico--mod2 {
+  width: 25px;
+}
 
-section {
+@keyframes shine {
+  0% {
+    top: 310px;
+    right: 100px;
+    background: rgba(238, 187, 231, 0.7);
+  }
+  100% {
+    top: -250px;
+    right: -150px;
+    background: white;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+/* Seccion index Article */
+.iarticle {
+  display: flex;
+  flex-direction: column;
+  margin: 250px 0;
+  width: 100vw;
+  perspective: 1000px;
+  /*animation: float 1s ease-in-out infinite;*/
+}
+.iarticle__title1 {
+  font-family: "";
+  font-weight: bolder;
+  font-size: 50px;
+  align-self: center;
+  margin-top: -10px;
+  margin-left: 80px;
+  text-shadow: 1px 3px 4px rgba(255, 255, 255, 0.3);
+  color: white;
+}
+.iarticle__title2 {
+  grid-area: title2;
+  align-self: center;
+  justify-self: center;
+  font-size: 50px;
+  font-family: "";
+  font-weight: bolder;
+  text-align: center;
+  color: rgba(235, 116, 229, 0.438);
+  transition: transform 1s ease-in;
+  transform: skew(-20deg);
+  text-shadow: 1px 3px 4px rgba(233, 132, 228, 0.3);
+}
+.iarticle__title3 {
+  grid-area: title2;
+  align-self: center;
+  justify-self: center;
+  font-size: 50px;
+  font-family: "";
+  font-weight: bolder;
+  text-align: center;
+  color: rgba(235, 116, 229, 0.438);
+}
+.iarticle__title4 {
+  grid-area: title2;
+  align-self: center;
+  justify-self: center;
+  font-size: 50px;
+  font-family: "";
+  font-weight: bolder;
+  text-align: center;
+  color: rgba(235, 116, 229, 0.438);
+}
+.iarticle__description {
+  grid-area: description;
+  align-self: center;
+  font-family: "";
+  font-weight: bolder;
+  font-size: 35px;
+  margin-top: 50px;
+  margin-left: 10px;
+  color: white;
+  line-height: 35px;
+  text-align: center;
+}
+
+/* Sección index Section - Carrusel de tarjetas */
+.isection {
+  margin-top: 120px;
+  background-image: url("https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1792&q=80");
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 200px;
+  border-radius: 5px;
+  box-shadow: inset 20px 30px 30px black, inset -25px -40px 30px black;
 }
-section .grabbing {
-  cursor: grabbing !important;
+.isection__arrowL, .isection__arrowR {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-evenly;
+  position: absolute;
+  color: white;
+  font-size: 35px;
+  margin-top: 250px;
+  opacity: 0.6;
 }
-section .grabbing .slide {
-  transform: scale(0.9);
+.isection__arrowL {
+  left: 25px;
 }
-section .slider-container {
+.isection__arrowR {
+  right: 25px;
+}
+.isection__slidercontainer {
   height: 600px;
-  margin-top: 100px;
-  margin-bottom: 100px;
   display: inline-flex;
   overflow: hidden;
   scrollbar-width: none;
@@ -288,11 +380,10 @@ section .slider-container {
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
-  will-change: transform;
   transition: transform 0.3s ease-out;
   cursor: grab;
 }
-section .slider-container .slide {
+.isection__slidercontainer--slide {
   max-height: 100vh;
   width: 100vw;
   display: flex;
@@ -303,22 +394,34 @@ section .slider-container .slide {
   transition: transform 0.3s ease-in-out;
 }
 @media (min-width: 1200px) {
-  section .slider-container .slide {
+  .isection__slidercontainer--slide {
     padding: 3rem;
   }
 }
-section .slider-container .slide .card {
+
+/* clases que se agregan con addClass en Js */
+.grabbing {
+  cursor: grabbing !important;
+}
+
+.grabbing .slide {
+  transform: scale(0.95);
+}
+
+/* Tarjetas */
+.card {
   position: relative;
   width: 200px;
   height: 350px;
-  margin-top: 150px;
   background-color: white;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1), inset 10px 10px 50px rgba(129, 107, 59, 0.76);
+  box-shadow: 10px 10px 30px rgba(10, 10, 10, 0.95), inset 10px 10px 50px rgba(129, 107, 59, 0.76);
   transition: transform 0.3s ease-in-out;
   user-select: none;
   overflow: hidden;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
-section .slider-container .slide .card::before {
+.card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -329,10 +432,10 @@ section .slider-container .slide .card::before {
   box-shadow: inset 5px 5px 50px rgba(49, 20, 20, 0.76);
   transition: bottom 0.5s ease-in-out;
 }
-section .slider-container .slide .card:hover::before {
+.card:hover::before {
   bottom: 0;
 }
-section .slider-container .slide .card::after {
+.card::after {
   content: "";
   position: absolute;
   top: 310px;
@@ -345,10 +448,10 @@ section .slider-container .slide .card::after {
   z-index: 4;
   filter: blur(4px);
 }
-section .slider-container .slide .card:hover::after {
-  animation: shiningLove 0.3s ease-in-out 0.5s;
+.card:hover::after {
+  animation: shine 0.3s ease-in-out 0.5s;
 }
-section .slider-container .slide .card__content {
+.card__content {
   padding: 20px;
   height: 350px;
   display: flex;
@@ -360,20 +463,19 @@ section .slider-container .slide .card__content {
   transition: color 0.7s ease-in;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-section .slider-container .slide .card__content:hover {
+.card__content:hover {
   color: white;
 }
-section .slider-container .slide .card__content--title {
+.card__content--title {
   font-family: "Amiri";
   font-weight: 600;
   text-align: center;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin: 10px 0;
   font-size: 2.2rem;
   border-top: 2px double black;
   border-bottom: 2px double black;
 }
-section .slider-container .slide .card__content--par {
+.card__content--par {
   align-self: center;
   font-family: "Antic Didone";
   margin-top: 30px;
@@ -383,7 +485,7 @@ section .slider-container .slide .card__content--par {
   line-height: 18px;
   letter-spacing: 1px;
 }
-section .slider-container .slide .card__content--par2 {
+.card__content--par2 {
   align-self: center;
   font-family: "Antic Didone";
   margin-top: 3px;
@@ -394,7 +496,7 @@ section .slider-container .slide .card__content--par2 {
   line-height: 18px;
   letter-spacing: 1px;
 }
-section .slider-container .slide .card__content--btn {
+.card__content--btn {
   width: 100px;
   height: 40px;
   text-decoration: none;
@@ -414,18 +516,6 @@ section .slider-container .slide .card__content--btn {
   z-index: 10;
 }
 
-@keyframes shiningLove {
-  0% {
-    top: 310px;
-    right: 100px;
-    background: rgba(238, 187, 231, 0.7);
-  }
-  100% {
-    top: -250px;
-    right: -150px;
-    background: white;
-  }
-}
 .main__title {
   padding: 10px;
   font-family: "Antic Didone";
@@ -436,13 +526,13 @@ section .slider-container .slide .card__content--btn {
   text-align: center;
 }
 
-.main__subtcontainer--subt1, .main__subtcontainer--subt2, .main__subtcontainer--subt3 {
+.main__sub--1, .main__sub--2, .main__sub--3 {
   font-family: "Abril Fatface", "Amiri";
   color: white;
   font-weight: normal;
 }
 
-.main__subtcontainer--slogan {
+.main__sub--slogan {
   font-family: "Amiri";
   color: white;
   font-weight: normal;
@@ -454,13 +544,6 @@ section .slider-container .slide .card__content--btn {
   letter-spacing: 4px;
   line-height: 3.2rem;
   font-size: 3rem;
-}
-
-.footer__rrss {
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-end;
-  padding: 10px;
 }
 
 .footer {
@@ -483,6 +566,10 @@ section .slider-container .slide .card__content--btn {
 }
 .footer__rrss {
   grid-area: rrss;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
 }
 .footer__rrss .form__ico--img {
   width: 18px;
@@ -525,8 +612,37 @@ section .slider-container .slide .card__content--btn {
   grid-area: irarriba;
   justify-self: center;
 }
-.footer .form__ico--arriba .flecha {
-  height: 90px;
+
+/* MAPS */
+/*------------------*/
+/*  SOUNDS y MUSIC  */
+/*------------------*/
+/* MAIN */
+.music__main {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: #f1b8d3;
+  color: black;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.music__main .sound__title {
+  margin-top: 50px;
+  align-self: center;
+  font-family: "Abril Fatface";
+  font-weight: lighter;
+  font-size: 2rem;
+}
+.music__main .page__text {
+  width: 80%;
+  height: 300px;
+  padding: 0;
+  margin-top: 100px;
+  font-family: "Amiri";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

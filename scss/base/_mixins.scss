@@ -4,3 +4,13 @@
     padding: $pad;
 }
 
+@mixin descripcion ($txtal, $fsize){
+    text-align: $txtal;
+    font-size: $fsize;    
+}
+
+@mixin cajas($width, $height, $pa){
+    width: $width;
+    height: $height;
+    padding: $pa;
+}

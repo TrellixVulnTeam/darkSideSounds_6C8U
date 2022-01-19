@@ -24,7 +24,10 @@
     }
     &__rrss{
         grid-area: rrss;
-        @extend %footer-rrss;       
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-end;
+        padding: 10px;      
         .form__ico--img{
             width: 18px;
             height: 18px;
@@ -68,9 +71,6 @@
     .form__ico--arriba{
         grid-area: irarriba;
         justify-self: center;
-        .flecha{
-            height: 90px;
-        }
     } 
 }
 
