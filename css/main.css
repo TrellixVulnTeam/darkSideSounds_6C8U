@@ -43,7 +43,7 @@ body {
 .header__nav {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 20px;
   z-index: 9999;
 }
 .header__nav div .navbar-toggler {
