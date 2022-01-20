@@ -3,12 +3,13 @@
 /* Seccion index Article */
 
 .iarticle{
+    width: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 200px;
-    width: 100%;
     perspective: 1000px;
     /*animation: float 1s ease-in-out infinite;*/
     &__title1, &__title2, &__title3{
@@ -35,7 +36,6 @@
     &__selector{
         display: flex;
         justify-content: space-around;
-        width: 100vw;
         margin-top: 0px;
         padding: 50px;
         &--sound, &--music{
@@ -73,8 +73,6 @@
     margin-top: 120px;
     background-image: url("https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1792&q=80");
     background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
     margin-bottom: 200px;
     border-radius: 5px;
