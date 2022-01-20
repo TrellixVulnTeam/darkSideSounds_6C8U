@@ -10,8 +10,12 @@ ul{
 
 a{
     text-decoration: none;
+    cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
+    
 }
 
 body{
     background-color: black;
+    overflow-x: hidden;
+    cursor: url(../../assets/punteros/punterovertical.png) 0 5, pointer;
 }

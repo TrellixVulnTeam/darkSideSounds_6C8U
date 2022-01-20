@@ -11,10 +11,13 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
 }
 
 body {
   background-color: black;
+  overflow-x: hidden;
+  cursor: url(../../assets/punteros/punterovertical.png) 0 5, pointer;
 }
 
 .main__title {
@@ -47,9 +50,9 @@ body {
   z-index: 9999;
 }
 .header__nav div .navbar-toggler {
-  width: 35px;
-  height: 30px;
-  padding: 0;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
   position: relative;
   transition: 0.5 ease-in-out;
   right: 5px;
@@ -58,7 +61,6 @@ body {
   top: 20px; MQ LARGE */
   outline: none;
   box-shadow: none;
-  border: 0;
   /*
   @media screen and (width: 1224px){
       @include w-h-pad(60px, 60px, 0);
@@ -83,11 +85,11 @@ body {
   display: block;
   position: absolute;
   background-color: #f1b8d3;
-  border-radius: 1px;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
+  border: 2px solid #f1b8d3;
 }
 .header__nav div .navbar-toggler .toggler-icon:focus {
   outline: none;
@@ -112,7 +114,7 @@ body {
 }
 .header__nav div .collapsed .top-bar {
   /* Estado cuando el navbar está colapsado*/
-  margin-top: -20px;
+  margin-top: -25px;
   /* margin-top: -40px; MQ LARGE*/
   transform: rotate(0deg);
 }
@@ -123,13 +125,14 @@ body {
 }
 .header__nav div .collapsed .bottom-bar {
   /*Estado cuando el navbar está colapsado*/
-  margin-top: 20px;
+  margin-top: 25px;
   /*margin-top: 40px; MQ LARGE*/
   transform: rotate(0deg);
 }
 .header__nav div .nav__linkcontainer {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1px;
+  height: 600px;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item {
   padding: 15px;
@@ -138,15 +141,16 @@ body {
   transition: 0.5s ease-in;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
-  font-family: "Abril Fatface", "Amiri";
-  color: pink;
+  font-family: "SuperLegendBoy", "Amiri";
+  font-size: 2.3rem;
   letter-spacing: 4px;
   line-height: 3.2rem;
-  font-size: 3rem;
+  color: pink;
+  text-shadow: 4px 6px 2px rgba(220, 101, 231, 0.8);
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link:hover {
-  background-color: rgba(220, 101, 231, 0.8);
   border: 0.5px solid white;
+  background-color: rgba(220, 101, 231, 0.8);
   color: white;
   transition: border 0.5s ease-in, background-color 0.3s ease-in, color 0.5s ease-in-out 0.1s;
 }
@@ -177,24 +181,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 100vh;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 }
 .main__title {
+  justify-self: flex-;
   width: 100vw;
   height: 60px;
-  margin-top: 100px;
   user-select: none;
 }
 .main__sub {
+  align-self: flex-start;
+  margin-top: -150px;
   display: grid;
   grid-template-columns: 100px, 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas: "ms1 ms1 ms1" "ms2 ms3 ms3" "ms2 slogan slogan";
   justify-content: center;
-  align-self: flex-start;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   padding: 3px;
-  margin-top: 80px;
   z-index: 90;
   user-select: none;
 }
@@ -234,11 +242,11 @@ body {
   user-select: none;
 }
 .main__ico {
+  justify-self: baseline;
   display: flex;
   justify-content: space-evenly;
   width: 250px;
   align-self: center;
-  margin-top: 250px;
 }
 .main__ico--mod1 {
   width: 15px;
@@ -270,34 +278,36 @@ body {
     transform: translateY(-1px);
   }
 }
+@font-face {
+  font-family: "SuperLegendBoy";
+  src: url("../../assets/fonts/SuperLegendBoy.ttf");
+}
 /* Seccion index Article */
 .iarticle {
-  width: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-top: 200px;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
   perspective: 1000px;
+  overflow: hidden;
   /*animation: float 1s ease-in-out infinite;*/
 }
 .iarticle__title1, .iarticle__title2, .iarticle__title3 {
-  font-family: "Abril Fatface";
-  font-size: 40px;
-  color: white;
-  padding: 20px;
+  font-family: "SuperLegendBoy";
+  font-size: 18px !important;
   text-align: center;
-  line-height: 40px;
+  color: #173a1f;
 }
 .iarticle__title1 {
   font-size: 50px;
-  color: #fafafa;
   transform: translateY(-15px);
 }
 .iarticle__title2 {
   font-size: 50px;
-  color: #ff56ac;
   transform: scale(0.9);
 }
 .iarticle__title3 {
@@ -305,13 +315,15 @@ body {
 }
 .iarticle__selector {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin-top: 0px;
-  padding: 50px;
+  border: 1px solid white;
+  cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
 }
 .iarticle__selector--sound, .iarticle__selector--music {
-  font-family: "Abril Fatface";
-  font-size: 30px;
+  font-family: "SuperLegendBoy";
+  font-size: 10px;
   border-radius: 10%;
   box-shadow: inset 15px 15px 30px rgba(0, 0, 0, 0.5), inset -15px -15px 30px rgba(0, 0, 0, 0.7);
   border: 1px outset rgba(0, 0, 0, 0.7);
@@ -334,26 +346,54 @@ body {
   margin-left: 5px;
 }
 
+@keyframes shine {
+  0% {
+    top: 310px;
+    right: 100px;
+    background: rgba(238, 187, 231, 0.7);
+  }
+  100% {
+    top: -250px;
+    right: -150px;
+    background: white;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+@font-face {
+  font-family: "SuperLegendBoy";
+  src: url("../../assets/fonts/SuperLegendBoy.ttf");
+}
 /* Sección index Section - Carrusel de tarjetas */
 .isection {
-  margin-top: 120px;
-  background-image: url("https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1792&q=80");
+  height: 100vh;
+  /* border-right: 1px solid white;
+  border-left: 1px solid white; */
   background-repeat: no-repeat;
-  overflow: hidden;
-  margin-bottom: 200px;
-  border-radius: 5px;
-  box-shadow: inset 20px 30px 30px black, inset -25px -40px 30px black;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  overflow-x: hidden;
+  cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
 }
 .isection__arrowL, .isection__arrowR {
   height: 100px;
+  margin-top: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: space-evenly;
   position: absolute;
   color: white;
-  font-size: 35px;
-  margin-top: 250px;
+  font-size: 30px;
   opacity: 0.6;
 }
 .isection__arrowL {
@@ -373,7 +413,7 @@ body {
   -o-transform: translateX(0);
   transform: translateX(0);
   transition: transform 0.3s ease-out;
-  cursor: grab;
+  cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
 }
 .isection__slidercontainer--slide {
   max-height: 100vh;
@@ -392,26 +432,19 @@ body {
 }
 
 /* clases que se agregan con addClass en Js */
-.grabbing {
-  cursor: grabbing !important;
-}
-
-.grabbing .slide {
-  transform: scale(0.95);
-}
-
 /* Tarjetas */
 .card {
   position: relative;
   width: 200px;
   height: 350px;
   background-color: white;
-  box-shadow: 10px 10px 30px rgba(10, 10, 10, 0.95), inset 10px 10px 50px rgba(129, 107, 59, 0.76);
+  box-shadow: 8px 5px 10px rgba(247, 129, 227, 0.3), inset 10px 10px 50px rgba(129, 107, 59, 0.76);
   transition: transform 0.3s ease-in-out;
   user-select: none;
   overflow: hidden;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
 }
 .card::before {
   content: "";
@@ -459,20 +492,20 @@ body {
   color: white;
 }
 .card__content--title {
-  font-family: "Amiri";
+  font-family: "SuperLegendBoy";
   font-weight: 600;
   text-align: center;
   margin: 10px 0;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   border-top: 2px double black;
   border-bottom: 2px double black;
 }
 .card__content--par {
   align-self: center;
-  font-family: "Antic Didone";
+  font-family: "SuperLegendBoy";
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   line-height: 18px;
   letter-spacing: 1px;
@@ -493,19 +526,20 @@ body {
   height: 40px;
   text-decoration: none;
   background-color: black;
-  font-family: "Antic Didone";
+  font-family: "SuperLegendBoy";
   align-self: center;
   justify-self: baseline;
   box-shadow: 10px 10px 30px #030303;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 14px;
+  font-size: 10px;
   color: white;
   padding: 6px 10px;
   font-weight: 600;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
   z-index: 10;
+  cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
 }
 
 .main__title {
@@ -536,14 +570,18 @@ body {
   grid-template-rows: 100px 50px 1fr 100px;
   gap: 15px;
   background-color: black;
-  z-index: 5;
   grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
+  width: 100vw;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 10px solid white;
+  z-index: 5;
 }
 .footer__title {
   grid-area: titulo;
-  font-family: "Abril Fatface";
+  font-family: "SuperLegendBoy";
   font-weight: lighter;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   color: pink;
   padding: 5px;
@@ -572,22 +610,29 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  background-color: pink;
+  overflow-x: hidden;
 }
 .footer .formulario .form__container .form__title {
-  color: pink;
-  font-family: "Antic Didone";
-  letter-spacing: 3px;
+  color: black;
+  letter-spacing: -1px;
 }
 .footer .formulario .form__container .form__fill {
   height: 30px;
   width: 200px;
+  font-family: "SuperLegendBoy";
 }
 .footer .formulario .form__container .form__textarea {
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
   height: 200px;
   width: 200px;
 }
 .footer .formulario .form__container div .form__button {
   background-color: pink;
+  font-family: "SuperLegendBoy";
   border: none;
   height: 30px;
   width: 100px;
@@ -627,6 +672,75 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+}
+
+/*------------------*/
+/*       SHOP       */
+/*------------------*/
+.burgerpages {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: 3px solid rgba(0, 0, 0, 0.6) !important;
+}
+
+.shop-main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  grid-template-rows: 80px 30px 100px 210px 1fr;
+  grid-template-areas: "title title title" "subtitle subtitle subtitle" "box2 box2 box2" "box1 box3 box3" "box4 box4 box4";
+  background-color: #f1b8d3;
+  overflow-x: hidden;
+}
+.shop-main__title {
+  grid-area: title;
+  align-self: auto;
+  margin-top: 0px;
+  font-family: "SuperLegendBoy";
+  font-size: 5rem;
+  color: white;
+}
+.shop-main__subtitle {
+  grid-area: subtitle;
+  align-self: center;
+  font-family: "SuperLegendBoy";
+  font-size: 1.3rem;
+}
+.shop-main__link1 {
+  grid-area: box1;
+  grid-row: 4/5;
+}
+.shop-main__link1--img1 {
+  width: 60px;
+  padding: 5px;
+}
+.shop-main__link2 {
+  grid-area: box2;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  align-self: flex-end;
+}
+.shop-main__link2--img2 {
+  width: 360px;
+  padding: 5px;
+}
+.shop-main__link3 {
+  grid-area: box3;
+}
+.shop-main__link3--img3 {
+  width: 300px;
+  margin-top: 20px;
+  transform: scaleY(1.15);
+}
+.shop-main__link4 {
+  grid-area: box4;
+  justify-self: center;
+  margin-top: 20px;
+}
+.shop-main__link4--img4 {
+  width: 360px;
+  padding: 5px;
+  transform: scaleY(1.7);
 }
 
 /*# sourceMappingURL=main.css.map */
