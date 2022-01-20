@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "SuperLegendBoy";
+  src: url("../../assets/fonts/SuperLegendBoy.ttf");
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -368,10 +372,6 @@ body {
   100% {
     transform: translateY(-1px);
   }
-}
-@font-face {
-  font-family: "SuperLegendBoy";
-  src: url("../../assets/fonts/SuperLegendBoy.ttf");
 }
 /* Sección index Section - Carrusel de tarjetas */
 .isection {
