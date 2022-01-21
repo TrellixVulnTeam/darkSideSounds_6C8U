@@ -1,15 +1,15 @@
 
 //SLIDER DEL INDEX (<SECTION>TARJETAS)
 
-const slider = document.querySelector('.isection__slidercontainer'),
-  slides = Array.from(document.querySelectorAll('.isection__slidercontainer--slide'))
+const slider = document.querySelector('.isection__slidercontainer');
+const slides = Array.from(document.querySelectorAll('.isection__slidercontainer--slide'));
 
-let isDragging = false,
-  startPos = 0,
-  currentTranslate = 0,
-  prevTranslate = 0,
-  animationID,
-  currentIndex = 0
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID;
+let currentIndex = 0;
 
 slides.forEach((slide, index) => {
   // touch events
@@ -21,21 +21,21 @@ slides.forEach((slide, index) => {
   slide.addEventListener('mouseup', touchEnd)
   slide.addEventListener('mousemove', touchMove)
   slide.addEventListener('mouseleave', touchEnd)
-})
+});
 
 // make responsive to viewport changes
-window.addEventListener('resize', setPositionByIndex)
+window.addEventListener('resize', setPositionByIndex);
 
 // prevent menu popup on long press
 window.oncontextmenu = function (event) {
   event.preventDefault()
   event.stopPropagation()
   return false
-}
+};
 
 function getPositionX(event) {
   return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
-}
+};
 
 function touchStart(index) {
   return function (event) {
@@ -44,8 +44,8 @@ function touchStart(index) {
     isDragging = true
     animationID = requestAnimationFrame(animation)
     slider.classList.add('grabbing')
-  }
-}
+  };
+};
 
 function touchMove(event) {
   if (isDragging) {
@@ -59,10 +59,10 @@ function touchEnd() {
   isDragging = false
   const movedBy = currentTranslate - prevTranslate
 
-  // if moved enough negative then snap to next slide if there is one
+  // si se mueve lo suficiente (-x) saltará al siguiente slider, de haber alguno
   if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1
 
-  // if moved enough positive then snap to previous slide if there is one
+  // si se mueve lo suficiente (x) saltará al siguiente slider, de haber alguno
   if (movedBy > 100 && currentIndex > 0) currentIndex -= 1
 
   setPositionByIndex()

@@ -1,5 +1,6 @@
 @import "../base/maps";
 @import "../base/mixins";
+@import "../base/keyframes";
 
 /*------------------*/
 /*  SOUNDS y MUSIC  */
@@ -32,80 +33,5 @@
     }
 }
 
-/*------------------*/
-/*       SHOP       */
-/*------------------*/
 
-.burgerpages{
-    background-color: rgba(0, 0, 0, .6) !important;
-    border: 3px solid rgba(0, 0, 0, 0.6)!important; 
-}
-
-.shop-main{
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 60px 1fr 1fr;
-    grid-template-rows: 80px 30px 100px 210px 1fr;
-    grid-template-areas: 
-    "title title title"
-    "subtitle subtitle subtitle"
-    "box2 box2 box2"
-    "box1 box3 box3"
-    "box4 box4 box4"
-    ;
-    background-color: rgba(241, 184, 211, 1);
-    overflow-x: hidden;
-    &__title{
-        grid-area: title;
-        align-self: auto;
-        margin-top: 0px;
-        font-family: "SuperLegendBoy";
-        font-size: 5rem;
-        color: white;
-    }
-    &__subtitle {
-        grid-area: subtitle;
-        align-self: center;
-        font-family: "SuperLegendBoy";
-        font-size: 1.3rem;
-    }
-    &__link1{
-        grid-area: box1;
-        grid-row: 4 / 5;
-        &--img1{
-            width: 60px;
-            padding:5px;            
-        }   
-    }
-    &__link2{
-        grid-area: box2;
-        grid-column: 1 / 4;
-        grid-row: 3 / 4;
-        align-self: flex-end;
-        &--img2{
-        width: 360px;
-        padding: 5px;
-    }
-}
-&__link3{
-    grid-area: box3;
-    &--img3{
-        width: 300px;
-        margin-top: 20px;
-        transform: scaleY(1.15)
-    }
-}
-&__link4{
-    grid-area: box4;
-    justify-self: center;
-    margin-top: 20px;
-    &--img4{
-        width: 360px;
-        padding: 5px;
-        transform: scaleY(1.7);
-    }
-    
-    }
-}
 
