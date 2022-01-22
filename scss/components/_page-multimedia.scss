@@ -1,0 +1,162 @@
+.multimedia{
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: rgb(241, 195, 217);
+    &__title{
+        font-family: "SuperLegendBoy";
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 3.75rem;
+        margin-bottom: 3rem;
+        color: rgb(0, 0, 0);
+        text-shadow: 3px 3px 1px rgb(241, 122, 236);
+    }
+    &__gif{
+        width: 100%;
+        border: 4px solid rgb(241, 122, 236);
+        object-fit: cover;
+        margin-bottom: 2rem;
+    }
+    &__descripcion{
+        padding: 1rem;
+        font-family: "SuperLegendBoy";
+        font-size: 1rem;
+        text-align: center;
+        color:rgb(0, 0, 0);
+        
+    }
+}
+
+
+.sound-container {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    .music-player{
+        border: 12px solid white;
+        .player {
+            height: 200px;
+            padding: 1rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            flex: 1;
+            background-image: url("../../assets/multi-img/giphy.gif");
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            background-position: center;
+            .player-title {
+                font-family: "SuperLegendBoy";
+                background-color: rgba(255, 255, 255, .7);
+            }
+        }
+        .playlist {
+            
+            display: flex;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            background: #96ce94b7;
+            border: 12px solid black;
+            h2{
+                font-family: "SuperLegendBoy";
+                font-size: 1.3em;
+                text-align: center;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                text-transform: uppercase;
+            }
+            .player-title {
+                color: rgb(255, 255, 255);
+                border-bottom: 1px solid black;
+            }
+            ul {
+                list-style-type: none;
+                flex-basis: 100%;
+                overflow-y: scroll;
+                li {
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: "SuperLegendBoy";
+                    font-size: .7rem;
+                    color: rosybrown;
+                    border-bottom: 1px solid #ddd;
+                    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+                    cursor: pointer;
+                }
+            }
+        }
+        .controls {
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            border-radius: 10px;
+            margin-top: 20px;
+            button {
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background: none;
+                padding: 1rem;
+            }
+            .control-btn {
+                font-size: 2rem;
+                color: #000000; 
+            }
+            .playpause-btn {
+                font-size: 1.5rem;
+                color: #000000;
+            }
+            .slidecontainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                .slide-icon {
+                    color: #264653;
+                    font-size: rem;
+                }        
+                .slider {             
+                    -webkit-appeance: none;       
+                    background: #fff;
+                    outline: none;
+                    opacity: .7;
+                    -webkit-transition: .2s;
+                    transition: .2;
+                    border-radius: 10px;
+                    margin: 0 20px;
+                    font-size: .5rem;
+                    &:hover {
+                        opacity: 1;
+                    }        
+                }
+            }
+        }
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e9c46a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #e76f51;
+}

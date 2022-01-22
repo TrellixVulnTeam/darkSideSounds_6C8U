@@ -1,0 +1,341 @@
+@import "../base/extends";
+/*------------------*/
+/*       SHOP       */
+/*------------------*/
+
+
+/* NAVBAR SETTINGS PARA EL SHOP */
+/* cambio de color al boton del menu hamburguesa*/
+.pages-toggler-icon{    
+    @include w-h-pad(100%, 3px, 0);
+    margin: 0;
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    }
+}
+
+
+
+/* SHOP MAIN MENU */
+
+.shop-main{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(241, 195, 217);
+    &__title{
+        font-family: "SuperLegendBoy";
+        font-size: 4rem;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
+        color: white;
+        user-select: none;
+    }
+    &__subtitle {
+        margin-top: -1.5625rem;
+        font-family: "SuperLegendBoy";
+        font-size: 1.35rem;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
+        user-select: none;
+    }
+    &__heart{
+        position: relative;
+        display: flex;
+        margin-top: 3.125rem;
+        align-self: center;
+        &--icon{
+        animation: iconrotation 2.5s infinite linear; 
+        }
+    }
+    &__selector{
+        position: relative;
+        width: 100%;
+        padding: 0.625rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5625rem;
+        background-color: rgba(255, 255, 255, 1);
+        cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
+        &--link{
+            margin: 2px 2px;
+            font-family: "SuperLegendBoy";
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            text-align: justify;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
+            a {
+                color: rgb(241, 93, 197);
+            }
+            &:hover{
+                background-color: grey;
+                width: 12.5rem;
+            }
+        }
+    }
+    &__sandia{
+    position: absolute;
+    top: 12.5rem;
+    right: 1.875rem;
+    border-radius: 50%;
+    margin: 1.25rem 1.25rem 1.25rem 1.25rem;
+    }
+}
+
+
+/*
+
+SHOP - SECCIONES: MERCH, SONIDOS
+MUSICA, CURSOS, CONTACTO-
+
+*/
+
+.shop{
+    height: 100vh;
+    padding: 0.625rem;
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+    grid-template-rows: .5fr 2fr 1fr;
+    overflow-x: hidden;
+    .shop-section__title{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: flex-start;
+        font-family: "SuperLegendBoy";
+        font-size: 4rem;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
+        color: white;
+        user-select: none;
+    }
+    &__title{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: center;
+        font-family: "SuperLegendBoy";
+        font-size: 3.5rem;
+        letter-spacing: 8px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        text-shadow: 5px 2px 0px rgba(255, 255, 255, 1);   
+        color: rgba(241, 184, 211, 1);
+        user-select: none;
+    }
+    &__cardcontainer{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        align-self: center;
+        display: flex;        
+        overflow-x: scroll;
+        scrollbar-width: auto;
+        scroll-snap-align: start;        
+        .shop-card{
+            padding: .3rem;
+            &__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                background-color: white;
+                height: 23rem;
+                padding: .65rem;
+                margin-right: 2rem;
+                box-shadow: 9px 9px 0px rgba(0, 0, 0, .4),
+                inset 1px 1px 100px rgba(190, 128, 12, 0.473);
+                user-select: none;
+                &--title{
+                    font-family: "SuperLegendBoy";
+                    font-size: 1rem;
+                    text-align: center;
+                }
+                &--description{
+                    margin-top: 0.625rem;
+                    font-family: "SuperLegendBoy";
+                    text-align: center;
+                }
+                &--img{
+                    width: 12.5rem;
+                    object-fit: cover;
+                    box-shadow: 3px 4px 0px rgba(0, 0, 0, .9);
+                }
+                &--img_musica{
+                    width: 12em;
+                    object-fit: cover;
+                    box-shadow: 5px 5px 0px rgba(0, 0, 0, .9);
+                }
+                &--img_musicFromMelee{
+                    width: 13rem;
+                    height: 10rem;
+                    margin-bottom: 2rem;
+                    object-fit: cover;
+                    box-shadow: 5px 5px 0px rgba(0, 0, 0, .9);
+                }
+                &--img_rubacava{
+                    width: 12.5rem;
+                    height: 12.1rem;
+                    object-fit: cover;
+                    box-shadow: 5px 5px 0px rgba(0, 0, 0, .9);
+                }
+                &--btn{
+                    align-self: center;
+                    z-index: 10;
+                    width: 6.25rem;
+                    height: 2.5rem;
+                    padding: 0.75rem 0.625rem;
+                    font-family: "SuperLegendBoy";
+                    font-size: 0.625rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    letter-spacing: 1.6px;
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 0.8125rem;
+                    color: rgb(255, 255, 255);
+                    box-shadow: 2px 2px 0px rgba(247, 1, 1, 0.527);
+                }
+            }
+        }
+    }
+    .sel-container{
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        align-self: flex-end;
+        background-color: white;
+        padding: 0.3125rem;
+        &__selector{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 1);
+            user-select: none;
+            &--link{
+                font-family: "SuperLegendBoy";
+                font-size: 1rem;
+                text-align: center;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+                a {
+                    color: rgb(241, 93, 197);
+                    &:hover{
+                        background-color: grey;
+                    }
+                }
+            }
+        }        
+    }
+}
+
+#merch{
+    background-color: orange;
+}
+
+#sonidos{
+    background-color: green;
+}
+
+#musica{
+    background-color: blue;
+}
+
+#cursos{
+    background-color: rgb(0, 0, 0);
+}
+
+/* FOOTER */
+
+.page-footer{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 3fr .5fr;
+    gap: .4rem;
+    grid-template-areas: 
+    "titulo"
+    "rrss"
+    "formulario"
+    "irarriba"
+    ;
+    justify-items: center;
+    background-color: rgb(255, 0, 0);
+    &__title{
+        grid-area: titulo;
+        align-self: center;
+        justify-self: flex-start;
+        padding: 0.9375rem;
+        font-family: 'SuperLegendBoy';
+        font-weight: lighter;
+        font-size: 2.3rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    &__rrss{
+        grid-area: rrss;
+        width: 18.75rem;
+        align-self: center;
+        justify-content: space-around;
+        display: flex;
+        padding: 0.625rem;
+    }
+    .page-form{
+        grid-area: formulario;
+        height: 25.9375rem;
+        display: flex;
+        flex-direction: column;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.9375rem;
+            gap: 0.3125rem;
+            font-family: 'SuperLegendBoy';
+            font-size: 1rem;
+            background-color: red;
+            overflow: hidden;
+            &--title{
+                color:rgb(0, 0, 0);
+                letter-spacing: -1px;
+            }
+            &--fill{
+                height: 1.875rem;
+                width: 12.5rem;
+                font-family: "SuperLegendBoy";
+            }               
+            &--fill2{
+                height: 1.875rem;
+                width: 12.5rem;
+                font-family: "SuperLegendBoy";
+            }               
+            &--textarea{
+                font-family: "SuperLegendBoy";
+                font-size: 1rem;
+                height: 9.375rem;
+                width: 12.5rem;
+            }
+            div{
+                .form__button{
+                    background-color: pink;
+                    font-family: "SuperLegendBoy";
+                    border: none;
+                    height: 1.875rem;
+                    width: 6.25rem;
+                }
+            }    
+        }
+    }    
+    &__arrow{
+        grid-area: irarriba;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: .5rem;
+    }
+}

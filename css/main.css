@@ -19,19 +19,8 @@ a {
 }
 
 body {
-  background-color: black;
   overflow-x: hidden;
   cursor: url(../../assets/punteros/punterovertical.png) 0 5, pointer;
-}
-
-.main__title {
-  padding: 10px;
-  font-family: "Antic Didone";
-  color: white;
-  font-weight: normal;
-  font-size: 1rem;
-  letter-spacing: 0.4rem;
-  text-align: center;
 }
 
 .main__sub--3, .main__sub--2, .main__sub--1 {
@@ -135,8 +124,7 @@ body {
 }
 .header__nav div .nav__linkcontainer {
   background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 1px;
-  height: 600px;
+  height: 30rem;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item {
   padding: 15px;
@@ -148,25 +136,14 @@ body {
   font-family: "SuperLegendBoy", "Amiri";
   font-size: 2.3rem;
   letter-spacing: 4px;
-  line-height: 3.2rem;
+  line-height: 2rem;
   color: pink;
-  text-shadow: 4px 4px 0px rgba(220, 101, 231, 0.8);
+  text-shadow: 4px 4px 1px rgba(220, 101, 231, 0.8);
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link:hover {
   border: 0.5px solid white;
   background-color: rgba(220, 101, 231, 0.8);
   color: white;
-  transition: border 0.5s ease-in, background-color 0.3s ease-in, color 0.5s ease-in-out 0.1s;
-}
-
-.main__title {
-  padding: 10px;
-  font-family: "Antic Didone";
-  color: white;
-  font-weight: normal;
-  font-size: 1rem;
-  letter-spacing: 0.4rem;
-  text-align: center;
 }
 
 .main__sub--3, .main__sub--2, .main__sub--1 {
@@ -182,19 +159,20 @@ body {
 }
 
 .main {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
+  background-color: black;
 }
 .main__title {
+  font-family: "SuperLegendBoy";
   justify-self: flex-;
   width: 100vw;
-  height: 60px;
+  font-size: 1rem;
+  color: white;
   user-select: none;
+  text-align: center;
 }
 .main__sub {
   align-self: flex-start;
@@ -302,8 +280,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
+  background-color: black;
   perspective: 1000px;
   overflow: hidden;
   /*animation: float 1s ease-in-out infinite;*/
@@ -311,6 +288,7 @@ body {
 .iarticle__title1, .iarticle__title2, .iarticle__title3 {
   font-family: "SuperLegendBoy";
   font-size: 18px !important;
+  /* REVISAR ESSSSSTOOOO*/
   text-align: center;
   color: #173a1f;
 }
@@ -392,9 +370,7 @@ body {
 /* Sección index Section - Carrusel de tarjetas */
 .isection {
   height: 100vh;
-  /* border-right: 1px solid white;
-  border-left: 1px solid white; */
-  background-repeat: no-repeat;
+  background-color: black;
   border-right: 2px solid white;
   border-left: 2px solid white;
   overflow-x: hidden;
@@ -558,16 +534,6 @@ body {
   cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
 }
 
-.main__title {
-  padding: 10px;
-  font-family: "Antic Didone";
-  color: white;
-  font-weight: normal;
-  font-size: 1rem;
-  letter-spacing: 0.4rem;
-  text-align: center;
-}
-
 .main__sub--1, .main__sub--2, .main__sub--3 {
   font-family: "Abril Fatface", "Amiri";
   color: white;
@@ -588,9 +554,6 @@ body {
   background-color: black;
   grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
   width: 100vw;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 10px solid white;
   z-index: 5;
 }
 .footer__title {
@@ -658,15 +621,202 @@ body {
   justify-self: center;
 }
 
+.multimedia {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  background-color: #f1c3d9;
+}
+.multimedia__title {
+  font-family: "SuperLegendBoy";
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 3.75rem;
+  margin-bottom: 3rem;
+  color: black;
+  text-shadow: 3px 3px 1px #f17aec;
+}
+.multimedia__gif {
+  width: 100%;
+  border: 4px solid #f17aec;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.multimedia__descripcion {
+  padding: 1rem;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.sound-container {
+  height: 100vh;
+  background-color: white;
+}
+.sound-container .music-player {
+  border: 12px solid white;
+}
+.sound-container .music-player .player {
+  height: 200px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  background-image: url("../../assets/multi-img/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: 300px 200px;
+  background-position: center;
+}
+.sound-container .music-player .player .player-title {
+  font-family: "SuperLegendBoy";
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.sound-container .music-player .playlist {
+  display: flex;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background: #96ce94b7;
+  border: 12px solid black;
+}
+.sound-container .music-player .playlist h2 {
+  font-family: "SuperLegendBoy";
+  font-size: 1.3em;
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
+.sound-container .music-player .playlist .player-title {
+  color: white;
+  border-bottom: 1px solid black;
+}
+.sound-container .music-player .playlist ul {
+  list-style-type: none;
+  flex-basis: 100%;
+  overflow-y: scroll;
+}
+.sound-container .music-player .playlist ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "SuperLegendBoy";
+  font-size: 0.7rem;
+  color: rosybrown;
+  border-bottom: 1px solid #ddd;
+  text-shadow: 1px 1px 1px black;
+  cursor: pointer;
+}
+.sound-container .music-player .controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.sound-container .music-player .controls button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 1rem;
+}
+.sound-container .music-player .controls .control-btn {
+  font-size: 2rem;
+  color: #000000;
+}
+.sound-container .music-player .controls .playpause-btn {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.sound-container .music-player .controls .slidecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.sound-container .music-player .controls .slidecontainer .slide-icon {
+  color: #264653;
+  font-size: rem;
+}
+.sound-container .music-player .controls .slidecontainer .slider {
+  -webkit-appeance: none;
+  background: #fff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: 0.2;
+  border-radius: 10px;
+  margin: 0 20px;
+  font-size: 0.5rem;
+}
+.sound-container .music-player .controls .slidecontainer .slider:hover {
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ccc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e9c46a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e76f51;
+}
+
+.main__sub--1, .main__sub--2, .main__sub--3 {
+  font-family: "Abril Fatface", "Amiri";
+  color: white;
+  font-weight: normal;
+}
+
+.main__sub--slogan {
+  font-family: "Amiri";
+  color: white;
+  font-weight: normal;
+}
+
 /*------------------*/
 /*       SHOP       */
 /*------------------*/
-.burgerpages {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  border: 3px solid rgba(0, 0, 0, 0.6) !important;
-  box-shadow: 1px 1px 0px #f1b8d3, -1px -1px 0px #f1b8d3;
+/* NAVBAR SETTINGS PARA EL SHOP */
+/* cambio de color al boton del menu hamburguesa*/
+.pages-toggler-icon {
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  background-color: black;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.pages-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
 }
 
+/* SHOP MAIN MENU */
 .shop-main {
   display: flex;
   flex-direction: column;
@@ -682,7 +832,7 @@ body {
   user-select: none;
 }
 .shop-main__subtitle {
-  margin-top: -25px;
+  margin-top: -1.5625rem;
   font-family: "SuperLegendBoy";
   font-size: 1.35rem;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
@@ -691,35 +841,27 @@ body {
 .shop-main__heart {
   position: relative;
   display: flex;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   align-self: center;
 }
 .shop-main__heart--icon {
   animation: iconrotation 2.5s infinite linear;
 }
-.shop-main__sandia {
-  position: absolute;
-  top: 200px;
-  right: 20px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: 20px 20px 20px 20px;
-}
 .shop-main__selector {
   position: relative;
-  top: 0;
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   background-color: white;
   cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
 }
 .shop-main__selector--link {
   margin: 2px 2px;
   font-family: "SuperLegendBoy";
-  font-size: 20px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
   text-align: justify;
   letter-spacing: 2px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
@@ -729,23 +871,35 @@ body {
 }
 .shop-main__selector--link:hover {
   background-color: grey;
-  width: 200px;
+  width: 12.5rem;
+}
+.shop-main__sandia {
+  position: absolute;
+  top: 12.5rem;
+  right: 1.875rem;
+  border-radius: 50%;
+  margin: 1.25rem 1.25rem 1.25rem 1.25rem;
 }
 
+/*
+
+SHOP - SECCIONES: MERCH, SONIDOS
+MUSICA, CURSOS, CONTACTO-
+
+*/
 .shop {
   height: 100vh;
+  padding: 0.625rem;
   display: grid;
-  grid-template-columns: 85px 1fr;
-  grid-template-rows: 80px 2fr 1fr;
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 0.5fr 2fr 1fr;
   overflow-x: hidden;
 }
 .shop .shop-section__title {
   grid-column: 1/3;
   grid-row: 1/2;
+  align-self: center;
   justify-self: flex-start;
-  align-self: flex-start;
   font-family: "SuperLegendBoy";
   font-size: 4rem;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
@@ -754,128 +908,117 @@ body {
 }
 .shop__title {
   grid-column: 1/2;
-  grid-row: 2;
-  margin-left: 0px;
+  grid-row: 2/3;
+  align-self: center;
   font-family: "SuperLegendBoy";
+  font-size: 3.5rem;
+  letter-spacing: 8px;
   writing-mode: vertical-lr;
   text-orientation: upright;
-  font-size: 5rem;
-  align-self: center;
-  color: #f1b8d3;
   text-shadow: 5px 2px 0px white;
-}
-.shop__title-esp {
-  grid-column: 1/2;
-  grid-row: 2;
-  margin-left: 0px;
-  font-family: "SuperLegendBoy";
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  font-size: 4rem;
-  align-self: center;
   color: #f1b8d3;
-  text-shadow: 5px 2px 0px white;
+  user-select: none;
 }
 .shop__cardcontainer {
   grid-column: 2/3;
   grid-row: 2/3;
-  max-width: 300px;
-  max-height: 500px;
-  width: 100%;
+  align-self: center;
   display: flex;
   overflow-x: scroll;
   scrollbar-width: auto;
   scroll-snap-align: start;
 }
+.shop__cardcontainer .shop-card {
+  padding: 0.3rem;
+}
 .shop__cardcontainer .shop-card__content {
   display: flex;
-  justify-content: center;
-  align-content: center;
   flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
   background-color: white;
-  height: 450px;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px 10px;
+  height: 23rem;
+  padding: 0.65rem;
+  margin-right: 2rem;
+  box-shadow: 9px 9px 0px rgba(0, 0, 0, 0.4), inset 1px 1px 100px rgba(190, 128, 12, 0.473);
   user-select: none;
 }
 .shop__cardcontainer .shop-card__content--title {
   font-family: "SuperLegendBoy";
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
 }
-.shop__cardcontainer .shop-card__content--img {
-  width: 250px;
-  object-fit: cover;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
-}
-.shop__cardcontainer .shop-card__content--img_musica {
-  width: 250px;
-  object-fit: cover;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
-}
-.shop__cardcontainer .shop-card__content--img_rubacava {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
-}
 .shop__cardcontainer .shop-card__content--description {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-family: "SuperLegendBoy";
   text-align: center;
 }
-.shop__cardcontainer .shop-card__content--description2 {
-  margin-top: 0px;
+.shop__cardcontainer .shop-card__content--img {
+  width: 12.5rem;
+  object-fit: cover;
+  box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.9);
+}
+.shop__cardcontainer .shop-card__content--img_musica {
+  width: 12em;
+  object-fit: cover;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+}
+.shop__cardcontainer .shop-card__content--img_musicFromMelee {
+  width: 13rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+}
+.shop__cardcontainer .shop-card__content--img_rubacava {
+  width: 12.5rem;
+  height: 12.1rem;
+  object-fit: cover;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
 }
 .shop__cardcontainer .shop-card__content--btn {
   align-self: center;
   z-index: 10;
-  width: 100px;
-  height: 40px;
-  padding: 12px 10px;
+  width: 6.25rem;
+  height: 2.5rem;
+  padding: 0.75rem 0.625rem;
   font-family: "SuperLegendBoy";
-  font-size: 10px;
+  font-size: 0.625rem;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1.6px;
   background-color: black;
-  border-radius: 13px;
+  border-radius: 0.8125rem;
   color: white;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.527);
+  box-shadow: 2px 2px 0px rgba(247, 1, 1, 0.527);
 }
 .shop .sel-container {
   grid-column: 1/3;
   grid-row: 3/4;
-  align-self: flex-start;
-  width: 100%;
-  margin-top: 40px;
+  align-self: flex-end;
   background-color: white;
+  padding: 0.3125rem;
 }
 .shop .sel-container__selector {
-  position: relative;
-  top: 0;
-  width: 100%;
-  padding: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: white;
+  user-select: none;
 }
 .shop .sel-container__selector--link {
-  margin: 2px 2px;
   font-family: "SuperLegendBoy";
-  font-size: 20px;
-  text-align: justify;
+  font-size: 1rem;
+  text-align: center;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 .shop .sel-container__selector--link a {
   color: #f15dc5;
 }
-.shop .sel-container__selector--link:hover {
+.shop .sel-container__selector--link a:hover {
   background-color: grey;
-  width: 200px;
 }
 
 #merch {
@@ -894,215 +1037,396 @@ body {
   background-color: black;
 }
 
-/* MAPS */
-@keyframes shine {
-  0% {
-    top: 310px;
-    right: 100px;
-    background: rgba(238, 187, 231, 0.7);
-  }
-  100% {
-    top: -250px;
-    right: -150px;
-    background: white;
-  }
+/* FOOTER */
+.page-footer {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 3fr 0.5fr;
+  gap: 0.4rem;
+  grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
+  justify-items: center;
+  background-color: red;
 }
-@keyframes float {
-  0% {
-    transform: translateY(-1px);
-  }
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(-1px);
-  }
+.page-footer__title {
+  grid-area: titulo;
+  align-self: center;
+  justify-self: flex-start;
+  padding: 0.9375rem;
+  font-family: "SuperLegendBoy";
+  font-weight: lighter;
+  font-size: 2.3rem;
+  text-align: center;
+  color: white;
 }
-@keyframes iconrotation {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+.page-footer__rrss {
+  grid-area: rrss;
+  width: 18.75rem;
+  align-self: center;
+  justify-content: space-around;
+  display: flex;
+  padding: 0.625rem;
 }
-/*------------------*/
-/*  SOUNDS y MUSIC  */
-/*------------------*/
-/* MAIN */
-.music__main {
+.page-footer .page-form {
+  grid-area: formulario;
+  height: 25.9375rem;
   display: flex;
   flex-direction: column;
-  height: 600px;
-  background-color: #f1b8d3;
-  color: black;
-  justify-content: space-evenly;
+}
+.page-footer .page-form__container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 0.9375rem;
+  gap: 0.3125rem;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  background-color: red;
+  overflow: hidden;
 }
-.music__main .sound__title {
-  margin-top: 50px;
+.page-footer .page-form__container--title {
+  color: black;
+  letter-spacing: -1px;
+}
+.page-footer .page-form__container--fill {
+  height: 1.875rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.page-footer .page-form__container--fill2 {
+  height: 1.875rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.page-footer .page-form__container--textarea {
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  height: 9.375rem;
+  width: 12.5rem;
+}
+.page-footer .page-form__container div .form__button {
+  background-color: pink;
+  font-family: "SuperLegendBoy";
+  border: none;
+  height: 1.875rem;
+  width: 6.25rem;
+}
+.page-footer__arrow {
+  grid-area: irarriba;
+  justify-self: center;
   align-self: center;
-  font-family: "Abril Fatface";
-  font-weight: lighter;
-  font-size: 2rem;
-}
-.music__main .page__text {
-  width: 80%;
-  height: 300px;
-  padding: 0;
-  margin-top: 100px;
-  font-family: "Amiri";
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
+.aboutus {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  padding: 25px;
+}
+.aboutus__title {
+  font-family: "SuperLegendBoy";
+  font-size: 2.5rem;
+  text-align: center;
+  color: palevioletred;
+  text-shadow: 2px 3px 1px white;
+}
+.aboutus__descripcion {
+  padding: 10px;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  text-align: center;
+  color: #6b3f3f;
+}
+
+/* NAVBAR */
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .header__nav div .nav__linkcontainer {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100vw;
+    height: 20rem;
+    text-shadow: 2px 2px 0px white;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .header__nav div .nav__linkcontainer .nav__links .nav__item {
+    padding: 0.65rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    line-height: 2rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link:hover {
+    border: 0.5px solid white;
+    background-color: rgba(220, 101, 231, 0.8);
+    color: white;
+  }
+}
+
+/* ------------------------------------------- */
+/*                  SHOP                       */
+/* ------------------------------------------- */
+/* SHOP MAIN */
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop-main__title {
+    font-size: 4rem;
+    margin-left: 5px;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop-main__subtitle {
+    margin-top: -25px;
+    margin-left: 5px;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop-main__heart {
+    display: none;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop-main__selector {
+    align-self: flex-end;
+    margin-bottom: 2px;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop-main__sandia {
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    border-radius: 50%;
+    margin: 20px 20px 20px 20px;
+  }
+}
+
+/* SHOP - SECCIONES */
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop {
-    height: 100vh;
     display: grid;
-    grid-template-columns: 85px 1fr;
-    grid-template-rows: 50px 2fr 1fr;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: 0.15fr 1fr;
+    grid-template-rows: 3.75rem 1fr 2.2rem;
+    gap: 0.5rem;
+    height: 100vh;
+    width: 100vw;
+    padding: 0.625rem;
     overflow-x: hidden;
   }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop .shop-section__title {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    justify-self: flex-start;
+    justify-self: center;
     align-self: flex-start;
-    font-family: "SuperLegendBoy";
-    font-size: 3rem;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
-    color: white;
-    user-select: none;
+    margin-top: -1rem;
+    padding: 8px;
+    font-size: 4rem;
   }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop__title {
     grid-column: 1/2;
-    grid-row: 2;
-    margin-left: 0px;
-    font-family: "SuperLegendBoy";
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    font-size: 4rem;
+    grid-row: 1/4;
+    justify-self: center;
     align-self: center;
-    color: #f1b8d3;
-    text-shadow: 5px 2px 0px white;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    background-color: darkred;
   }
-  .shop__title-esp {
-    grid-column: 1/2;
-    grid-row: 2;
-    margin-left: 0px;
-    font-family: "SuperLegendBoy";
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    font-size: 4rem;
-    align-self: center;
-    color: #f1b8d3;
-    text-shadow: 5px 2px 0px white;
-  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop__cardcontainer {
     grid-column: 2/3;
     grid-row: 2/3;
-    max-width: 300px;
-    max-height: 500px;
-    width: 100%;
     display: flex;
-    overflow-x: scroll;
-    scrollbar-width: auto;
-    scroll-snap-align: start;
+    /* max-height: 16rem; */
   }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop__cardcontainer .shop-card {
+    padding: 0.8rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop__cardcontainer .shop-card__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    background-color: white;
-    height: 350px;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px 10px;
-    user-select: none;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1.5rem 1fr 1.5rem;
+    justify-items: center;
+    align-items: center;
+    height: 14rem;
+    width: 25rem;
+    border-radius: 0;
+    border: 10px dashed black;
   }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop__cardcontainer .shop-card__content--title {
-    font-family: "SuperLegendBoy";
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-start;
     font-size: 1rem;
-    text-align: center;
+    margin: 0;
   }
-  .shop__cardcontainer .shop-card__content--img {
-    width: 200px;
-    object-fit: cover;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
-  }
-  .shop__cardcontainer .shop-card__content--img_musica {
-    width: 200px;
-    object-fit: cover;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
-  }
-  .shop__cardcontainer .shop-card__content--img_rubacava {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
-  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop__cardcontainer .shop-card__content--description {
-    margin-top: 4px;
-    font-family: "SuperLegendBoy";
-    text-align: center;
-  }
-  .shop__cardcontainer .shop-card__content--description2 {
-    margin-top: 0px;
-  }
-  .shop__cardcontainer .shop-card__content--btn {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0;
+    font-size: 1rem;
     align-self: center;
-    z-index: 10;
-    width: 100px;
-    height: 20px;
-    padding: 2.5px 0px;
-    font-family: "SuperLegendBoy";
-    font-size: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.1rem;
-    background-color: black;
-    border-radius: 13px;
-    color: white;
-    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.527);
   }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop__cardcontainer .shop-card__content--img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin: 0;
+    width: 11rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop__cardcontainer .shop-card__content--img_musica {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin: 0;
+    width: 11rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop__cardcontainer .shop-card__content--img_musicFromMelee {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin: 0;
+    width: 13rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop__cardcontainer .shop-card__content--img_rubacava {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin: 0;
+    width: 13rem;
+    height: 11rem;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .shop__cardcontainer .shop-card__content--btn {
+    grid-column: 2;
+    grid-row: 2/3;
+    align-self: flex-end;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop .sel-container {
     grid-column: 1/3;
     grid-row: 3/4;
-    align-self: flex-start;
-    width: 100%;
-    margin-top: 40px;
+    align-self: flex-end;
     background-color: white;
+    padding: 0.3125rem;
   }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .shop .sel-container__selector {
-    position: relative;
-    top: 0;
-    width: 100%;
-    padding: 10px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+  }
+}
+
+/* FOOTER ROJO LANDSCAPE */
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: white;
   }
-  .shop .sel-container__selector--link {
-    margin: 2px 2px;
-    font-family: "SuperLegendBoy";
-    font-size: 20px;
-    text-align: justify;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer__rrss {
+    width: 300px;
+    align-self: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 10px;
   }
-  .shop .sel-container__selector--link a {
-    color: #f15dc5;
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer__rrss--img {
+    align-self: center;
+    width: 18px;
+    height: 18px;
   }
-  .shop .sel-container__selector--link:hover {
-    background-color: grey;
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form {
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form__container--title {
+    display: none;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form__container--fill {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: flex-end;
+    justify-self: center;
+    height: 40px;
     width: 200px;
+    font-family: "SuperLegendBoy";
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form__container--fill2 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: flex-start;
+    justify-self: center;
+    height: 40px;
+    width: 200px;
+    font-family: "SuperLegendBoy";
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form__container--textarea {
+    grid-column: 2;
+    grid-row: 1/3;
+    height: 150px;
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer .page-form__container div {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .page-footer__arrow {
+    margin-top: -60px;
+    justify-self: flex-start;
+    align-self: center;
   }
 }
 

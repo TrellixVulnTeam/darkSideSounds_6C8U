@@ -89,9 +89,8 @@
             }    
         }
         .nav__linkcontainer{
-            background-color: rgba(255, 255, 255, .95);
-            border-radius: 1px;
-            height: 600px;
+            background-color: rgba(255, 255, 255, 0.95);
+            height: 30rem;
             .nav__links{
                 .nav__item{
                     padding: 15px;
@@ -102,17 +101,13 @@
                         font-family: 'SuperLegendBoy', 'Amiri';
                         font-size: 2.3rem;
                         letter-spacing: 4px;
-                        line-height: 3.2rem;
+                        line-height: 2rem;
                         color: pink;
-                        text-shadow: 4px 4px 0px rgba(220, 101, 231, 0.8);
+                        text-shadow: 4px 4px 1px rgba(220, 101, 231, 0.8);
                         &:hover{
                             border: .5px solid white;
                             background-color: rgba(220, 101, 231, 0.8);
                             color: rgb(255, 255, 255);
-                            transition: 
-                            border .5s ease-in,
-                            background-color .3s ease-in,
-                            color .5s ease-in-out .1s;
                         }
                     }
                 }

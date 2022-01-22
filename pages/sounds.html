@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SEO KEYS -->
+    <meta name="description" content="dark side sounds diseño sonoro y composicion musical para videojuegos">
+    <meta name="keywords" content="videogames, music, sound, xbox, playstation, microsoft, steam, fmod, wise">
+    <!-- Font Antic Didone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet"> 
+    <!-- Font Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <!-- Font Abril Fatface -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/favicon/faviconDSS.png" type="image/x-icon">
+    <!--Animation on Scroll CDN css stylesheet-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FONT AWESOME STYLESHEET -->
+    <script src="https://kit.fontawesome.com/b4fc7efcd0.js" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS STYLESHEET -->
     <link rel="stylesheet" href="../css/main.css">
-    <title>Document</title>
+    <title>dark side sounds - diseño sonoro musica</title>
 </head>
 <body>
     <header>
         <nav class="navbar header__nav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand" href="index.html">
                     <img class="nav__logo" src="" alt="">
                 </a>      
-                <button class="navbar-toggler collapsed navbar-dark d-flex flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="toggler-icon top-bar"></span>
-                    <span class="toggler-icon middle-bar"></span>
-                    <span class="toggler-icon bottom-bar"></span>
+                <button class="pages-button navbar-toggler collapsed navbar-dark d-flex flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="pages-toggler-icon top-bar"></span>
+                    <span class="pages-toggler-icon middle-bar"></span>
+                    <span class="pages-toggler-icon bottom-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse nav__linkcontainer" id="collapsibleNavbar">
                     <ul class="nav__links navbar-nav container d-flex justify-content-evenly">            
@@ -35,7 +56,51 @@
             </div>    
         </nav>
     </header>
+    <main class="multimedia">
+        <h1 class="multimedia__title">SOUNDS</h1>
+        <img class="multimedia__gif" src="../assets/shop-img/streetLandscape.gif" alt="paisaje urbano">
+        <p class="multimedia__descripcion">
+            Conocemos las últimas tecnologías de implementación para contenido multimedia.
+            Somos expertos en generar paisajes y ambientación mediante el uso del sonido.
+        </p>
+    </main>
     
+    <footer class="footer">
+        <h3 class="footer__title">CONTACTO</h3>
+        <ul class="footer__rrss">
+            <li><a href="https://www.youtube.com/" target="_blank">
+                <img class="footer__rrss--img" src="../assets/ico/youTube.svg" alt="youtube"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank">
+                <img class="footer__rrss--img" src="../assets/ico/facebook.svg" alt="facebook"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank">
+                <img class="footer__rrss--img" src="../assets/ico/instagram.svg" alt="instagram"></a></li>
+            <li><a href="https://www.twitter.com/?lang=es" target="_blank">
+                <img class="footer__rrss--img" src="../assets/ico/twitter.svg" alt="twitter"></a></li>
+            <li><a href="https://www.soundcloud.com/" target="_blank">
+                <img class="form__ico--img" src="../assets/ico/soundCloud.svg" alt="soundcloud"></a></li>
+            <li><a href="https://www.bandcamp.com/" target="_blank">
+                <img class="form__ico--img" src="../assets/ico/bandCamp.svg" alt="bandcamp"></a></li>
+            <li><a href="https://www.spotify.com/ar/" target="_blank">
+                <img class="form__ico--img" src="../assets/ico/spotify.svg" alt="spotify"></a></li>
+        </ul>
+        <form class="formulario" action="servidor.php" method="post">
+                <div class="form__container">
+                    <h4 class="form__title">Leave us a Message</h4>                
+                    <label for="nombre"></label>  
+                    <input class="form__fill" type="text" name="nombre" placeholder="Your name" required>
+                    <label for="email"></label>  
+                    <input class="form__fill" type="email" name="email" placeholder="Your E-mail" required>
+                    <textarea class="form__textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
+                    <div>
+                        <input class="form__button" type="submit" value="SEND">
+                        <input class="form__button" type="reset" value="RESET">
+                    </div>
+                </div>
+        </form>
+        <a class="form__ico--arriba" href="#top">
+                <img class="flecha" src="../assets/punteros/Lvlup.png" width="100px" height="50px" alt="ir arriba">
+        </a>
+    </footer>
 
 
 
@@ -44,10 +109,10 @@
 
 
 
-
-
-
-
+    
+    <!-- main.js Script-->
+    <script src="../js/main.js"></script>
+    <!-- Bootstrap Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,156 +1,336 @@
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-    .shop{
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 85px 1fr;
-        grid-template-rows: 50px 2fr 1fr;
-        align-items: center;
-        justify-items: center;
-        overflow-x: hidden;
-        .shop-section__title{
-            grid-column: 1 / 3;
-            grid-row: 1 / 2;
-            justify-self: flex-start;
-            align-self: flex-start;
-            font-family: "SuperLegendBoy";
-            font-size: 3rem;
-            text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
-            color: white;
-            user-select: none;
-        }
-        &__title{
-            grid-column: 1 / 2;
-            grid-row: 2;
-            margin-left: 0px;
-            font-family: "SuperLegendBoy";
-            writing-mode: vertical-lr;
-            text-orientation: upright;
-            font-size: 4rem;
-            align-self: center;
-            color: rgba(241, 184, 211, 1);
-            text-shadow: 5px 2px 0px rgba(255, 255, 255, 1);   
-        }
-        &__title-esp{
-            grid-column: 1 / 2;
-            grid-row: 2;
-            margin-left: 0px;
-            font-family: "SuperLegendBoy";
-            writing-mode: vertical-lr;
-            text-orientation: upright;
-            font-size: 4rem;
-            align-self: center;
-            color: rgba(241, 184, 211, 1);
-            text-shadow: 5px 2px 0px rgba(255, 255, 255, 1);   
-        }
-        &__cardcontainer{
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-    
-            max-width: 300px;
-            max-height: 500px;
-            width: 100%;
-    
-            display: flex;
-            
-            overflow-x: scroll;
-            scrollbar-width: auto;
-            scroll-snap-align: start;
-            
-            .shop-card{
-                &__content{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-content: center;
-                    background-color: white;
-                    height: 350px;
-                    padding: 10px;
-                    border-radius: 10px;
-                    margin: 10px 10px;
-                    user-select: none;
-                    &--title{
-                        font-family: "SuperLegendBoy";
-                        font-size: 1rem;
-                        text-align: center;
+
+
+
+/* NAVBAR */
+
+.header__nav{
+    div{
+        .nav__linkcontainer{
+            @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    background-color: rgba(255, 255, 255, .95);
+                    width: 100vw;
+                    height: 20rem;
+                    text-shadow: 2px 2px 0px white;
+                }
+            .nav__links{
+                .nav__item{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        padding: .65rem;
                     }
-                    &--img{
-                        width: 200px;
-                        object-fit: cover;
-                        box-shadow: 5px 5px 3px rgba(0, 0, 0, .9);
-                    }
-                    &--img_musica{
-                        width: 200px;
-                        object-fit: cover;
-                        box-shadow: 5px 5px 3px rgba(0, 0, 0, .9);
-                    }
-                    &--img_rubacava{
-                        width: 200px;
-                        height: 250px;
-                        object-fit: cover;
-                        box-shadow: 5px 5px 3px rgba(0, 0, 0, .9);
-                    }
-    
-                    &--description{
-                        margin-top: 4px;
-                        font-family: "SuperLegendBoy";
-                        text-align: center;
-                    }
-                    &--description2{
-                        margin-top: 0px;
-                    }
-                    &--btn{
-                        align-self: center;
-                        z-index: 10;
-                        width: 100px;
-                        height: 20px;
-                        padding: 2.5px 0px;
-                        font-family: "SuperLegendBoy";
-                        font-size: 10px;
-                        text-align: center;
-                        text-transform: uppercase;
-                        text-decoration: none;
-                        letter-spacing: .1rem;
-                        background-color: rgb(0, 0, 0);
-                        border-radius: 13px;
-                        color: rgb(255, 255, 255);
-                        box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.527);
+                    .nav__link{
+                        @media only screen and (min-width : 321px)
+                        and (orientation: landscape){
+                            font-size: 2rem;
+                            letter-spacing: 4px;
+                            line-height: 2rem;                            
+                        }
+                        &:hover{
+                            @media only screen and (min-width : 321px)
+                            and (orientation: landscape){
+                                border: .5px solid white;
+                                background-color: rgba(220, 101, 231, 0.8);
+                                color: rgb(255, 255, 255);
+                            }
+                        }
                     }
                 }
             }
         }
-        .sel-container{
-            grid-column: 1 / 3;
-            grid-row: 3 / 4;
-            align-self: flex-start;
-            width: 100%;
-            margin-top: 40px;
-            background-color: white;
-            &__selector{
-                position: relative;
-                top:0;
-                width: 100%;
-                padding: 10px;
-                display: flex;
-                flex-direction: column;
-                background-color: rgba(255, 255, 255, 1);
-                &--link{
-                    margin: 2px 2px;
-                    font-family: "SuperLegendBoy";
-                    font-size: 20px;
-                    text-align: justify;
-                    letter-spacing: 2px;
-                    text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
-                    a {
-                        color: rgb(241, 93, 197);
-                    }
-                    &:hover{
-                        background-color: grey;
-                        width: 200px;
-                    }
-                }
-            }        
+    }
+}
+
+/* ------------------------------------------- */ 
+/*                  SHOP                       */
+/* ------------------------------------------- */
+
+/* SHOP MAIN */
+.shop-main{
+    &__title{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            font-size: 4rem;
+            margin-left: 5px;
         }
     }
-} 
+    &__subtitle {
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+        margin-top: -25px;
+        margin-left: 5px;
+        }
+    }
+    &__heart{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+        display: none;
+        }
+    }   
+    &__selector{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            align-self: flex-end;
+            margin-bottom: 2px;
+        }
+    }
+    &__sandia{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            position: absolute;
+            top: 130px;
+            right: 20px;
+            border-radius: 50%;
+            margin: 20px 20px 20px 20px;
+        }
+    }
+}
 
+
+/* SHOP - SECCIONES */
+.shop{
+    @media only screen and (min-width : 321px)
+    and (orientation: landscape){
+        display: grid;
+        grid-template-columns: .15fr 1fr;
+        grid-template-rows: 3.75rem 1fr 2.2rem;
+        gap: .5rem;
+        height: 100vh;
+        width: 100vw;
+        padding: 0.625rem;
+        overflow-x: hidden;
+    }
+    .shop-section__title{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            justify-self: center;
+            align-self: flex-start;
+            margin-top: -1rem;
+            padding: 8px;
+            font-size: 4rem;
+        }
+    }
+    &__title{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+            justify-self: center;
+            align-self: center;
+            font-size: 3rem;
+            letter-spacing: .3rem;
+            background-color: darkred;
+        }
+    }
+    &__cardcontainer{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            display: flex;
+            /* max-height: 16rem; */
+        }
+        .shop-card{
+            @media only screen and (min-width : 321px)
+            and (orientation: landscape){
+                padding: .8rem;
+            }
+            &__content{
+                @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    display: grid;
+                    grid-template-columns: 1fr .5fr;
+                    grid-template-rows: 1.5rem 1fr 1.5rem;
+                    justify-items: center; 
+                    align-items: center;
+                    height: 14rem;
+                    width: 25rem;
+                    border-radius: 0;
+                    border: 10px dashed black;
+                }
+                &--title{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                        align-self: flex-start;
+                        font-size: 1rem;
+                        margin: 0;
+                    }
+                }
+                &--description{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                        margin: 0;
+                        font-size: 1rem;
+                        align-self: center;
+                    }
+                }
+                &--img{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 4;
+                        margin: 0;
+                        width: 11rem;
+                    }
+                }
+                &--img_musica{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 4;
+                        margin: 0;
+                        width: 11rem;
+                    }
+                }
+                &--img_musicFromMelee{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 4;
+                        margin: 0;
+                        width: 13rem;
+                    }
+                }
+                &--img_rubacava{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 4;
+                        margin: 0;
+                        width: 13rem;
+                        height: 11rem;
+                    }
+                }
+                &--btn{
+                    @media only screen and (min-width : 321px)
+                    and (orientation: landscape){
+                        grid-column: 2;
+                        grid-row: 2 / 3;
+                        align-self: flex-end;                        
+                    }
+                }
+            }
+        }
+    }
+    .sel-container{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            align-self: flex-end;
+            background-color: white;
+            padding: 0.3125rem;
+        }
+        &__selector{
+            @media only screen and (min-width : 321px)
+            and (orientation: landscape){
+                flex-direction: row;
+                align-content: center;
+                justify-content: space-around;
+            }
+        }        
+    }
+}
+
+
+/* FOOTER ROJO LANDSCAPE */
+.page-footer{
+    @media only screen and (min-width : 321px)
+    and (orientation: landscape){
+        height: 100vh;
+        width: 100vw;
+        display:flex;
+        flex-direction: column;
+    }
+    &__rrss{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            width: 300px;
+            align-self: center;
+            justify-content: space-around;
+            display: flex;
+            padding: 10px;      
+        }
+        &--img{
+            @media only screen and (min-width : 321px)
+            and (orientation: landscape){
+                align-self: center;
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    .page-form{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            width: 100vw;
+        }
+        &__container{
+            @media only screen and (min-width : 321px)
+            and (orientation: landscape){
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 100px 1fr;
+                }
+            &--title{
+                @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    display: none;
+                }
+            }
+            &--fill{
+                @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: flex-end;
+                    justify-self: center;
+                    height: 40px;
+                    width: 200px;
+                    font-family: "SuperLegendBoy";
+                }
+            }               
+            &--fill2{
+                @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: flex-start;
+                    justify-self: center;
+                    height: 40px;
+                    width: 200px;
+                    font-family: "SuperLegendBoy";
+                }
+            }               
+            &--textarea{
+                @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    grid-column: 2;
+                    grid-row: 1 / 3;
+                    height: 150px;
+                    width: 300px;
+                }
+            }
+            div{
+                @media only screen and (min-width : 321px)
+                and (orientation: landscape){
+                    grid-column: 1;
+                    grid-row: 2;
+                    justify-self: center;
+                }
+            }    
+        }
+    }
+    &__arrow{
+        @media only screen and (min-width : 321px)
+        and (orientation: landscape){
+            margin-top: -60px;
+            justify-self: flex-start;
+            align-self: center;
+        }
+    }
+}
