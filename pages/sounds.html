@@ -58,16 +58,17 @@
     </header>
     <main class="multimedia">
         <h1 class="multimedia__title">SOUNDS</h1>
-        <img class="multimedia__gif" src="../assets/shop-img/streetLandscape.gif" alt="paisaje urbano">
+        <img class="multimedia__animation" src="../assets/shop-img/streetLandscape.gif" alt="paisaje urbano">
         <p class="multimedia__descripcion">
-            Conocemos las últimas tecnologías de implementación para contenido multimedia.
-            Somos expertos en generar paisajes y ambientación mediante el uso del sonido.
+            Video game sound design is the art of creating and adding audio elements 
+            to a video game. This involves creating entire libraries of custom sound 
+            effects to give the game a sense of realism and uniqueness.
         </p>
     </main>
     
-    <footer class="footer">
-        <h3 class="footer__title">CONTACTO</h3>
-        <ul class="footer__rrss">
+    <footer id="page-footer" class="page-footer">
+        <h3 class="page-footer__title">CONTACTO</h3>
+        <ul class="page-footer__rrss">
             <li><a href="https://www.youtube.com/" target="_blank">
                 <img class="footer__rrss--img" src="../assets/ico/youTube.svg" alt="youtube"></a></li>
             <li><a href="https://www.facebook.com/" target="_blank">
@@ -77,39 +78,30 @@
             <li><a href="https://www.twitter.com/?lang=es" target="_blank">
                 <img class="footer__rrss--img" src="../assets/ico/twitter.svg" alt="twitter"></a></li>
             <li><a href="https://www.soundcloud.com/" target="_blank">
-                <img class="form__ico--img" src="../assets/ico/soundCloud.svg" alt="soundcloud"></a></li>
+                <img class="form__rrss--img" src="../assets/ico/soundCloud.svg" alt="soundcloud"></a></li>
             <li><a href="https://www.bandcamp.com/" target="_blank">
-                <img class="form__ico--img" src="../assets/ico/bandCamp.svg" alt="bandcamp"></a></li>
+                <img class="form__rrss--img" src="../assets/ico/bandCamp.svg" alt="bandcamp"></a></li>
             <li><a href="https://www.spotify.com/ar/" target="_blank">
-                <img class="form__ico--img" src="../assets/ico/spotify.svg" alt="spotify"></a></li>
+                <img class="form__rrss--img" src="../assets/ico/spotify.svg" alt="spotify"></a></li>
         </ul>
-        <form class="formulario" action="servidor.php" method="post">
-                <div class="form__container">
-                    <h4 class="form__title">Leave us a Message</h4>                
+            <form class="page-form" action="servidor.php" method="post">
+                <div class="page-form__container">
+                    <h4 class="page-form__container--title">Leave us a Message</h4>                
                     <label for="nombre"></label>  
-                    <input class="form__fill" type="text" name="nombre" placeholder="Your name" required>
+                    <input class="page-form__container--fill" type="text" name="nombre" placeholder="Your name" required>
                     <label for="email"></label>  
-                    <input class="form__fill" type="email" name="email" placeholder="Your E-mail" required>
-                    <textarea class="form__textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
+                    <input class="page-form__container--fill2" type="email" name="email" placeholder="Your E-mail" required>
+                    <textarea class="page-form__container--textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
                     <div>
-                        <input class="form__button" type="submit" value="SEND">
-                        <input class="form__button" type="reset" value="RESET">
+                        <input class="page-form__button" type="submit" value="SEND">
+                        <input class="page-form__button" type="reset" value="RESET">
                     </div>
                 </div>
-        </form>
-        <a class="form__ico--arriba" href="#top">
+            </form>
+            <a class="page-footer__arrow" href="#top">
                 <img class="flecha" src="../assets/punteros/Lvlup.png" width="100px" height="50px" alt="ir arriba">
-        </a>
+            </a>
     </footer>
-
-
-
-
-
-
-
-
-    
     <!-- main.js Script-->
     <script src="../js/main.js"></script>
     <!-- Bootstrap Script-->

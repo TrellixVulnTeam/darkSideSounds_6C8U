@@ -56,231 +56,195 @@
             </div>    
         </nav>
     </header>
+    <!-- SHOP MAIN SECTION -->
     <main class="shop-main">
         <h1 class="shop-main__title">SHOP</h1>
         <h2 class="shop-main__subtitle">choose your destiny!</h2>
-        <div class="shop-main__heart">
-            <img class="shop-main__heart--icon" src="../assets/punteros/punterovertical.png" alt="">
-            <img class="shop-main__heart--icon" src="../assets/punteros/punterovertical.png" alt="">
-            <img class="shop-main__heart--icon" src="../assets/punteros/punterovertical.png" alt="">       
-        </div>
-        <!-- Selector de Secciones -->
-        <div class="shop-main__selector">
-            <div class="shop-main__selector--link"><a href="#merch">merch</a></div>
-            <div class="shop-main__selector--link"><a href="#sonidos">sonidos</a></div>
-            <div class="shop-main__selector--link"><a href="#musica">musica</a></div>
-            <div class="shop-main__selector--link"><a href="#cursos">cursos</a></div>
-            <div class="shop-main__selector--link"><a href="#page-footer">contacto</a></div>
-        </div>
-        <div class="shop-main__sandia">
-            <img src="../assets/shop-img/V5KM.gif" width="110px" height="100px" alt="gif">
+        <!-- MENU DE OPCIONES  -->
+        <div class="main-selector">
+            <div class="main-selector__list">
+                <div class="main-selector__list--link"><a href="#merch">merch</a></div>
+                <div class="main-selector__list--link"><a href="#sonidos">sounds</a></div>
+                <div class="main-selector__list--link"><a href="#musica">music</a></div>
+                <div class="main-selector__list--link"><a href="#cursos">learn</a></div>
+                <div class="main-selector__list--link"><a href="#page-footer">contact</a></div>
+            </div>
+            <div class="main-selector__ico">
+                <img src="../assets/shop-img/V5KM.gif" alt="gif">
+            </div>
         </div>
     </main>
     <!-- cierre de seccion-->
-    <!-- MERCH -->
-    <section>
-        <section id="merch">
-            <article class="shop">
-                <h2 class="shop-section__title">SHOP</h2>
-                <h2 class="shop__title">MERCH</h2>
-                <!-- SLIDER - Contenedor de tarjetas (remeras) -->
-                <section class="shop__cardcontainer">                
-                    <!-- Remera ::beforeBurner:: -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::beforeBurner::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/reme-throughpipes.png" alt="el viaje de mario, a traves de los">
-                            <p class="shop-card__content--description">sizes s-xxl</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>             
-                        </div>
-                    </div>
-                    <!-- Remera ::skyrunner:: -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::skyRunner::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/reme-stepsonthesky.png" alt="pasos en el cielo, como luke">
-                            <p class="shop-card__content--description">sizes s-xxl</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>
-                    <!-- Remera ::greySounds:: -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::greySounds::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/reme-greysounds.png" alt="">
-                            <p class="shop-card__content--description">sizes s-xxl</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>            
-                    </div>
-                    <!-- Remera ::AfterBurnerII:: -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::BeforeManny!::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/reme-beforeburner.png" alt="manny calavera">
-                            <p class="shop-card__content--description">M a XXL</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>                
-                </section>
-                <!-- selector de secciones -->
-                <section class="sel-container">
-                    <div class="sel-container__selector">
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU PRINCIPAL</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#sonidos">ADELANTE</a></div> 
-                    </div>                
-                </section>
-            </article>
-        </section>
+    <!-- SHOP! -->
+    <section">
+        <!-- Seccion MERCH-->
+        <article id="merch" class="shop">
+            <h2 class="shop__title">SHOP</h2>
+            <h2 class="shop__subtitle">MERCH</h2>
+            <!-- SLIDER - Contenedor de tarjetas (remeras) -->
+            <section class="cards">                
+                <!-- Remera ::beforeBurner:: -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::beforeBurner::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/reme-throughpipes.png" alt="el viaje de mario, a traves de los">
+                    <p class="cards__card--description">sizes s-xxl</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>             
+                </div>                
+                <!-- Remera ::skyrunner:: -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::skyRunner::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/reme-stepsonthesky.png" alt="pasos en el cielo, como luke">
+                    <p class="cards__card--description">sizes s-xxl</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>                
+                <!-- Remera ::greySounds:: -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::greySounds::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/reme-greysounds.png" alt="">
+                    <p class="cards__card--description">sizes s-xxl</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>                
+                <!-- Remera ::AfterBurnerII:: -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::BeforeManny!::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/reme-beforeburner.png" alt="manny calavera">
+                    <p class="cards__card--description">M a XXL</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>               
+            </section>
+            <!-- selector de secciones -->
+            <section class="sel-container">
+                <div class="sel-container__selector">
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU</a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#sonidos"> >> </a></div> 
+                </div>                
+            </section>
+        </article>
         <!-- cierre de seccion-->
         <!-- SECCION SONIDOS -->
-        <section id="sonidos">
-            <article class="shop">
-                <h2 class="shop-section__title">SHOP</h2>
-                <h2 class="shop__title">SOUND</h2>
-                <!-- SLIDER - Contenedor de tarjetas (samples) -->
-                <div class="shop__cardcontainer">
-                    <!-- tarjeta ORGANIC -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::organic::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/fungusgif.gif" alt="organismos vivos">
-                            <p class="shop-card__content--description">0rgAnism#s</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>             
-                        </div>
-                    </div>
-                    <!-- tarjeta ::INDUSTRIAL::-->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::industrial::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/industry.gif" alt="industrial fuerza dureza">
-                            <p class="shop-card__content--description">M@qu1n@ria</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>        
-                    <!-- tarjeta ::natural:: -->        
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::natural::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/natural-landscape.png" alt="paisaje natural">
-                            <p class="shop-card__content--description">Landscapes</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>        
-                    <!-- tarjeta ::DEEP MINDS:: -->        
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::deepMinds::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/deepminds.png" alt="pensamientos profundos">
-                            <p class="shop-card__content--description">M a XXL</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>                
+        <article id="sonidos" class="shop">
+            <h2 class="shop__title">SHOP</h2>
+            <h2 class="shop__subtitle">SOUND</h2>
+            <!-- SLIDER - Contenedor de tarjetas (samples) -->
+            <div class="cards">
+                <!-- tarjeta ORGANIC -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::organic::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/fungusgif.gif" alt="el viaje de mario, a traves de los">
+                    <p class="cards__card--description">0rgAnism#s</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>             
                 </div>
-                <!-- selector de secciones -->
-                <section class="sel-container">
-                    <div class="sel-container__selector">
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#merch">ATRAS</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU PRINCIPAL</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#musica">ADELANTE</a></div> 
-                    </div>
-                </section>
-            </article>
-        </section>
+                <!-- tarjeta ::INDUSTRIAL::-->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::industrial::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/industry.gif" alt="el viaje de mario, a traves de los">
+                    <p class="cards__card--description">M@qu1n@ria</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>             
+                </div>               
+                <!-- tarjeta ::natural:: -->        
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::natural::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/natural-landscape.png" alt="paisaje natural">
+                    <p class="cards__card--description">Landscapes</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>      
+                <!-- tarjeta ::DEEP MINDS:: -->        
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::deepMinds::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/deepminds.png" alt="pensamientos profundos">
+                    <p class="cards__card--description">M a XXL</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>             
+            </div>
+            <!-- selector de secciones -->
+            <section class="sel-container">
+                <div class="sel-container__selector">
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#merch"><<</a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU</a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#musica">>></a></div> 
+                </div>
+            </section>
+        </article>
         <!-- cierre de seccion-->
         <!-- SECCION MUSICA -->
-        <section id="musica">
-            <article class="shop">
-                <h2 class="shop-section__title">SHOP</h2>
-                <h2 class="shop__title">MUSIC</h2>
-                <div class="shop__cardcontainer">
-                    <!-- tarjeta ::chiptune::-->                               
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::chiptune::</h4>
-                            <img class="shop-card__content--img_musica" src="../assets/shop-img/chiptune.gif" alt="saludo personajes retro">
-                            <p class="shop-card__content--description">Glory of Chiptune</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>     
-                    <!-- tarjeta ::musicFromMelee:: -->           
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::Melee::</h4>
-                            <img class="shop-card__content--img_musicFromMelee" src="../assets/shop-img/guythreep.gif" alt="musica de piratas">
-                            <p class="shop-card__content--description">Guybrush Dreams</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>                
-                    </div>
-                    <!-- tarjeta ::rubacava-noire:: -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::rubacava-noire::</h4>
-                            <img class="shop-card__content--img_rubacava" src="../assets/shop-img/manny.gif" alt="jazz contemporaneo cine noir">
-                            <p class="shop-card__content--description">cigarettes a.s</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>                
-                    </div>
+        <article id="musica" class="shop">
+            <h2 class="shop__title">SHOP</h2>
+            <h2 class="shop__subtitle">MUSIC</h2>
+            <div class="cards">
+                <!-- tarjeta ::chiptune::-->                               
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::chiptune::</h4>
+                    <img class="cards__card--img_musica" src="../assets/shop-img/chiptune.gif" alt="saludo personajes retro">
+                    <p class="cards__card--description">Glory of Chiptune</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
                 </div>
-                <!-- selector de secciones -->
-                <section class="sel-container">
-                    <div class="sel-container__selector">
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#sonidos">ATRAS</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU PRINCIPAL</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#cursos">ADELANTE</a></div>    
-                    </div>
-                </section>
-            </article>
-        </section>
+                <!-- tarjeta ::musicFromMelee:: -->           
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::Melee::</h4>
+                    <img class="cards__card--img_musica2" src="../assets/shop-img/guythreep.gif" alt="musica de piratas">
+                    <p class="cards__card--description">Guybrush Dreams</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>                
+                <!-- tarjeta ::rubacava-noire:: -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::rubacava-noire::</h4>
+                    <img class="cards__card--img_musica3" src="../assets/shop-img/manny.gif" alt="jazz contemporaneo cine noir">
+                    <p class="cards__card--description">cigarettes atr</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>                
+            </div>
+            <!-- selector de secciones -->
+            <section class="sel-container">
+                <div class="sel-container__selector">
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#sonidos"><<</a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU</a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#cursos">>></a></div>    
+                </div>
+            </section>
+        </article>
         <!-- cierre de seccion-->
         <!-- SECCION CURSOS -->
-        <section id="cursos">
-            <article class="shop">
-                <h2 class="shop-section__title">SHOP</h2>
-                <h2 class="shop__title">LEARN</h2>
-                <div class="shop__cardcontainer">
-                    <!-- tarjeta curso de REAPER -->
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::dawInicial::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/DAW.png" alt="curso de DAW reaper">
-                            <p class="shop-card__content--description">Reaper a fondo</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>         
-                    <!-- tarjeta curso de VGM I -->       
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::VGM I::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/produccion.png" alt="curso de produccion 1">
-                            <p class="shop-card__content--description">Prod. VGM I</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>     
-                    <!-- tarjeta curso de VGM II -->           
-                    <div class="shop-card">
-                        <div class="shop-card__content">
-                            <h4 class="shop-card__content--title">::VGM II::</h4>
-                            <img class="shop-card__content--img" src="../assets/shop-img/produccion II.png" alt="curso de produccion 2">
-                            <p class="shop-card__content--description">Prod. VGM II</p>
-                            <a class="shop-card__content--btn" href="pages/contact.html">BUY!</a>
-                        </div>
-                    </div>                
+        <article id="cursos" class="shop">
+            <h2 class="shop__title">SHOP</h2>
+            <h2 class="shop__subtitle">LEARN</h2>
+            <!-- Contenedor "slider" de las tarjetas -->
+            <div class="cards">
+                <!-- tarjeta curso de REAPER -->
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::dawInicial::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/DAW.png" alt="curso de DAW reaper">
+                    <p class="cards__card--description">Reaper a fondo</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>                      
+                <!-- tarjeta curso de VGM I -->       
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::VGM I::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/produccion.png" alt="curso de produccion 1">
+                    <p class="cards__card--description">Prod. VGM I</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
                 </div>
-                <!-- selector de secciones -->
-                <section class="sel-container">
-                    <div class="sel-container__selector">
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#musica">ATRAS</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU PRINCIPAL</a></div>
-                        <div class="sel-container__selector--link"><a class="section-links-selectors" href="#page-footer">ADELANTE</a></div> 
-                    </div>
-                </section>
-            </article>
-        </section>
+                <!-- tarjeta curso de VGM II -->           
+                <div class="cards__card">
+                    <h4 class="cards__card--title">::VGM II::</h4>
+                    <img class="cards__card--img" src="../assets/shop-img/produccion II.png" alt="curso de produccion 2">
+                    <p class="cards__card--description">Prod. VGM II</p>
+                    <a class="cards__card--btn" href="pages/contact.html">BUY!</a>
+                </div>              
+            </div>
+            <!-- selector de secciones -->
+            <section class="sel-container">
+                <div class="sel-container__selector">
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#musica"> << </a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#top">MENU PRINCIPAL</a></div>
+                    <div class="sel-container__selector--link"><a class="section-links-selectors" href="#page-footer"> >> </a></div> 
+                </div>
+            </section>
+        </article>
     </section>
     <!-- Final de seccion SHOP-->
     <!-- FOOTER-->
     <footer id="page-footer" class="page-footer">
-        <h3 class="page-footer__title">CONTACTO</h3>
+        <h3 class="page-footer__title">CONTACT</h3>
         <ul class="page-footer__rrss">
             <li><a href="https://www.youtube.com/" target="_blank">
                 <img class="footer__rrss--img" src="../assets/ico/youTube.svg" alt="youtube"></a></li>
@@ -299,7 +263,7 @@
         </ul>
             <form class="page-form" action="servidor.php" method="post">
                 <div class="page-form__container">
-                    <h4 class="page-form__container--title">Leave us a Message</h4>                
+                    <h4 class="page-form__container--title">We wanna hear from you</h4>                
                     <label for="nombre"></label>  
                     <input class="page-form__container--fill" type="text" name="nombre" placeholder="Your name" required>
                     <label for="email"></label>  

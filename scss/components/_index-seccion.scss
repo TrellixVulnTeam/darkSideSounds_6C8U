@@ -5,11 +5,8 @@
 /* Sección index Section - Carrusel de tarjetas */
 
 .isection{
-    height: 100vh;
-    
+    height: 100vh;   
     background-color: black;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
     overflow-x: hidden;
     cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
     &__arrowL, &__arrowR{
@@ -57,7 +54,6 @@
         }
     }
 }     
-/* clases que se agregan con addClass en Js */
 
 /* Tarjetas */ 
 .card{
@@ -65,13 +61,13 @@
     width: 200px;
     height: 350px;
     background-color: white;
+    transition: transform .3s ease-in-out;
+    overflow: hidden;
+    user-select: none;
+    /* border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%; */
     box-shadow: 8px 5px 10px rgba(247, 129, 227, 0.3),
     inset 10px 10px 50px rgba(129, 107, 59, 0.76);
-    transition: transform .3s ease-in-out;
-    user-select: none;
-    overflow: hidden;
-    border-top-right-radius: 10%;
-    border-bottom-left-radius: 10%;
     cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
     &::before{
         content:"";
@@ -89,39 +85,39 @@
     }
     &::after{
         content: "";
+        z-index: 4;
         position: absolute;
-        top: 310px;
         right: 100px;
+        top: 310px;
         width: 200%;
         height: 150px;
         background: rgba(238, 187, 231, .7);
         box-shadow: 20px 20px 40px rgb(255, 255, 255);
         transform: skewY(40deg);
-        z-index: 4;
         filter: blur(4px);
     }
     &:hover::after{
         animation: shine .3s ease-in-out .5s;
     }
     &__content {
-        padding:20px;
-        height: 350px;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         position: relative;
+        height: 350px;
+        padding:20px;
         color: rgb(0, 0, 0);
-        z-index: 2;
-        transition: color .7s ease-in;
         text-shadow: 1px 1px 5px rgba(0, 0, 0, .8);
+        transition: color .7s ease-in;
         &:hover{
             color: rgb(255, 255, 255);  
         }
         &--title {
+            margin: 10px 0;
             font-family: "SuperLegendBoy";
             font-weight: 600;
             text-align: center;
-            margin: 10px 0;
             font-size: 1.4rem;
             border-top: 2px double black;
             border-bottom: 2px double black;
