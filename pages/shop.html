@@ -78,7 +78,7 @@
     </main>
     <!-- cierre de seccion-->
     <!-- SECCION SHOP! -->
-    <section">
+    <section id="shop-father">
     <!-- SECCION MUSICA -->
         <article id="musica" class="shop">
             <h2 class="shop__title">SHOP</h2>
@@ -106,7 +106,7 @@
             <!-- selector de secciones -->
             <section class="selector">
                 <li class="selector__link"><a class="section-links-selectors" href="#top">menu</a></li>
-                <li class="selector__link"><a class="section-links-selectors" href="#sonidos">to sounds</a></li>    
+                <li class="selector__link"><a class="section-links-selectors" href="#sonidos"><i class="fas fa-arrow-down"></i></a></li>    
             </section>
         </article>
         <!-- cierre de seccion-->
@@ -120,36 +120,36 @@
                 <div class="cards__card">
                     <h4 class="cards__card--title">::organic::</h4>
                     <img class="cards__card--img" src="../assets/shop-img/fungusgif.gif" alt="el viaje de mario, a traves de los">
-                    <p class="cards__card--description">From Funghi to Human Body</p>
+                    <p class="cards__card--description">From Funghi to Human</p>
                     <a class="cards__card--btn" href="pages/contact.html">learn more</a>             
                 </div>
                 <!-- tarjeta ::INDUSTRIAL::-->
                 <div class="cards__card">
                     <h4 class="cards__card--title">::industrial::</h4>
                     <img class="cards__card--img" src="../assets/shop-img/industry.gif" alt="el viaje de mario, a traves de los">
-                    <p class="cards__card--description">Heavy Machinery and Crafting</p>
+                    <p class="cards__card--description">Heavy Machinery</p>
                     <a class="cards__card--btn" href="pages/contact.html">learn more</a>             
                 </div>               
                 <!-- tarjeta ::natural:: -->        
                 <div class="cards__card">
                     <h4 class="cards__card--title">::natural::</h4>
                     <img class="cards__card--img" src="../assets/shop-img/natural-landscape.png" alt="paisaje natural">
-                    <p class="cards__card--description">Landscapes and Soundscapes</p>
+                    <p class="cards__card--description">Landscapes Soundscapes</p>
                     <a class="cards__card--btn" href="pages/contact.html">learn more</a>
                 </div>      
                 <!-- tarjeta ::DEEP MINDS:: -->        
                 <div class="cards__card">
                     <h4 class="cards__card--title">::deepMinds::</h4>
                     <img class="cards__card--img" src="../assets/shop-img/deepminds.png" alt="pensamientos profundos">
-                    <p class="cards__card--description">Electronic Sounds</p>
+                    <p class="cards__card--description">Electronic Sounds & techno</p>
                     <a class="cards__card--btn" href="pages/contact.html">learn more</a>
                 </div>             
             </div>
             <!-- selector de secciones -->
             <section class="selector">
-                <li class="selector__link"><a class="section-links-selectors" href="#musica">back</a></li>
+                <li class="selector__link"><a class="section-links-selectors" href="#musica"><i class="fas fa-arrow-up"></i></a></li>
                 <li class="selector__link"><a class="section-links-selectors" href="#top">menu</a></li>
-                <li class="selector__link"><a class="section-links-selectors" href="#cursos">forward</a></li> 
+                <li class="selector__link"><a class="section-links-selectors" href="#cursos"><i class="fas fa-arrow-down"></i></a></li> 
             </section>
         </article>        
         <!-- cierre de seccion-->
@@ -183,9 +183,9 @@
             </div>
             <!-- selector de secciones -->
             <section class="selector">
-                <li class="selector__link"><a class="section-links-selectors" href="#musica">back</a></li>
+                <li class="selector__link"><a class="section-links-selectors" href="#musica"><i class="fas fa-arrow-up"></i></a></li>
                 <li class="selector__link"><a class="section-links-selectors" href="#top">menu</a></li>
-                <li class="selector__link"><a class="section-links-selectors" href="#merch">forward</a></li> 
+                <li class="selector__link"><a class="section-links-selectors" href="#merch"><i class="fas fa-arrow-down"></i></a></li> 
             </section>
         </article>
         <!-- cierre de seccion-->
@@ -226,9 +226,9 @@
             </section>
             <!-- selector de secciones -->
             <section class="selector">
-                <li class="selector__link"><a class="section-links-selectors" href="#cursos">back</a></li>
+                <li class="selector__link"><a class="section-links-selectors" href="#cursos"><i class="fas fa-arrow-up"></i></a></li>
                 <li class="selector__link"><a class="section-links-selectors" href="#top">menu</a></li>
-                <li class="selector__link"><a class="section-links-selectors" href="#page-footer">forward</a></li>               
+                <li class="selector__link"><a class="section-links-selectors" href="#page-footer"><i class="fas fa-arrow-down"></i></a></li>               
             </section>
         </article>
         <!-- cierre de seccion-->        
@@ -253,23 +253,23 @@
             <li><a href="https://www.spotify.com/ar/" target="_blank">
                 <img class="form__rrss--img" src="../assets/ico/spotify.svg" alt="spotify"></a></li>
         </ul>
-            <form class="page-form" action="servidor.php" method="post">
-                <div class="page-form__container">
-                    <h4 class="page-form__container--title">We wanna hear from you</h4>                
-                    <label for="nombre"></label>  
-                    <input class="page-form__container--fill" type="text" name="nombre" placeholder="Your name" required>
-                    <label for="email"></label>  
-                    <input class="page-form__container--fill2" type="email" name="email" placeholder="Your E-mail" required>
-                    <textarea class="page-form__container--textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
-                    <div>
+        <form class="page-form" action="servidor.php" method="post">
+            <div class="page-form__container">
+                <h4 class="page-form__container--title">We wanna hear from you</h4>                
+                <label for="nombre"></label>  
+                <input class="page-form__container--fill" type="text" name="nombre" placeholder="Your name" required>
+                <label for="email"></label>  
+                <input class="page-form__container--fill2" type="email" name="email" placeholder="Your E-mail" required>
+                <textarea class="page-form__container--textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
+                <div>
                         <input class="page-form__button" type="submit" value="SEND">
                         <input class="page-form__button" type="reset" value="RESET">
-                    </div>
                 </div>
-            </form>
-            <a class="page-footer__arrow" href="#top">
+            </div>
+        </form>
+        <a class="page-footer__arrow" href="#top">
                 <img class="flecha" src="../assets/punteros/Lvlup.png" width="100px" height="50px" alt="ir arriba">
-            </a>
+        </a>
     </footer>
     <!--BOOTSTRAP Js SCRIPT-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
