@@ -14,15 +14,8 @@
             transition: .5 ease-in-out;
             right: 5px;
             top: 5px;
-            /*right: 20px;  MQ LARGE
-            top: 20px; MQ LARGE */
             outline: none;
             box-shadow: none;
-            /*
-            @media screen and (width: 1224px){
-                @include w-h-pad(60px, 60px, 0);
-            }
-            */
             &:focus{
                 outline: none;
                 box-shadow: none;
