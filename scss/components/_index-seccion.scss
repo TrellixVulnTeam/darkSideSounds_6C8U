@@ -8,7 +8,7 @@
 .isection{
     height: 100%;   
     background-color: rgb(226, 126, 218);
-    overflow-x: hidden;
+    overflow: hidden;
     &__parrafo1{
         position: relative;
         margin: 3rem 1rem 0 1rem;
@@ -18,7 +18,7 @@
         font-size: 2rem;
         user-select: none;
         &--p1{
-            z-index: 9999;
+            z-index: 999;
             align-self: flex-start;
             margin-top: 7rem;        
             margin-bottom: 10rem;
@@ -78,7 +78,7 @@
             text-align: center;
         }
         &--emptybox3{
-            z-index:998;
+            z-index:900;
             position: absolute;
             right: 40%;
             bottom: 7rem;
@@ -96,8 +96,6 @@
         }
     }
 }     
-
-
 /* Slider e íconos */
 /*  Hay una inconveniencia en el Scope, esto debería ir en otro padre.
 Por cuestiones de deadline no llego a corregirlo, por eso lo separo

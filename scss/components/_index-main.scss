@@ -17,7 +17,11 @@
         color: white;
         user-select: none;
     }
-    &__sub{
+    
+    /*NOTA: Por ahora no utilizaré este
+    subtitulo.*/
+    
+    /*  &__sub{
         align-self: flex-start;
         margin-top: -9rem;
         display: grid;
@@ -65,11 +69,12 @@
             letter-spacing: .75px;
             user-select: none;
         }
-    }
+    } */
+    
     &__ico{
-        margin-bottom: 10rem;
+        margin-bottom: 2rem;
         align-self: center;
-        justify-self: baseline;
+        justify-self: flex-end;
         display: flex;
         width: 15.5rem;
         justify-content: space-evenly;

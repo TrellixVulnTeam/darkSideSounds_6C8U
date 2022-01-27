@@ -29,34 +29,32 @@
 
 /* ESTILOS PAGINAS SOUND Y MUSIC */
 .multimedia{
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: map-get($sections, bg-colorblack);
+    background-color: map-get($sections, bg-colorpink);
     color: rgba(241, 184, 211, 1);
     justify-content: space-evenly;
     align-items: center;
     &__title{
-        margin-top: 50px;
+        margin-top: 3rem;
         align-self: center;
         font-family: map-get($sections, fontprimaria);
         font-weight: lighter;
-        font-size: 4rem;
+        font-size: 5rem;
         text-shadow: 3px 3px 4px rgba(29, 18, 28, 0.473);
     }
     &__animation{
         width: 80%;
-        border: 0.25rem solid rgb(241, 122, 236);
+        border: 0.25rem solid rgb(83, 52, 82);
         object-fit: cover;
-        margin-bottom: .5rem;
     }
     &__descripcion{
-        padding: 2rem;
+        padding: 1rem;
         font-family: "Amiri";
-        font-size: 1.4rem;
-        line-height: 1.4rem;
+        font-size: 2rem;
+        line-height: 1.6rem;
         text-align: center;
-        color:rgba(241, 184, 211, 1);
+        color:black;
     }
     &__link-button{
         position: absolute;
@@ -72,6 +70,40 @@
         border: 0.125rem solid black;
     }
 }
+
+
+/* Galería de Sounds*/
+.soundworks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(226, 126, 218);
+    padding-bottom: 4rem;
+    &__title{
+        width: 20rem;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        font-family: 'Amiri';
+        font-size: 8rem;
+        line-height: 6rem;
+        text-align: justify;
+    }
+    &__work{
+        margin-top: 2rem;
+        &--title{
+            font-family: 'Amiri';
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 3rem;
+            background-color: darkslateblue;
+        }
+        &--img{
+            width: 17rem;
+        }
+    }
+}
+
+
 
 /* REPRODUCTOR DE SONIDO 
 (POR AHORA SOLO EN PAGINA => MUSIC */
