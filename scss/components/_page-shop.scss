@@ -63,7 +63,7 @@
                 text-transform: uppercase;
                 text-align: justify;
                 letter-spacing: 2px;
-                text-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
                 a {
                     color: rgb(241, 93, 197);
                 }
@@ -91,6 +91,7 @@ MUSICA, CURSOS, CONTACTO-
     display: grid;
     grid-template-columns: .2fr 1fr;
     grid-template-rows: 3.75rem 2fr 3rem;
+    align-self: center;
     gap: .3rem;
     padding: 0.8px;
     overflow: hidden;
@@ -108,11 +109,9 @@ MUSICA, CURSOS, CONTACTO-
     &__subtitle{
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        align-self: center;
         padding: .15rem;
         font-family: "SuperLegendBoy";
         font-size: 3rem;
-        letter-spacing: .5rem;
         text-orientation: upright;
         writing-mode: vertical-lr;
         color: rgba(241, 184, 211, 1);
@@ -122,7 +121,7 @@ MUSICA, CURSOS, CONTACTO-
     .cards{
         grid-column: 2 / 3;
         grid-row: 2 / 3;   
-        min-height: 25rem;
+        height: 25rem;
         display: flex;
         align-items: center; 
         background-color: white;     
@@ -134,11 +133,10 @@ MUSICA, CURSOS, CONTACTO-
         background-size: cover;
         &__card{
             margin: 0 1rem; 
-            height: 28rem; 
+            height: 20rem; 
             padding: 1rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
             background-color: white;
             box-shadow: 9px 9px 1px rgba(0, 0, 0, .6),
             inset 1px 1px 100px rgba(190, 128, 12, 0.473);
@@ -160,26 +158,26 @@ MUSICA, CURSOS, CONTACTO-
                 width: 14rem;
                 height: 13rem;
                 object-fit: cover;
-                box-shadow: 3px 4px 0px rgba(0, 0, 0, .9);
+                box-shadow: 3px 4px 0px rgba(0, 0, 0, .6);
             }
             &--img_musica{
                 width: 14rem;
                 height: 14rem;
                 object-fit: cover;
-                box-shadow: 5px 5px 0px rgba(0, 0, 0, .9);
+                box-shadow: 5px 5px 0px rgba(0, 0, 0, .6);
             }
             &--img_musica2{
                 width: 14rem;
                 height: 12rem;
                 object-fit: fill;
-                box-shadow: 5px 5px 0px rgba(0, 0, 0, .9);
+                box-shadow: 5px 5px 0px rgba(0, 0, 0, .6);
             }
             &--img_musica3{
                 align-self: center;
                 width: 14rem;
                 height: 15.5rem;
                 object-fit: fill;
-                box-shadow: 5px 5px 0px rgba(0, 0, 0, .9);
+                box-shadow: 5px 5px 0px rgba(0, 0, 0, .6);
             }
             &--btn{
                 align-self: center;

@@ -15,12 +15,10 @@ ul {
 
 a {
   text-decoration: none;
-  cursor: url(../../assets/punteros/punterodiagonal.png) 1 0, pointer;
 }
 
 body {
   overflow-x: hidden;
-  cursor: url(../../assets/punteros/punterovertical.png) 0 5, pointer;
 }
 
 .main__sub--3, .main__sub--2, .main__sub--1 {
@@ -33,6 +31,13 @@ body {
   font-family: "Amiri";
   color: white;
   font-weight: normal;
+}
+
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
 }
 
 /* Variables para MQueries*/
@@ -116,7 +121,7 @@ body {
   transform: rotate(0deg);
 }
 .header__nav div .nav__linkcontainer {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   height: 30rem;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item {
@@ -126,12 +131,11 @@ body {
   transition: 0.5s ease-in;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
-  font-family: "SuperLegendBoy", "Amiri";
-  font-size: 2.3rem;
-  letter-spacing: 4px;
-  line-height: 2rem;
+  font-family: "Abril Fatface", "Amiri";
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  line-height: 1rem;
   color: pink;
-  text-shadow: 4px 4px 1px rgba(220, 101, 231, 0.8);
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link:hover {
   border: 0.5px solid white;
@@ -151,28 +155,36 @@ body {
   font-weight: normal;
 }
 
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
 .main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: black;
 }
 .main__title {
-  font-family: "SuperLegendBoy";
-  justify-self: flex-;
   width: 100vw;
+  justify-self: center;
+  font-family: "Antic Didone";
   font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
   color: white;
   user-select: none;
-  text-align: center;
 }
 .main__sub {
   align-self: flex-start;
-  margin-top: -150px;
+  margin-top: -9rem;
   display: grid;
-  grid-template-columns: 100px, 1fr, 1fr;
-  grid-template-rows: 1fr, 1fr, 1fr;
+  grid-template-columns: 6.25rem, 1fr, 1fr;
+  grid-template-rows: 1fr, 0.5fr, 1fr;
   grid-template-areas: "ms1 ms1 ms1" "ms2 ms3 ms3" "ms2 slogan slogan";
   justify-content: center;
   width: 100%;
@@ -183,8 +195,6 @@ body {
 }
 .main__sub--1 {
   grid-area: ms1;
-  grid-column: 1/3;
-  grid-row: 1;
   font-size: 1.8rem;
   justify-self: start;
   margin: 10px 0 0 10px;
@@ -194,34 +204,29 @@ body {
 .main__sub--2 {
   grid-area: ms2;
   font-size: 3.8rem;
-  grid-row: 2/4;
-  grid-column: 1;
   margin: -15px 0 0 8px;
   user-select: none;
 }
 .main__sub--3 {
   grid-area: ms3;
-  grid-column: 2/4;
-  grid-row: 2;
   margin: -5px 0 0 0;
   font-size: 1.65rem;
   user-select: none;
 }
 .main__sub--slogan {
   grid-area: slogan;
-  grid-column: 2/3;
-  grid-row: 3/4;
   margin: -10px 0 0 5px;
   font-size: 1.1rem;
   letter-spacing: 0.75px;
   user-select: none;
 }
 .main__ico {
+  align-self: center;
   justify-self: baseline;
   display: flex;
+  width: 15.5rem;
   justify-content: space-evenly;
-  width: 250px;
-  align-self: center;
+  align-items: center;
 }
 .main__ico--mod1 {
   width: 15px;
@@ -261,111 +266,92 @@ body {
     transform: rotateY(360deg);
   }
 }
-@font-face {
-  font-family: "SuperLegendBoy";
-  src: url("../../assets/fonts/SuperLegendBoy.ttf");
-}
-/* Seccion index Article */
-.iarticle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  perspective: 1000px;
-  overflow: hidden;
-  /*animation: float 1s ease-in-out infinite;*/
-}
-.iarticle__title1, .iarticle__title2, .iarticle__title3 {
-  font-family: "SuperLegendBoy";
-  font-size: 18px !important;
-  /* REVISAR ESSSSSTOOOO*/
-  text-align: center;
-  color: #173a1f;
-}
-.iarticle__title1 {
-  font-size: 50px;
-  transform: translateY(-15px);
-}
-.iarticle__title2 {
-  font-size: 50px;
-  transform: scale(0.9);
-}
-.iarticle__title3 {
-  transform: scale(1.12);
-}
-.iarticle__selector {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-top: 0px;
-  border: 1px solid white;
-  cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
-}
-.iarticle__selector--sound, .iarticle__selector--music {
-  font-family: "SuperLegendBoy";
-  font-size: 10px;
-  border-radius: 10%;
-  box-shadow: inset 15px 15px 30px rgba(0, 0, 0, 0.5), inset -15px -15px 30px rgba(0, 0, 0, 0.7);
-  border: 1px outset rgba(0, 0, 0, 0.7);
-}
-.iarticle__selector--sound a, .iarticle__selector--music a {
-  color: white;
-}
-.iarticle__selector--sound {
-  align-self: center;
-  transform: rotateZ(-6deg);
-  padding: 5px;
-  background-color: #ff56ad9a;
-  margin-right: 5px;
-}
-.iarticle__selector--music {
-  align-self: center;
-  transform: rotateZ(6deg);
-  padding: 5px;
-  background-color: #ff56ad9a;
-  margin-left: 5px;
-}
-
-@keyframes shine {
-  0% {
-    top: 310px;
-    right: 100px;
-    background: rgba(238, 187, 231, 0.7);
-  }
-  100% {
-    top: -250px;
-    right: -150px;
-    background: white;
-  }
-}
-@keyframes float {
-  0% {
-    transform: translateY(-1px);
-  }
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(-1px);
-  }
-}
-@keyframes iconrotation {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
 /* Sección index Section - Carrusel de tarjetas */
 .isection {
-  height: 100vh;
-  background-color: black;
+  height: 100%;
+  background-color: #e27eda;
   overflow-x: hidden;
-  cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
+}
+.isection__parrafo {
+  position: relative;
+  margin: 3rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Amiri";
+  user-select: none;
+}
+.isection__parrafo--p1 {
+  z-index: 9999;
+  width: 6rem;
+  align-self: flex-start;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
+  font-size: 2rem;
+  line-height: 1.6rem;
+  text-align: start;
+  transition: 0.5s color ease-in 1s;
+}
+.isection__parrafo--emptybox1 {
+  position: absolute;
+  left: 10rem;
+  top: 5rem;
+  width: 22rem;
+  height: 16rem;
+  background-color: #2431a0;
+}
+.isection__parrafo--p2 {
+  z-index: 999;
+  align-self: flex-end;
+  width: 10rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  text-align: end;
+  margin-bottom: 12rem;
+}
+.isection__parrafo--emptybox2 {
+  position: absolute;
+  right: 12rem;
+  top: 28rem;
+  width: 22rem;
+  height: 18rem;
+  background-color: #2431a0;
+}
+.isection__parrafo--p3 {
+  z-index: 999;
+  width: 6rem;
+  align-self: center;
+  font-size: 2.8rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.isection__parrafo--emptybox3 {
+  z-index: 998;
+  position: absolute;
+  right: 9rem;
+  bottom: 15rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: white;
+}
+.isection__parrafo--link {
+  margin-top: 6rem;
+  align-self: center;
+  width: 12rem;
+  text-align: center;
+  color: black;
+  box-shadow: 1px 3px 4px black;
+}
+.isection__parrafo--link:hover {
+  font-weight: bolder;
+  color: white;
+}
+.isection__parrafo--emptybox4 {
+  position: absolute;
+  left: 9rem;
+  bottom: 7rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: #2431a0;
 }
 .isection__arrowL, .isection__arrowR {
   height: 100px;
@@ -396,7 +382,6 @@ body {
   -o-transform: translateX(0);
   transform: translateX(0);
   transition: transform 0.3s ease-out;
-  cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
 }
 .isection__slidercontainer--slide {
   max-height: 100vh;
@@ -417,16 +402,15 @@ body {
 /* Tarjetas */
 .card {
   position: relative;
-  width: 200px;
-  height: 350px;
+  width: 12.5rem;
+  height: 21.875rem;
   background-color: white;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
   user-select: none;
-  /* border-top-right-radius: 10%;
-  border-bottom-left-radius: 10%; */
-  box-shadow: 8px 5px 10px rgba(247, 129, 227, 0.3), inset 10px 10px 50px rgba(129, 107, 59, 0.76);
-  cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 1.1rem 0.94rem 0.6rem rgba(8, 8, 8, 0.651), inset 0.625rem 0.625rem 3.125rem rgba(129, 107, 59, 0.76);
 }
 .card::before {
   content: "";
@@ -446,12 +430,12 @@ body {
   content: "";
   z-index: 4;
   position: absolute;
-  right: 100px;
-  top: 310px;
+  right: 6.25rem;
+  top: 19.375rem;
   width: 200%;
-  height: 150px;
+  height: 9.375rem;
   background: rgba(238, 187, 231, 0.7);
-  box-shadow: 20px 20px 40px white;
+  box-shadow: 1.25rem 1.25rem 2.5rem white;
   transform: skewY(40deg);
   filter: blur(4px);
 }
@@ -460,12 +444,12 @@ body {
 }
 .card__content {
   z-index: 2;
+  position: relative;
+  padding: 1.25rem;
+  height: 22rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  position: relative;
-  height: 350px;
-  padding: 20px;
   color: black;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   transition: color 0.7s ease-in;
@@ -475,21 +459,22 @@ body {
 }
 .card__content--title {
   margin: 10px 0;
-  font-family: "SuperLegendBoy";
-  font-weight: 600;
+  font-family: "Abril Fatface";
+  font-size: 1.8rem;
+  font-weight: normal;
   text-align: center;
-  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
   border-top: 2px double black;
   border-bottom: 2px double black;
 }
 .card__content--par {
   align-self: center;
-  font-family: "SuperLegendBoy";
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 0.8rem;
+  font-family: "Antic Didone";
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  font-size: 1rem;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.125rem;
   letter-spacing: 1px;
 }
 .card__content--par2 {
@@ -504,24 +489,24 @@ body {
   letter-spacing: 1px;
 }
 .card__content--btn {
-  width: 100px;
+  width: 7rem;
   height: 40px;
-  text-decoration: none;
-  background-color: black;
-  font-family: "SuperLegendBoy";
+  padding: 6px 10px;
   align-self: center;
   justify-self: baseline;
-  box-shadow: 10px 10px 30px #030303;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 10px;
-  color: white;
-  padding: 6px 10px;
+  text-decoration: none;
+  font-family: "Antic Didone";
+  font-size: 15px;
   font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
+  color: white;
+  background-color: black;
+  box-shadow: 10px 10px 30px #030303;
   z-index: 10;
-  cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
 }
 
 .main__sub--1, .main__sub--2, .main__sub--3 {
@@ -536,113 +521,232 @@ body {
   font-weight: normal;
 }
 
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
+/* INDEX FOOTER */
 .footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px 50px 1fr 100px;
   gap: 15px;
   background-color: black;
-  grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
-  width: 100vw;
   z-index: 5;
+  grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
 }
 .footer__title {
   grid-area: titulo;
-  font-family: "SuperLegendBoy";
+  padding: 1rem;
+  margin-top: 3.2rem;
+  font-family: "Abril Fatface";
+  font-size: 3rem;
   font-weight: lighter;
-  font-size: 2rem;
+  letter-spacing: 0.5rem;
   text-align: center;
-  color: pink;
-  padding: 5px;
+  color: #fdfdfd;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
 }
 .footer__rrss {
   grid-area: rrss;
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-end;
-  padding: 10px;
 }
 .footer__rrss .form__ico--img {
   width: 18px;
   height: 18px;
 }
-.footer .formulario {
+.footer .form {
   grid-area: formulario;
-  height: 400px;
   background-color: black;
   display: flex;
   flex-direction: column;
 }
-.footer .formulario .form__container {
+.footer .form__container {
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
-  background-color: pink;
-  overflow-x: hidden;
 }
-.footer .formulario .form__container .form__title {
-  color: black;
-  letter-spacing: -1px;
+.footer .form__container--title {
+  color: white;
+  font-family: "Antic Didone";
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  transform: scaleY(1.2);
 }
-.footer .formulario .form__container .form__fill {
+.footer .form__container--fill {
   height: 30px;
   width: 200px;
-  font-family: "SuperLegendBoy";
 }
-.footer .formulario .form__container .form__textarea {
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
+.footer .form__container--textarea {
   height: 200px;
   width: 200px;
 }
-.footer .formulario .form__container div .form__button {
-  background-color: pink;
-  font-family: "SuperLegendBoy";
+.footer .form__container div .form__button {
+  padding: 0 1rem;
+  background-color: black;
+  font-family: "Amiri";
+  font-size: 2rem;
+  color: white;
   border: none;
-  height: 30px;
-  width: 100px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+.footer .form__container div .form__button:hover {
+  color: #ff002b;
 }
 .footer .form__ico--arriba {
   grid-area: irarriba;
   justify-self: center;
 }
+.footer .form__ico--arriba i {
+  font-size: 3rem;
+  color: white;
+}
+
+/* FOOTER ROJO - SOUNDS MUSIC ABOUT US SHOP*/
+.page-footer {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2rem 3fr 0.5fr;
+  grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
+  align-content: space-evenly;
+  justify-items: center;
+  background-color: #f1b8d3;
+}
+.page-footer__title {
+  grid-area: titulo;
+  align-self: flex-end;
+  font-family: "Abril Fatface";
+  font-size: 2.3rem;
+  color: black;
+}
+.page-footer__rrss {
+  grid-area: rrss;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  padding: 0.2rem;
+}
+.page-footer__arrow {
+  grid-area: irarriba;
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+
+.page-form {
+  grid-area: formulario;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.4rem;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  background-color: red;
+  overflow: hidden;
+}
+.page-form__container--title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #4b1f1f;
+  text-shadow: 2px 2px 4px white;
+}
+.page-form__container--fill {
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.page-form__container--fill2 {
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.page-form__container--textarea {
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  height: 9.375rem;
+  width: 12.5rem;
+}
+.page-form__container div .page-form__button {
+  background-color: #c00020;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  border: none;
+  height: 1.5rem;
+  width: 6rem;
+}
+
+/* MAPS */
+.sound__section {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: #f1b8d3;
+  color: black;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sound__section .sound__title {
+  margin-top: 50px;
+  align-self: center;
+  font-family: "Abril Fatface";
+  font-weight: lighter;
+  font-size: 2rem;
+}
+.sound__section .page__text {
+  width: 80%;
+  height: 300px;
+  padding: 0;
+  margin-top: 100px;
+  font-family: "Amiri";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
 
 /* ESTILOS PAGINAS SOUND Y MUSIC */
 .multimedia {
   height: 100vh;
-  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: flex-start;
-  background-color: #f1c3d9;
+  background-color: black;
+  color: #f1b8d3;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .multimedia__title {
-  font-family: "SuperLegendBoy";
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 3.75rem;
-  margin-bottom: 3rem;
-  color: black;
-  text-shadow: 3px 3px 1px #f17aec;
+  margin-top: 50px;
+  align-self: center;
+  font-family: "Abril Fatface";
+  font-weight: lighter;
+  font-size: 4rem;
+  text-shadow: 3px 3px 4px rgba(29, 18, 28, 0.473);
 }
 .multimedia__animation {
-  width: 100%;
+  width: 80%;
   border: 0.25rem solid #f17aec;
   object-fit: cover;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .multimedia__descripcion {
-  padding: 1rem;
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
-  text-align: start;
-  color: black;
-  text-shadow: 1px 1px 1px white;
+  padding: 2rem;
+  font-family: "Amiri";
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #f1b8d3;
 }
 .multimedia__link-button {
   position: absolute;
@@ -810,6 +914,13 @@ body {
   font-weight: normal;
 }
 
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
 /*------------------*/
 /*       SHOP       */
 /*------------------*/
@@ -875,7 +986,7 @@ body {
   text-transform: uppercase;
   text-align: justify;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 0 black;
+  text-shadow: 1px 1px 4px black;
 }
 .shop-main .main-selector__list--link a {
   color: #f15dc5;
@@ -898,6 +1009,7 @@ MUSICA, CURSOS, CONTACTO-
   display: grid;
   grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 3.75rem 2fr 3rem;
+  align-self: center;
   gap: 0.3rem;
   padding: 0.8px;
   overflow: hidden;
@@ -916,11 +1028,9 @@ MUSICA, CURSOS, CONTACTO-
 .shop__subtitle {
   grid-column: 1/2;
   grid-row: 2/3;
-  align-self: center;
   padding: 0.15rem;
   font-family: "SuperLegendBoy";
   font-size: 3rem;
-  letter-spacing: 0.5rem;
   text-orientation: upright;
   writing-mode: vertical-lr;
   color: #f1b8d3;
@@ -930,7 +1040,7 @@ MUSICA, CURSOS, CONTACTO-
 .shop .cards {
   grid-column: 2/3;
   grid-row: 2/3;
-  min-height: 25rem;
+  height: 25rem;
   display: flex;
   align-items: center;
   background-color: white;
@@ -943,11 +1053,10 @@ MUSICA, CURSOS, CONTACTO-
 }
 .shop .cards__card {
   margin: 0 1rem;
-  height: 28rem;
+  height: 20rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   background-color: white;
   box-shadow: 9px 9px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 100px rgba(190, 128, 12, 0.473);
   user-select: none;
@@ -969,26 +1078,26 @@ MUSICA, CURSOS, CONTACTO-
   width: 14rem;
   height: 13rem;
   object-fit: cover;
-  box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.6);
 }
 .shop .cards__card--img_musica {
   width: 14rem;
   height: 14rem;
   object-fit: cover;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6);
 }
 .shop .cards__card--img_musica2 {
   width: 14rem;
   height: 12rem;
   object-fit: fill;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6);
 }
 .shop .cards__card--img_musica3 {
   align-self: center;
   width: 14rem;
   height: 15.5rem;
   object-fit: fill;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6);
 }
 .shop .cards__card--btn {
   align-self: center;
@@ -1159,9 +1268,7 @@ MUSICA, CURSOS, CONTACTO-
 }
 
 /*--------------------------------------------*/
-/*                                            */
 /*             MEDIA QUERIES                  */
-/*                                            */
 /*--------------------------------------------*/
 /* NAVBAR */
 @media (min-width: 768px) {
@@ -1198,949 +1305,320 @@ MUSICA, CURSOS, CONTACTO-
     margin-top: 30px;
   }
 }
-@media only screen and (min-width: 321px) and (orientation: landscape) {
-  .header__nav div .nav__linkcontainer {
-    background-color: rgba(255, 255, 255, 0.95);
-    width: 100vw;
-    height: 17rem;
-    text-shadow: 2px 2px 0px white;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .header__nav div .nav__linkcontainer {
-    width: 100vw;
-    height: 80rem;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .header__nav div .nav__linkcontainer .nav__links {
-    height: 80rem;
-  }
-}
-@media only screen and (min-width: 321px) and (orientation: landscape) {
-  .header__nav div .nav__linkcontainer .nav__links .nav__item {
-    padding: 0.7rem;
-  }
-}
-@media only screen and (min-width: 321px) and (orientation: landscape) {
-  .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
-    font-size: 2rem;
-    letter-spacing: 3px;
-    line-height: 10px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
-    font-size: 12rem;
-    line-height: 10rem;
-  }
-}
-@media only screen and (min-width: 321px) and (orientation: landscape) {
-  .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link:hover {
-    border: 0.5px solid white;
-    background-color: rgba(220, 101, 231, 0.8);
-    color: white;
-  }
-}
 
-/* ------------------------------------------- */
-/*                  SHOP                       */
-/* ------------------------------------------- */
-/* SHOP MAIN */
+/* INDEX MAIN */
 @media (min-width: 480px) {
-  .shop-main__titles--title {
-    justify-self: center;
-    margin-top: 4rem;
-    padding: 2rem;
-    font-size: 5rem;
-    text-align: center;
-    letter-spacing: 2rem;
-    text-shadow: 10px 10px 4px palevioletred;
+  .main__title {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 768px) {
-  .shop-main__titles--title {
+  .main__title {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1224px) {
+  .main__title {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 480px) {
+  .main__sub {
+    grid-template-columns: 10px, 10px;
+    grid-template-rows: 100px, 1fr, 1fr;
+  }
+}
+@media (min-width: 480px) {
+  .main__sub--1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__sub--1 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 480px) {
+  .main__sub--2 {
+    font-size: 5rem;
+    margin-top: -1.3rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__sub--2 {
     font-size: 9rem;
-    margin-left: 5px;
-    letter-spacing: 0.8rem;
-  }
-}
-@media (min-width: 1224px) {
-  .shop-main__titles--title {
-    font-size: 18rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop-main__titles--sub {
-    margin-left: 5px;
-    font-size: 1.5rem;
-    letter-spacing: 2.7px;
+    margin-top: -2.5rem;
   }
 }
 @media (min-width: 480px) {
-  .shop-main__titles--sub {
-    margin-top: 1rem;
-    font-size: 3rem;
-    text-align: center;
-    letter-spacing: 1rem;
-    text-shadow: 10px 10px 4px palevioletred;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop-main__titles--sub {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 1224px) {
-  .shop-main__titles--sub {
-    font-size: 3rem;
-    margin-top: -8rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop-main .main-selector {
-    margin-top: 1.2rem;
-    margin-bottom: 2px;
-  }
-}
-@media only screen and (min-width: 1224px) and (orientation: landscape) {
-  .shop-main .main-selector__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop-main .main-selector__list--link {
-    margin: 2px 2px;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    text-align: justify;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
-  }
-}
-@media (min-width: 768px) {
-  .shop-main .main-selector__list--link {
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-width: 1224px) and (orientation: landscape) {
-  .shop-main .main-selector__list--link {
+  .main__sub--3 {
     font-size: 2.3rem;
-    margin: 5px 0.5rem;
-    padding: 10px;
-    background-color: rgba(220, 101, 231, 0.2);
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop-main .main-selector__ico img {
-    width: 120px;
-    height: 120px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop-main .main-selector__ico img {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-@media (min-width: 1224px) {
-  .shop-main .main-selector__ico img {
-    display: none;
-  }
-}
-
-/* SHOP - SECCIONES */
-@media screen and (min-width: 480px) {
-  .shop {
-    grid-template-columns: 0.1fr 1fr 0.1fr;
-    grid-template-rows: 50px 1fr 50px;
-    justify-content: center;
-    padding: 1rem;
   }
 }
 @media (min-width: 768px) {
-  .shop {
-    grid-template-columns: 0.1fr 1fr;
-    grid-template-rows: 2rem 1fr 2rem;
-    height: 100vh;
-    grid-template-columns: 8rem 1fr;
-    grid-template-rows: 8rem 1fr 3rem;
-    padding: 0;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop {
-    height: 100vh;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop__title {
-    grid-column: 2/3;
-    padding: 0;
-    margin: 0;
-    align-self: center;
-    font-size: 3rem;
+  .main__sub--3 {
+    font-size: 4rem;
+    margin-top: -0.5rem;
   }
 }
 @media (min-width: 480px) {
-  .shop__title {
-    grid-row: 2/4;
-    grid-column: 3/4;
-    font-size: 3rem;
-    align-self: center;
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-    letter-spacing: 4rem;
-    text-shadow: 8px 8px 10px black;
+  .main__sub--slogan {
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 768px) {
-  .shop__title {
-    grid-row: 1/2;
-    grid-column: 1/4;
-    padding: 0;
-    margin: 0;
-    align-self: center;
-    justify-content: center;
-    font-size: 7.5rem;
-    letter-spacing: 2rem;
-    text-orientation: upright;
-    writing-mode: horizontal-tb;
-    text-shadow: 10px 10px 0 black;
-  }
-}
-@media (min-width: 1224px) {
-  .shop__title {
-    font-size: 7rem;
-    align-self: center;
-    justify-self: center;
-    letter-spacing: 3rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop__title {
-    grid-column: 2/3;
-    font-size: 7rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop__subtitle {
-    grid-column: 1/2;
-    grid-row: 2/4;
-    padding: 0;
-    margin: 0;
-    justify-self: center;
-    align-self: flex-start;
-    font-size: 2.6rem;
-    letter-spacing: 0;
-    background-color: darkred;
-  }
-}
-@media (min-width: 480px) {
-  .shop__subtitle {
-    grid-row: 1/4;
-    grid-column: 1/2;
-    align-self: center;
-    font-size: 3rem;
-    letter-spacing: 2rem;
-    text-shadow: 8px 8px 10px black;
-  }
-}
-@media (min-width: 768px) {
-  .shop__subtitle {
-    padding: 0;
-    margin-top: 3rem;
-    justify-self: center;
-    font-size: 7rem;
-    letter-spacing: 2.3rem;
-  }
-}
-@media (min-width: 1224px) {
-  .shop__subtitle {
-    font-size: 6rem;
-    grid-row: 1/3;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop__subtitle {
-    font-size: 5rem;
-    letter-spacing: 2rem;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    display: flex;
-    min-height: 10rem;
-    box-shadow: inset 0px 5px 6px black;
-  }
-}
-@media screen and (min-width: 480px) {
-  .shop .cards {
-    width: 20rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards {
-    height: 50rem;
-    width: 39rem;
-    align-items: center;
-    background-color: white;
-    box-shadow: inset 4px 4px 1px black;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards {
-    height: 34rem;
-    width: 55rem;
-    justify-self: flex-end;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card {
-    align-self: center;
-    display: grid;
-    min-width: 25rem;
-    min-height: 10rem;
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 1rem 1fr 1rem;
-    justify-items: center;
-    align-items: center;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    border-radius: 0;
-  }
-}
-@media (min-width: 480px) {
-  .shop .cards__card {
-    width: 22rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card {
-    height: 42rem;
-    min-width: 33rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border: 20px solid black;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card {
-    height: 32rem;
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--title {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    align-self: flex-start;
-    justify-self: center;
-    font-size: 1rem;
-    margin: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--title {
-    font-size: 2.4rem;
-    margin-top: 2rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--title {
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--description {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin: 0;
-    padding: 10px;
-    font-size: 0.8rem;
-    align-self: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--description {
-    font-size: 1.9rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--description {
-    display: none;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--img {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    justify-self: center;
-    padding: 0;
-    margin: 0 15px 0 0;
-    width: 11rem;
-    height: 10rem;
-  }
-}
-@media screen and (min-width: 480px) {
-  .shop .cards__card--img {
-    width: 15rem;
-    height: 13rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--img {
-    width: 27rem;
-    height: 20rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--img {
-    width: 27rem;
-    height: 18rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--img_musica {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    justify-self: center;
-    align-self: center;
-    width: 11rem;
-    height: 10rem;
-    margin: 0 15px 0 0;
-    object-fit: center;
-  }
-}
-@media screen and (min-width: 480px) {
-  .shop .cards__card--img_musica {
-    width: 16rem;
-    height: 21rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--img_musica {
-    width: 28rem;
-    height: 26rem;
-    align-self: center;
-    border: 3px solid black;
-    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.7);
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--img_musica {
-    width: 24rem;
-    height: 19rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--img_musica2 {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    justify-self: flex-start;
-    align-self: center;
-    margin: 0;
-    width: 11.5rem;
-    height: 10rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--img_musica2 {
-    width: 28rem;
-    height: 26rem;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--img_musica2 {
-    width: 10rem;
-    height: 5rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--img_musica2 {
-    width: 27rem;
-    height: 19rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--img_musica3 {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    justify-self: center;
-    align-self: center;
-    width: 11rem;
-    margin: 0;
-    height: 10rem;
-    object-fit: fill;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--img_musica3 {
-    width: 27rem;
-    height: 28rem;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--img_musica3 {
-    width: 23rem;
-    height: 20rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .cards__card--btn {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    align-self: flex-end;
-  }
-}
-@media screen and (min-width: 768px) {
-  .shop .cards__card--btn {
-    position: relative;
-    width: 24rem;
-    height: 4rem;
-    margin-top: 0;
-    padding: 0.75rem 0.625rem;
-    font-size: 2rem;
-    box-shadow: 4px 4px 0 crimson;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .shop .cards__card--btn {
-    width: 18rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .shop .selector {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    width: 100vw;
-    align-self: flex-end;
-    background-color: white;
-    padding: 0;
-  }
-}
-@media (min-width: 480px) {
-  .shop .selector {
-    grid-column: 1/5;
-  }
-}
-@media (min-width: 768px) {
-  .shop .selector {
-    height: 5.5rem;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-around;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-}
-@media (min-width: 480px) {
-  .shop .selector__link {
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 0;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  }
-}
-@media (min-width: 768px) {
-  .shop .selector__link {
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 0;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  }
-}
-
-/* FOOTER ROJO LANDSCAPE */
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .page-footer {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media (min-width: 480px) and (orientation: landscape) {
-  .page-footer {
-    align-content: center;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-footer__title {
-    align-self: center;
-    justify-self: flex-start;
-    padding: 0;
-    margin-top: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  .page-footer__title {
-    font-size: 6rem;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-footer__rrss {
-    width: 23rem;
-    height: 5rem;
-    align-self: center;
-    padding: 0;
-  }
-}
-@media (min-width: 768px) {
-  .page-footer__rrss {
-    margin-top: 2rem;
-    width: 30rem;
-    height: 6rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .page-footer__rrss {
-    justify-content: space-between;
-    width: 50rem;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-footer__rrss--img {
-    align-self: center;
-    width: 1.125rem;
-    height: 1.125rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .page-footer__rrss--img {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-footer__arrow {
-    margin-top: -60px;
-    justify-self: flex-start;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .page-form {
-    padding: 1rem;
+  .main__sub--slogan {
+    font-size: 2.9rem;
     margin-top: -1rem;
   }
 }
+@media (min-width: 480px) {
+  .main__ico {
+    width: 25rem;
+  }
+}
 @media (min-width: 768px) {
-  .page-form {
-    height: 40rem;
+  .main__ico {
+    width: 40rem;
   }
 }
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-form__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr;
+@media (min-width: 1224px) {
+  .main__ico {
+    width: 40rem;
   }
 }
-@media (min-width: 1024px) and (orientation: landscape) {
-  .page-form__container {
-    display: grid;
-    height: 28rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 20rem;
+@media (min-width: 480px) {
+  .main__ico--mod1 {
+    width: 1.25rem;
   }
 }
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-form__container--title {
+@media (min-width: 768px) {
+  .main__ico--mod1 {
+    width: 1.8rem;
+  }
+}
+@media (min-width: 1224px) {
+  .main__ico--mod1 {
+    width: 1.5rem;
+  }
+}
+@media (min-width: 480px) {
+  .main__ico--mod2 {
+    width: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__ico--mod2 {
+    width: 3rem;
+  }
+}
+@media (min-width: 1224px) {
+  .main__ico--mod2 {
+    width: 2.5rem;
+  }
+}
+
+/* INDEX SECTION */
+.isection {
+  height: 100%;
+  background-color: #e27eda;
+  overflow-x: hidden;
+}
+@media (min-width: 480px) {
+  .isection__parrafo--p1 {
+    width: 6rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--p1 {
+    width: 8rem;
+    font-size: 3.5rem;
+    line-height: 2.3rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--p1 {
+    width: 40rem;
+    font-size: 6rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--emptybox1 {
+    left: 18rem;
+    top: 4.5rem;
+    height: 20rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--emptybox1 {
+    left: 30rem;
+    top: 4.5rem;
+    height: 25rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--emptybox1 {
+    left: 7rem;
+    top: 1rem;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--p2 {
+    width: 11rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--p2 {
+    width: 14rem;
+    font-size: 3.5rem;
+    line-height: 2.3rem;
+    margin-top: 20rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--p2 {
+    width: 40rem;
+    line-height: 2.4rem;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--emptybox2 {
+    right: 18rem;
+    top: 30rem;
+    height: 25rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--emptybox2 {
+    right: 30rem;
+    top: 50rem;
+    height: 35rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--emptybox2 {
+    right: 0;
+    top: 51.3rem;
+    height: 20rem;
+    width: 40rem;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--p3 {
+    width: 6rem;
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--p3 {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    width: 10rem;
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--p3 {
+    font-size: 8rem;
+    width: 40rem;
+    line-height: 6rem;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--emptybox3 {
+    bottom: 17rem;
+    width: 8rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--emptybox3 {
+    bottom: 29.5rem;
+    width: 20rem;
+    height: 14rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--emptybox3 {
+    bottom: 29.5rem;
+    width: 30rem;
+    height: 19rem;
+    right: 11.5rem;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--emptybox4 {
+    bottom: 9rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo--emptybox4 {
+    bottom: 18rem;
+    width: 20rem;
+    height: 14rem;
+  }
+}
+@media (min-width: 1224px) {
+  .isection__parrafo--emptybox4 {
+    bottom: 16rem;
+    width: 30rem;
+    height: 19rem;
+    left: 16rem;
+  }
+}
+@media (min-width: 480px) {
+  .isection__parrafo--link {
+    font-size: 3rem;
+    width: 15rem;
+  }
+}
+.isection__arrowL {
+  left: 25px;
+}
+.isection__arrowR {
+  right: 25px;
+}
+.isection__slidercontainer {
+  height: 600px;
+  display: inline-flex;
+  overflow: hidden;
+  scrollbar-width: none;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+.isection__slidercontainer--slide {
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .isection__slidercontainer--slide {
+    padding: 3rem;
+  }
+}
+
+/* /* Tarjetas */
+@media (min-width: 1224px) {
+  .card {
     display: none;
   }
 }
-@media (min-width: 768px) {
-  .page-form__container--title {
-    margin-top: 2rem;
-    justify-content: space-evenly;
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 1024px) and (orientation: landscape) {
-  .page-form__container--title {
-    display: inherit;
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-form__container--fill {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: flex-end;
-    justify-self: center;
-    height: 40px;
-    width: 16rem;
-    font-family: "SuperLegendBoy";
-  }
-}
-@media (min-width: 768px) {
-  .page-form__container--fill {
-    margin-top: 6rem;
-    width: 20rem;
-    height: 4rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .page-form__container--fill {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: flex-start;
-    padding: 1rem;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-form__container--fill2 {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: flex-start;
-    justify-self: center;
-    height: 40px;
-    width: 200px;
-    font-family: "SuperLegendBoy";
-  }
-}
-@media (min-width: 768px) {
-  .page-form__container--fill2 {
-    width: 20rem;
-    height: 4rem;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .page-form__container--fill2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-form__container--textarea {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    height: 130px;
-    width: 300px;
-  }
-}
-@media (min-width: 768px) {
-  .page-form__container--textarea {
-    width: 20rem;
-    height: 12rem;
-  }
-}
-@media (min-width: 320px) and (orientation: landscape) {
-  .page-form__container div {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: center;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .page-form__container div {
-    grid-column: 1/3;
-    grid-row: 3/4;
-  }
-}
-
-/* ------------------------------------------- */
-/*                  MUSIC                       */
-/* ------------------------------------------- */
-/* ESTILOS PAGINAS SOUND Y MUSIC */
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .multimedia {
-    flex-direction: row;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .multimedia__title {
-    justify-self: center;
-    align-self: center;
-    font-size: 3rem;
-    letter-spacing: 1rem;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .multimedia__descripcion {
-    padding: 1rem;
-    font-size: 1.3rem;
-    align-self: center;
-    text-align: start;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .multimedia__link-button {
-    position: absolute;
-    width: 300px;
-    bottom: 0.6rem;
-    right: 10px;
-    padding: 5px;
-    font-size: 1rem;
-    color: black;
-  }
-}
-
-/* REPRODUCTOR DE SONIDO 
-(POR AHORA SOLO EN PAGINA => MUSIC */
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container {
-    height: 100vh;
-    background-color: black;
-    padding: 4rem;
-    user-select: none;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 3rem 1fr;
-    grid-template-areas: "player player" "controls controls" "playlist playlist";
-    justify-content: center;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .player {
-    grid-area: player;
-    display: flex;
-    justify-content: center;
-    background-image: url("../../assets/multi-img/giphy.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .player .player-title {
-    justify-self: center;
-    align-self: center;
-    font-family: "SuperLegendBoy";
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 1px white;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .playlist {
-    grid-area: playlist;
-    height: 6rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgba(190, 36, 88, 0.89);
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .playlist h2 {
-    font-family: "SuperLegendBoy";
-    font-size: 1.3em;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 3px 3px 0px purple, 5px 5px 0px green, 7px 7px 0px darkred;
-  }
-}
-@media only screen and (min-width: 321px) and (orientation: landscape) {
-  .sound-container .music-player .playlist .player-title {
-    color: white;
-    border-bottom: 1px solid black;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .playlist ul {
-    list-style-type: none;
-    overflow-y: scroll;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .playlist ul li {
-    padding: 5px;
-    font-family: "SuperLegendBoy";
-    font-size: 1rem;
-    color: #fffbfb;
-    border-bottom: 1px solid #ddd;
-    text-shadow: 1px 1px 1px black;
-    cursor: pointer;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls {
-    grid-area: controls;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 3rem;
-    background-image: url("../../assets/multi-img/player-texture.gif");
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: none;
-    padding: 0.5rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls .control-btn {
-    font-size: 2rem;
-    color: white;
-    text-shadow: 3px 3px 0px purple, 5px 5px 0px green, 7px 7px 0px darkred;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls .playpause-btn {
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: 3px 3px 0px purple, 5px 5px 0px green, 7px 7px 0px darkred;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls .slidecontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls .slidecontainer .slide-icon {
-    color: #ffffff;
-    font-size: 2rem;
-  }
-}
-@media only screen and (min-width: 320px) and (orientation: landscape) {
-  .sound-container .music-player .controls .slidecontainer .slider {
-    -webkit-appeance: none;
-    background: #fff;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: 0.2;
-    border-radius: 10px;
-    margin: 0 20px;
-    font-size: 0.5rem;
-  }
-}
-
-/* ------------------------------------------- */
-/*                  ABOUT US                       */
-/* ------------------------------------------- */
 
 /*# sourceMappingURL=main.css.map */

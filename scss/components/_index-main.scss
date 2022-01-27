@@ -4,23 +4,24 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: black;
     &__title{
-        font-family: "SuperLegendBoy";
-        justify-self: flex-;
         width: 100vw;
+        justify-self: center;
+        font-family: "Antic Didone";
         font-size: 1rem;
+        text-align: center;
+        letter-spacing: .5rem;
         color: white;
         user-select: none;
-        text-align: center;
     }
     &__sub{
         align-self: flex-start;
-        margin-top: -150px;
+        margin-top: -9rem;
         display: grid;
-        grid-template-columns: 100px, 1fr, 1fr;
-        grid-template-rows: 1fr, 1fr, 1fr;
+        grid-template-columns: 6.25rem, 1fr, 1fr;
+        grid-template-rows: 1fr, .5fr, 1fr;
         grid-template-areas: 
         "ms1 ms1 ms1"
         "ms2 ms3 ms3"
@@ -34,8 +35,6 @@
         &--1{
             @extend %subtitlewhite;
             grid-area: ms1;
-            grid-column: 1 / 3;
-            grid-row: 1;
             font-size: 1.8rem;
             justify-self: start;
             margin: 10px 0 0 10px;
@@ -46,16 +45,12 @@
             @extend %subtitlewhite;
             grid-area: ms2;
             font-size: 3.8rem;
-            grid-row: 2 / 4;
-            grid-column: 1;
             margin: -15px 0 0 8px;
             user-select: none;
         }
         &--3{
             @extend %subtitlewhite;
             grid-area: ms3;
-            grid-column: 2 / 4;
-            grid-row: 2;
             margin: -5px 0 0 0;
             font-size: 1.65rem;
             user-select: none;
@@ -63,8 +58,6 @@
         &--slogan{
             @extend %slogan1;
             grid-area: slogan;
-            grid-column: 2 / 3;
-            grid-row: 3 / 4;
             margin: -10px 0 0 5px;
             font-size: 1.1rem;
             letter-spacing: .75px;
@@ -72,11 +65,12 @@
         }
     }
     &__ico{
+        align-self: center;
         justify-self: baseline;
         display: flex;
+        width: 15.5rem;
         justify-content: space-evenly;
-        width: 250px;
-        align-self: center;
+        align-items: center;
         &--mod1 {
             width: 15px;
         }

@@ -2,13 +2,95 @@
 
 
 
+
 /* Sección index Section - Carrusel de tarjetas */
 
 .isection{
-    height: 100vh;   
-    background-color: black;
+    height: 100%;   
+    background-color: rgb(226, 126, 218);
     overflow-x: hidden;
-    cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
+    &__parrafo{
+        position: relative;
+        margin: 3rem 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: "Amiri";
+        user-select: none;
+        &--p1{
+            z-index: 9999;
+            width: 6rem;   
+            align-self: flex-start;
+            margin-top: 7rem;        
+            margin-bottom: 10rem;
+            font-size: 2rem;
+            line-height: 1.6rem;
+            text-align: start;
+            transition: .5s color ease-in 1s;
+        }
+        &--emptybox1{
+            position: absolute;
+            left: 10rem;
+            top: 5rem;
+            width:22rem;
+            height: 16rem;
+            background-color: rgb(36, 49, 160);
+        }
+        &--p2{
+            z-index: 999;
+            align-self: flex-end;
+            width: 10rem;   
+            font-size: 2rem;
+            line-height: 1.5rem;
+            text-align: end;
+            margin-bottom: 12rem;
+        }
+        &--emptybox2{
+            position: absolute;
+            right:12rem;
+            top: 28rem;
+            width:22rem;
+            height: 18rem;
+            background-color: rgb(36, 49, 160);        
+        }
+        &--p3{
+            z-index:999;
+            width: 6rem;
+            align-self: center;  
+            font-size: 2.8rem;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+        &--emptybox3{
+            z-index:998;
+            position: absolute;
+            right:9rem;
+            bottom: 15rem;
+            width:8rem;
+            height: 8rem;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        &--link{
+            margin-top: 6rem;
+            align-self: center;
+            width: 12rem;
+            text-align: center;
+            color: black;
+            box-shadow: 1px 3px 4px black;
+            &:hover{
+                font-weight: bolder;
+                color: white;
+            }
+        }
+        &--emptybox4{
+            position: absolute;
+            left:9rem;
+            bottom: 7rem;
+            width:8rem;
+            height: 8rem;
+            background-color: rgb(36, 49, 160);
+        }
+    }
     &__arrowL, &__arrowR{
         height: 100px;
         margin-top: 250px;
@@ -38,7 +120,6 @@
         -o-transform: translateX(0);
         transform: translateX(0);
         transition: transform .3s ease-out;
-        cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
         &--slide{
             max-height: 100vh;
             width: 100vw;
@@ -58,17 +139,16 @@
 /* Tarjetas */ 
 .card{
     position: relative;
-    width: 200px;
-    height: 350px;
-    background-color: white;
+    width: 12.5rem;
+    height: 21.875rem;
+    background-color: rgb(255, 255, 255);
     transition: transform .3s ease-in-out;
     overflow: hidden;
     user-select: none;
-    /* border-top-right-radius: 10%;
-    border-bottom-left-radius: 10%; */
-    box-shadow: 8px 5px 10px rgba(247, 129, 227, 0.3),
-    inset 10px 10px 50px rgba(129, 107, 59, 0.76);
-    cursor: url(../../assets/punteros/xombie.png) 0 0, pointer;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 1.1rem 0.94rem 0.6rem rgba(8, 8, 8, 0.651),
+    inset 0.625rem 0.625rem 3.125rem rgba(129, 107, 59, 0.76);
     &::before{
         content:"";
         position: absolute;
@@ -87,12 +167,12 @@
         content: "";
         z-index: 4;
         position: absolute;
-        right: 100px;
-        top: 310px;
+        right: 6.25rem;
+        top: 19.375rem;
         width: 200%;
-        height: 150px;
+        height: 9.375rem;
         background: rgba(238, 187, 231, .7);
-        box-shadow: 20px 20px 40px rgb(255, 255, 255);
+        box-shadow: 1.25rem 1.25rem 2.5rem rgb(255, 255, 255);
         transform: skewY(40deg);
         filter: blur(4px);
     }
@@ -101,12 +181,12 @@
     }
     &__content {
         z-index: 2;
+        position: relative;
+        padding:1.25rem;
+        height: 22rem;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        position: relative;
-        height: 350px;
-        padding:20px;
         color: rgb(0, 0, 0);
         text-shadow: 1px 1px 5px rgba(0, 0, 0, .8);
         transition: color .7s ease-in;
@@ -115,21 +195,22 @@
         }
         &--title {
             margin: 10px 0;
-            font-family: "SuperLegendBoy";
-            font-weight: 600;
+            font-family: "Abril Fatface";
+            font-size: 1.8rem;
+            font-weight: normal;
             text-align: center;
-            font-size: 1.4rem;
+            letter-spacing:.3rem;
             border-top: 2px double black;
             border-bottom: 2px double black;
         }    
         &--par{
             align-self: center;
-            font-family: "SuperLegendBoy";
-            margin-top: 30px;
-            margin-bottom: 30px;
-            font-size: .8rem ;
+            font-family: "Antic Didone";
+            margin-top: 1.875rem;
+            margin-bottom: 1.875rem;
+            font-size: 1rem ;
             text-align: center;
-            line-height: 18px;
+            line-height: 1.125rem;
             letter-spacing: 1px;
         }
         &--par2{
@@ -144,24 +225,24 @@
             letter-spacing: 1px;
         }   
         &--btn{
-            width: 100px;
+            width: 7rem;
             height: 40px;
-            text-decoration: none;
-            background-color: rgb(0, 0, 0);
-            font-family: "SuperLegendBoy";
+            padding: 6px 10px;
             align-self: center;
             justify-self: baseline;
-            box-shadow: 10px 10px 30px rgba(3, 3, 3, 1);
-            text-transform: uppercase;
-            letter-spacing: .1rem;
-            font-size: 10px;
-            color: rgb(255, 255, 255);
-            padding: 6px 10px;
+            text-decoration: none;
+            font-family: "Antic Didone";
+            font-size: 15px;
             font-weight: 600;
+            letter-spacing: .1rem;
+            text-align: center;
+            text-transform: uppercase;
             border-top-left-radius: 13px;
             border-top-right-radius: 13px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            box-shadow: 10px 10px 30px rgba(3, 3, 3, 1);
             z-index: 10;
-            cursor: url(../../assets/punteros/punterodiagonal.png) 0 0, pointer;
         }
     }
 }
