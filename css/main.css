@@ -1181,27 +1181,27 @@ MUSICA, CURSOS, CONTACTO-
     }
 }     */
 .aboutus {
-  background-color: black;
   height: 100vh;
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
-  padding: 25px;
+  padding: 10px;
 }
 .aboutus__title {
-  font-family: "SuperLegendBoy";
-  font-size: 2.5rem;
+  margin-top: 2rem;
+  font-family: "Amiri";
+  font-size: 4rem;
   text-align: center;
   color: palevioletred;
-  text-shadow: 2px 3px 1px white;
 }
 .aboutus__descripcion {
   padding: 10px;
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
+  font-family: "Antic Didone";
+  font-size: 1.2rem;
   text-align: center;
-  color: #6b3f3f;
+  color: white;
 }
 
 /* FOOTER ROJO - SOUNDS MUSIC ABOUT US SHOP*/
@@ -1286,6 +1286,91 @@ MUSICA, CURSOS, CONTACTO-
   color: white;
   border: none;
   background-color: #310a64;
+}
+
+/*--------------------------------------------------------------------------*/
+.shop-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f02630;
+}
+.shop-footer__title {
+  padding: 1rem;
+  align-self: center;
+  font-family: "SuperLegendBoy";
+  font-size: 2.5rem;
+  text-align: center;
+  color: black;
+}
+.shop-footer__rrss {
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+}
+.shop-footer__arrow {
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+.shop-footer__arrow i {
+  font-size: 3rem;
+  color: black;
+  transition: 0.5s ease-in;
+}
+
+.shop-form {
+  grid-area: formulario;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop-form__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+.shop-form__container--title {
+  font-family: "SuperLegendBoy";
+  font-size: 2rem;
+  text-align: start;
+  color: black;
+}
+.shop-form__container--fill {
+  align-self: center;
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.shop-form__container--fill2 {
+  align-self: center;
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.shop-form__container--textarea {
+  align-self: center;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  height: 9.375rem;
+  width: 12.5rem;
+}
+.shop-form__container div {
+  align-self: center;
+}
+.shop-form__container div .shop-form__button {
+  height: 1.5rem;
+  width: 6rem;
+  font-family: "SuperLegendBoy";
+  font-weight: bolder;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: #f02630;
 }
 
 .footer__rrss {
@@ -1861,6 +1946,38 @@ a corregirlo, por eso lo separo en la hoja de SASS */
   .soundworks__work--img {
     width: 35rem;
     justify-self: center;
+  }
+}
+
+/*---------------------------------------------------------------------------------------*/
+/* ABOUT US */
+@media (min-width: 1224px) {
+  .aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 480px) {
+  .aboutus__title {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1224px) {
+  .aboutus__title {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 480px) {
+  .aboutus__descripcion {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1224px) {
+  .aboutus__descripcion {
+    justify-self: center;
+    font-size: 3.2rem;
+    width: 1000px;
   }
 }
 
