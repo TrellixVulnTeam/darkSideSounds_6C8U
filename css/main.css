@@ -1006,8 +1006,8 @@ MUSICA, CURSOS, CONTACTO-
 }
 .shop .cards__card--img {
   align-self: center;
-  width: 14rem;
-  height: 13rem;
+  width: 13rem;
+  height: 12rem;
   object-fit: cover;
   box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.6);
 }
@@ -1026,7 +1026,7 @@ MUSICA, CURSOS, CONTACTO-
 .shop .cards__card--img_musica3 {
   align-self: center;
   width: 14rem;
-  height: 15.5rem;
+  height: 14rem;
   object-fit: fill;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6);
 }
@@ -1497,6 +1497,53 @@ MUSICA, CURSOS, CONTACTO-
 
 /* ---------------------------------------------------------------------------------------*/
 /* INDEX MAIN */
+.main {
+  /* &__sub{ Subtitulo con formato de logo, por ahora no se usará 
+  @media (min-width: 480px){
+          grid-template-columns: 10px, 10px;
+          grid-template-rows: 100px, 1fr, 1fr;
+      }
+      @media (min-width: 1224px){
+          display: none;
+      }
+      &--1{
+          @media (min-width: 480px){
+              font-size: 3rem;
+          }
+          @media (min-width: 768px){
+              font-size: 5rem;
+          }
+      }
+      &--2{
+          @media (min-width: 480px){
+              font-size: 5rem;
+              margin-top: -1.3rem;
+          }
+          @media (min-width: 768px){
+              font-size: 9rem;
+              margin-top: -2.5rem;
+          }
+      }
+      &--3{
+          @media (min-width: 480px){             
+              font-size:2.3rem;
+          }
+          @media (min-width: 768px){
+              font-size: 4rem;
+              margin-top: -.5rem;
+          }
+      }
+      &--slogan{
+          @media (min-width: 480px){
+              font-size: 1.6rem;
+          }
+          @media (min-width: 768px){
+              font-size: 2.9rem;
+              margin-top: -1rem;
+          }
+      }
+  } */
+}
 @media (min-width: 480px) {
   .main__title {
     font-size: 1.5rem;
@@ -1510,64 +1557,9 @@ MUSICA, CURSOS, CONTACTO-
 @media (min-width: 1224px) {
   .main__title {
     margin-top: 15rem;
-    font-size: 3.5rem;
-    letter-spacing: 3.5rem;
-    color: #f1b8d3;
-  }
-}
-@media (min-width: 480px) {
-  .main__sub {
-    grid-template-columns: 10px, 10px;
-    grid-template-rows: 100px, 1fr, 1fr;
-  }
-}
-@media (min-width: 1224px) {
-  .main__sub {
-    display: none;
-  }
-}
-@media (min-width: 480px) {
-  .main__sub--1 {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 768px) {
-  .main__sub--1 {
-    font-size: 5rem;
-  }
-}
-@media (min-width: 480px) {
-  .main__sub--2 {
-    font-size: 5rem;
-    margin-top: -1.3rem;
-  }
-}
-@media (min-width: 768px) {
-  .main__sub--2 {
-    font-size: 9rem;
-    margin-top: -2.5rem;
-  }
-}
-@media (min-width: 480px) {
-  .main__sub--3 {
-    font-size: 2.3rem;
-  }
-}
-@media (min-width: 768px) {
-  .main__sub--3 {
     font-size: 4rem;
-    margin-top: -0.5rem;
-  }
-}
-@media (min-width: 480px) {
-  .main__sub--slogan {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 768px) {
-  .main__sub--slogan {
-    font-size: 2.9rem;
-    margin-top: -1rem;
+    letter-spacing: 1rem;
+    color: #f1b8d3;
   }
 }
 @media (min-width: 480px) {
@@ -1577,12 +1569,12 @@ MUSICA, CURSOS, CONTACTO-
 }
 @media (min-width: 768px) {
   .main__ico {
-    width: 40rem;
+    width: 25rem;
   }
 }
 @media (min-width: 1224px) {
   .main__ico {
-    width: 50rem;
+    width: 25rem;
     margin-top: 10rem;
   }
 }
