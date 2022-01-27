@@ -108,6 +108,13 @@
 
 
 /* REPRODUCTOR DE SONIDO SOLO PAGINA MUSIC */
+
+/* Nota: es intencional que en 320px el reproductor
+se oculte en el overflow de la pantalla, luego, a 
+medida que se amplia el ancho de la misma aparece 
+completo y se centra. Esto sucedió por accidente pero 
+luego de corregirlo decidí volver a dejarlo como estaba.*/
+
 .sound-container {
     height: 100vh;
     align-self: center;
