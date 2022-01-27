@@ -166,10 +166,11 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: black;
 }
 .main__title {
+  margin-top: 7rem;
   width: 100vw;
   justify-self: center;
   font-family: "Antic Didone";
@@ -192,6 +193,7 @@ body {
   padding: 3px;
   z-index: 90;
   user-select: none;
+  transform: scale(0.7);
 }
 .main__sub--1 {
   grid-area: ms1;
@@ -221,6 +223,7 @@ body {
   user-select: none;
 }
 .main__ico {
+  margin-bottom: 10rem;
   align-self: center;
   justify-self: baseline;
   display: flex;
@@ -272,51 +275,68 @@ body {
   background-color: #e27eda;
   overflow-x: hidden;
 }
-.isection__parrafo {
+.isection__parrafo1 {
   position: relative;
   margin: 3rem 1rem 0 1rem;
   display: flex;
   flex-direction: column;
   font-family: "Amiri";
+  font-size: 2rem;
   user-select: none;
 }
-.isection__parrafo--p1 {
+.isection__parrafo1--p1 {
   z-index: 9999;
-  width: 6rem;
   align-self: flex-start;
   margin-top: 7rem;
   margin-bottom: 10rem;
-  font-size: 2rem;
+  width: 6rem;
   line-height: 1.6rem;
   text-align: start;
   transition: 0.5s color ease-in 1s;
 }
-.isection__parrafo--emptybox1 {
+.isection__parrafo1--emptybox1 {
   position: absolute;
-  left: 10rem;
+  left: 60%;
   top: 5rem;
   width: 22rem;
   height: 16rem;
   background-color: #2431a0;
 }
-.isection__parrafo--p2 {
+.isection__parrafo2 {
+  position: relative;
+  margin: 3rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Amiri";
+  font-size: 2rem;
+  user-select: none;
+}
+.isection__parrafo2--p2 {
   z-index: 999;
   align-self: flex-end;
   width: 10rem;
-  font-size: 2rem;
   line-height: 1.5rem;
   text-align: end;
   margin-bottom: 12rem;
 }
-.isection__parrafo--emptybox2 {
+.isection__parrafo2--emptybox2 {
   position: absolute;
-  right: 12rem;
-  top: 28rem;
+  right: 60%;
+  top: -2rem;
   width: 22rem;
   height: 18rem;
   background-color: #2431a0;
 }
-.isection__parrafo--p3 {
+.isection__parrafo3 {
+  position: relative;
+  margin: 3rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Amiri";
+  font-size: 2rem;
+  user-select: none;
+}
+.isection__parrafo3--p3 {
   z-index: 999;
   width: 6rem;
   align-self: center;
@@ -324,35 +344,28 @@ body {
   line-height: 1.5rem;
   text-align: center;
 }
-.isection__parrafo--emptybox3 {
+.isection__parrafo3--emptybox3 {
   z-index: 998;
   position: absolute;
-  right: 9rem;
-  bottom: 15rem;
+  right: 40%;
+  bottom: 7rem;
   width: 8rem;
   height: 8rem;
   background-color: white;
 }
-.isection__parrafo--link {
-  margin-top: 6rem;
-  align-self: center;
-  width: 12rem;
-  text-align: center;
-  color: black;
-  box-shadow: 1px 3px 4px black;
-}
-.isection__parrafo--link:hover {
-  font-weight: bolder;
-  color: white;
-}
-.isection__parrafo--emptybox4 {
+.isection__parrafo3--emptybox4 {
   position: absolute;
-  left: 9rem;
-  bottom: 7rem;
+  left: 50%;
+  bottom: 0;
   width: 8rem;
   height: 8rem;
   background-color: #2431a0;
 }
+
+/* Slider e íconos */
+/*  Hay una inconveniencia en el Scope, esto debería ir en otro padre.
+Por cuestiones de deadline no llego a corregirlo, por eso lo separo
+en la hoja de SASS */
 .isection__arrowL, .isection__arrowR {
   height: 100px;
   margin-top: 250px;
@@ -532,11 +545,11 @@ body {
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 50px 1fr 100px;
+  grid-template-rows: 100px 50px 1fr 3rem 6rem;
   gap: 15px;
   background-color: black;
   z-index: 5;
-  grid-template-areas: "titulo" "rrss" "formulario" "irarriba";
+  grid-template-areas: "titulo" "rrss" "formulario" "irarriba" "devsign";
 }
 .footer__title {
   grid-area: titulo;
@@ -592,18 +605,30 @@ body {
   font-size: 2rem;
   color: white;
   border: none;
+  background-color: #e27eda;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 .footer .form__container div .form__button:hover {
-  color: #ff002b;
+  color: black;
 }
-.footer .form__ico--arriba {
+.footer__ico {
   grid-area: irarriba;
   justify-self: center;
 }
-.footer .form__ico--arriba i {
+.footer__ico i {
   font-size: 3rem;
   color: white;
+}
+.footer__devsign {
+  grid-area: devsign;
+  height: 4rem;
+  width: 100vw;
+  align-self: flex-end;
+  text-align: center;
+  font-family: "Abril Fatface";
+  letter-spacing: 0.2rem;
+  font-size: 10rem;
+  background-color: #e27eda;
 }
 
 /* FOOTER ROJO - SOUNDS MUSIC ABOUT US SHOP*/
@@ -1267,6 +1292,25 @@ MUSICA, CURSOS, CONTACTO-
   color: #6b3f3f;
 }
 
+.main__sub--1, .main__sub--2, .main__sub--3 {
+  font-family: "Abril Fatface", "Amiri";
+  color: white;
+  font-weight: normal;
+}
+
+.main__sub--slogan {
+  font-family: "Amiri";
+  color: white;
+  font-weight: normal;
+}
+
+.footer__rrss {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding: 10px;
+}
+
 /*--------------------------------------------*/
 /*             MEDIA QUERIES                  */
 /*--------------------------------------------*/
@@ -1304,6 +1348,99 @@ MUSICA, CURSOS, CONTACTO-
   .header__nav div .collapsed .bottom-bar {
     margin-top: 30px;
   }
+}
+
+/* FOOTERS */
+@media (min-width: 1224px) {
+  .footer {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 100px;
+    gap: 15px;
+    background-color: black;
+    z-index: 5;
+  }
+}
+@media (min-width: 1224px) {
+  .footer__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 1rem;
+    margin-top: 3.2rem;
+    font-family: "Abril Fatface";
+    font-size: 8rem;
+    font-weight: lighter;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: #fdfdfd;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+  }
+}
+@media (min-width: 1224px) {
+  .footer__rrss {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1224px) and (min-width: 1224px) {
+  .footer__rrss .form__ico--img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (min-width: 1224px) {
+  .footer .form {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+}
+@media (min-width: 1224px) {
+  .footer .form__container {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+}
+@media (min-width: 1224px) {
+  .footer .form__container--title {
+    color: white;
+    font-family: "Antic Didone";
+    font-size: 6rem;
+    letter-spacing: 3px;
+    transform: scaleY(0.98);
+  }
+}
+@media (min-width: 1224px) {
+  .footer .form__container--fill {
+    display: none;
+  }
+}
+@media (min-width: 1224px) {
+  .footer .form__container--textarea {
+    height: 20rem;
+    width: 40rem;
+  }
+}
+@media (min-width: 1224px) {
+  .footer .form__container div .form__button {
+    width: 8rem;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  }
+}
+.footer .form__ico--arriba {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  justify-self: center;
+}
+.footer .form__ico--arriba i {
+  font-size: 3rem;
+  color: white;
 }
 
 /* INDEX MAIN */
@@ -1425,58 +1562,56 @@ MUSICA, CURSOS, CONTACTO-
   overflow-x: hidden;
 }
 @media (min-width: 480px) {
-  .isection__parrafo--p1 {
+  .isection__parrafo1--p1 {
     width: 6rem;
     font-size: 2.5rem;
     line-height: 2rem;
   }
 }
 @media (min-width: 768px) {
-  .isection__parrafo--p1 {
+  .isection__parrafo1--p1 {
     width: 8rem;
     font-size: 3.5rem;
     line-height: 2.3rem;
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--p1 {
+  .isection__parrafo1--p1 {
     width: 40rem;
     font-size: 6rem;
     line-height: 4rem;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--emptybox1 {
-    left: 18rem;
-    top: 4.5rem;
+  .isection__parrafo1--emptybox1 {
     height: 20rem;
   }
 }
 @media (min-width: 768px) {
-  .isection__parrafo--emptybox1 {
-    left: 30rem;
-    top: 4.5rem;
+  .isection__parrafo1--emptybox1 {
     height: 25rem;
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--emptybox1 {
-    left: 7rem;
-    top: 1rem;
+  .isection__parrafo1--emptybox1 {
+    left: 8%;
+    right: 0;
+    top: 0;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--p2 {
-    width: 11rem;
+  .isection__parrafo2--p2 {
+    margin-top: 2.5rem;
+    width: 12rem;
     font-size: 2.5rem;
     line-height: 2rem;
   }
 }
 @media (min-width: 768px) {
-  .isection__parrafo--p2 {
+  .isection__parrafo2--p2 {
     width: 14rem;
     font-size: 3.5rem;
     line-height: 2.3rem;
@@ -1484,41 +1619,41 @@ MUSICA, CURSOS, CONTACTO-
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--p2 {
+  .isection__parrafo2--p2 {
     width: 40rem;
     line-height: 2.4rem;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--emptybox2 {
-    right: 18rem;
-    top: 30rem;
+  .isection__parrafo2--emptybox2 {
+    right: 50%;
+    top: 0;
     height: 25rem;
   }
 }
 @media (min-width: 768px) {
-  .isection__parrafo--emptybox2 {
-    right: 30rem;
-    top: 50rem;
+  .isection__parrafo2--emptybox2 {
+    right: 60%;
+    top: 14rem;
     height: 35rem;
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--emptybox2 {
+  .isection__parrafo2--emptybox2 {
     right: 0;
-    top: 51.3rem;
+    top: 55%;
     height: 20rem;
     width: 40rem;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--p3 {
+  .isection__parrafo3--p3 {
     width: 6rem;
     font-size: 2.8rem;
   }
 }
 @media (min-width: 768px) {
-  .isection__parrafo--p3 {
+  .isection__parrafo3--p3 {
     margin-top: 10rem;
     margin-bottom: 10rem;
     width: 10rem;
@@ -1527,98 +1662,84 @@ MUSICA, CURSOS, CONTACTO-
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--p3 {
+  .isection__parrafo3--p3 {
     font-size: 8rem;
     width: 40rem;
     line-height: 6rem;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--emptybox3 {
-    bottom: 17rem;
-    width: 8rem;
+  .isection__parrafo3--emptybox3 {
+    bottom: 6rem;
+    width: 9rem;
   }
 }
 @media (min-width: 768px) {
-  .isection__parrafo--emptybox3 {
-    bottom: 29.5rem;
-    width: 20rem;
+  .isection__parrafo3--emptybox3 {
+    right: 45%;
+    bottom: 20rem;
+    width: 15rem;
     height: 14rem;
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--emptybox3 {
-    bottom: 29.5rem;
+  .isection__parrafo3--emptybox3 {
+    right: 20%;
+    bottom: 20%;
     width: 30rem;
     height: 19rem;
-    right: 11.5rem;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--emptybox4 {
+  .isection__parrafo3--emptybox4 {
+    bottom: 0;
+    width: 9rem;
+  }
+}
+@media (min-width: 768px) {
+  .isection__parrafo3--emptybox4 {
+    left: 45%;
     bottom: 9rem;
-  }
-}
-@media (min-width: 768px) {
-  .isection__parrafo--emptybox4 {
-    bottom: 18rem;
-    width: 20rem;
+    width: 15rem;
     height: 14rem;
   }
 }
 @media (min-width: 1224px) {
-  .isection__parrafo--emptybox4 {
-    bottom: 16rem;
+  .isection__parrafo3--emptybox4 {
+    left: 20%;
+    bottom: 40%;
     width: 30rem;
     height: 19rem;
-    left: 16rem;
   }
 }
 @media (min-width: 480px) {
-  .isection__parrafo--link {
+  .isection--link {
     font-size: 3rem;
     width: 15rem;
   }
 }
-.isection__arrowL {
-  left: 25px;
+
+/*  Hay una inconveniencia en el Scope, esto debería ir en otro padre
+por cuestiones de deadline no llego a corregirlo, por eso lo separo
+en la hoja de SASS */
+@media (min-width: 1224px) {
+  .isection__arrowL, .isection__arrowR {
+    display: none;
+  }
 }
-.isection__arrowR {
-  right: 25px;
-}
-.isection__slidercontainer {
-  height: 600px;
-  display: inline-flex;
-  overflow: hidden;
-  scrollbar-width: none;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-}
-.isection__slidercontainer--slide {
-  max-height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  user-select: none;
-  transition: transform 0.3s ease-in-out;
-}
-@media (min-width: 1200px) {
-  .isection__slidercontainer--slide {
-    padding: 3rem;
+@media (min-width: 1224px) {
+  .isection__slidercontainer {
+    display: none;
   }
 }
 
-/* /* Tarjetas */
+/* Tarjetas */
 @media (min-width: 1224px) {
   .card {
     display: none;
   }
 }
+
+/* PAGINAS SONIDO - MUSICA */
 
 /*# sourceMappingURL=main.css.map */

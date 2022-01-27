@@ -9,49 +9,66 @@
     height: 100%;   
     background-color: rgb(226, 126, 218);
     overflow-x: hidden;
-    &__parrafo{
+    &__parrafo1{
         position: relative;
         margin: 3rem 1rem 0 1rem;
         display: flex;
         flex-direction: column;
         font-family: "Amiri";
+        font-size: 2rem;
         user-select: none;
         &--p1{
             z-index: 9999;
-            width: 6rem;   
             align-self: flex-start;
             margin-top: 7rem;        
             margin-bottom: 10rem;
-            font-size: 2rem;
+            width: 6rem;   
             line-height: 1.6rem;
             text-align: start;
             transition: .5s color ease-in 1s;
         }
         &--emptybox1{
             position: absolute;
-            left: 10rem;
+            left: 60%;
             top: 5rem;
             width:22rem;
             height: 16rem;
             background-color: rgb(36, 49, 160);
         }
+    }
+    &__parrafo2{
+        position: relative;
+        margin: 3rem 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: "Amiri";
+        font-size: 2rem;
+        user-select: none;
         &--p2{
             z-index: 999;
             align-self: flex-end;
             width: 10rem;   
-            font-size: 2rem;
             line-height: 1.5rem;
             text-align: end;
             margin-bottom: 12rem;
         }
         &--emptybox2{
             position: absolute;
-            right:12rem;
-            top: 28rem;
+            right: 60%;
+            top: -2rem;
             width:22rem;
             height: 18rem;
             background-color: rgb(36, 49, 160);        
         }
+    }
+    &__parrafo3{
+        position: relative;
+        margin: 3rem 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: "Amiri";
+        font-size: 2rem;
+        user-select: none;
         &--p3{
             z-index:999;
             width: 6rem;
@@ -63,34 +80,29 @@
         &--emptybox3{
             z-index:998;
             position: absolute;
-            right:9rem;
-            bottom: 15rem;
+            right: 40%;
+            bottom: 7rem;
             width:8rem;
             height: 8rem;
             background-color: rgb(255, 255, 255);
         }
-        
-        &--link{
-            margin-top: 6rem;
-            align-self: center;
-            width: 12rem;
-            text-align: center;
-            color: black;
-            box-shadow: 1px 3px 4px black;
-            &:hover{
-                font-weight: bolder;
-                color: white;
-            }
-        }
         &--emptybox4{
             position: absolute;
-            left:9rem;
-            bottom: 7rem;
+            left: 50%;
+            bottom: 0;
             width:8rem;
             height: 8rem;
             background-color: rgb(36, 49, 160);
         }
     }
+}     
+
+
+/* Slider e íconos */
+/*  Hay una inconveniencia en el Scope, esto debería ir en otro padre.
+Por cuestiones de deadline no llego a corregirlo, por eso lo separo
+en la hoja de SASS */
+.isection{
     &__arrowL, &__arrowR{
         height: 100px;
         margin-top: 250px;
@@ -134,7 +146,7 @@
             }
         }
     }
-}     
+}
 
 /* Tarjetas */ 
 .card{

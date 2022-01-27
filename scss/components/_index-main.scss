@@ -4,9 +4,10 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: black;
     &__title{
+        margin-top: 7rem;
         width: 100vw;
         justify-self: center;
         font-family: "Antic Didone";
@@ -32,6 +33,7 @@
         padding: 3px;
         z-index: 90;
         user-select: none;
+        transform: scale(.7);
         &--1{
             @extend %subtitlewhite;
             grid-area: ms1;
@@ -65,6 +67,7 @@
         }
     }
     &__ico{
+        margin-bottom: 10rem;
         align-self: center;
         justify-self: baseline;
         display: flex;
