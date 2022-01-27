@@ -4,7 +4,11 @@
 /*             MEDIA QUERIES                  */
 /*--------------------------------------------*/
 
-/* NAVBAR */
+
+
+/* BARRA DE NAVEGACION (USO SOLO MENU HAMBURGUESA */
+
+
 .header__nav{
     div{
         .navbar-toggler{
@@ -44,8 +48,8 @@
     }
 }
 
-/* FOOTERS */
-
+/* ----------------------------------------------------------------------------------------*/
+/* FOOTER INDEX */
 .footer{
     @media (min-width: 1224px){
         height: 100vh;
@@ -85,51 +89,6 @@
             }
         }
     }
-    .form{
-        @media (min-width: 1224px){
-            grid-column: 1 / 3;
-            grid-row: 2 / 4;
-        }
-        &__container{
-            @media (min-width: 1224px){
-                padding: 15px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 5px;
-            }
-            &--title{
-                @media (min-width: 1224px){
-                    color:rgb(255, 255, 255);
-                    font-family: 'Antic Didone';
-                    font-size: 6rem;
-                    letter-spacing: 3px;
-                    transform: scaleY(.98);
-                }
-            }
-            &--fill{
-                @media (min-width: 1224px){
-                    display:none;
-                }
-            }               
-            &--textarea{
-                @media (min-width: 1224px){
-                    height: 20rem;
-                    width: 40rem;
-                }
-            }
-            div{
-                .form__button{
-                    @media (min-width: 1224px){
-                        width: 8rem;
-                        font-size: 2rem;
-                        color: white;
-                        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
-                    }
-                }
-            }    
-        }
-    }    
     .form__ico--arriba{
         grid-column: 1 / 3;
         grid-row: 3 / 4;
@@ -140,8 +99,128 @@
         }
     } 
 }
+/* formulario */
+.form{
+    @media (min-width: 1224px){
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+    &__container{
+        @media (min-width: 1224px){
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+        &--title{
+            @media (min-width: 1224px){
+                color:rgb(255, 255, 255);
+                font-family: 'Antic Didone';
+                font-size: 6rem;
+                letter-spacing: 3px;
+                transform: scaleY(.98);
+            }
+        }
+        &--fill{
+            @media (min-width: 1224px){
+                display:none;
+            }
+        }               
+        &--textarea{
+            @media (min-width: 1224px){
+                height: 20rem;
+                width: 40rem;
+            }
+        }
+        div{
+            .form__button{
+                @media (min-width: 1224px){
+                    width: 8rem;
+                    font-size: 2rem;
+                    color: white;
+                    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+                }
+            }
+        }    
+    }
+}    
+
+/*------------------*/
+/*FOOTER DE PAGES - Page-Footer - */
+.page-footer{
+    &__title{
+        @media (min-width: 768px){
+            align-self: center;
+            font-family: 'Amiri';
+            font-size: 8rem;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+    }
+    &__rrss{
+        @media (min-width: 768px){
+            width: 42rem;
+            img{
+                @media (min-width: 768px){
+                    width: 3rem;
+                    height: 4rem;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    &__arrow{
+        i{
+            @media (min-width: 768px){
+                font-size: 5rem;
+            }
+        }
+    }
+}
+/* formulario */
+.page-form{
+    &__container{
+        &--title{
+            @media (min-width: 768px){
+                font-size: 4rem;
+            }
+        }
+        &--fill{
+            @media (min-width: 768px){
+                height: 4rem;
+                width: 24rem;
+                font-size: 2rem;
+            }
+        }               
+        &--fill2{
+            @media (min-width: 768px){
+                height: 4rem;
+                width: 24rem;
+                font-size: 2rem;
+            }
+        }               
+        &--textarea{
+            @media (min-width: 768px){
+                height: 15rem;
+                width: 24rem;
+                font-size: 2rem;
+            }
+        }
+        div{
+            .page-form__button{
+                @media (min-width: 768px){
+                    height: 5rem;
+                    width: 12rem;
+                    font-size: 3rem;
+                }
+            }
+        }    
+    }
+}  
 
 
+/* ---------------------------------------------------------------------------------------*/
 /* INDEX MAIN */
 .main{
     &__title{
@@ -240,9 +319,7 @@
         }
     }    
 }
-
 /* INDEX SECTION */
-
 .isection{
     height: 100%;   
     background-color: rgb(226, 126, 218);
@@ -383,10 +460,9 @@
             }
     }
 }   
-
-/*  Hay una inconveniencia en el Scope, esto debería ir en otro padre
-por cuestiones de deadline no llego a corregirlo, por eso lo separo
-en la hoja de SASS */
+/*  Hay una inconveniencia en el Scope, los estilos a continuación 
+deberían ir en otro padre pero por cuestiones de deadline no llego 
+a corregirlo, por eso lo separo en la hoja de SASS */
 .isection{
     &__arrowL, &__arrowR{
         @media (min-width: 1224px){
@@ -400,8 +476,7 @@ en la hoja de SASS */
         }
     }
 }
-
-/* Tarjetas */ 
+/* TARJETAS (JS) */ 
 .card{
     @media (min-width: 1224px){
         display: none;
@@ -409,4 +484,80 @@ en la hoja de SASS */
 }
 
 
-/* PAGINAS SONIDO - MUSICA */
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------*/
+/* ESTILOS PAGINAS SOUND Y MUSIC */
+/* MAIN*/
+.multimedia{
+    &__title{
+        @media (min-width: 768px){
+            margin-top: 4rem;
+            font-size: 10rem;
+        }
+    }
+    &__animation{
+        @media (min-width: 768px){
+            width: 60%;
+            border: 0.25rem solid rgb(83, 52, 82);
+            object-fit: cover;
+        }
+    }
+    &__descripcion{
+        @media (min-width: 768px){
+            padding: 6rem;
+            font-size: 3rem;
+            line-height: 2.2rem;
+        }
+    }
+    &__link-button{
+        /* Pagina MUSIC */
+        position: absolute;
+        bottom: 2rem;
+        width: 20rem;
+        padding: .5rem;
+        font-family: "SuperLegendBoy";
+        font-size: 1rem;
+        text-align: center;
+        align-self: center;
+        color: black;
+        background-color: rgb(241, 122, 236);
+        border: 0.125rem solid black;
+    }
+}
+/* SECCION Galería de Pagina SOUNDS*/
+.soundworks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(226, 126, 218);
+    padding-bottom: 4rem;
+    &__title{
+        @media (min-width: 768px){
+            height: 100vh;
+            width: 40rem;
+            justify-self: center;
+            font-size: 9rem;
+            text-align: center;
+        }
+    }
+    &__work{
+        margin-top: 2rem;
+        &--title{
+            @media (min-width: 768px){
+                font-size: 5rem;
+            }
+        }
+        &--img{
+            @media (min-width: 768px){
+                width: 35rem;
+                justify-self: center;
+
+            }
+        }
+    }
+}

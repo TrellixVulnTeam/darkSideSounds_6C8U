@@ -28,7 +28,6 @@ body {
   padding: 10px;
 }
 
-/* Variables para MQueries*/
 .header__nav {
   position: fixed;
   top: 0;
@@ -82,14 +81,17 @@ body {
   position: absolute;
   margin-top: 0px;
   transform: rotate(135deg);
+  border-radius: 50px;
 }
 .header__nav div .navbar-toggler .middle-bar {
   opacity: 0;
   filter: alpha(opacity=0);
+  border-radius: 50px;
 }
 .header__nav div .navbar-toggler .bottom-bar {
   margin-top: 0;
   transform: rotate(-135deg);
+  border-radius: 50px;
 }
 .header__nav div .collapsed .top-bar {
   /* Estado cuando el navbar está colapsado*/
@@ -110,7 +112,9 @@ body {
 }
 .header__nav div .nav__linkcontainer {
   background-color: rgba(0, 0, 0, 0.95);
-  height: 30rem;
+  padding: 1rem;
+  height: 26rem;
+  width: 15rem;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item {
   padding: 15px;
@@ -119,10 +123,9 @@ body {
   transition: 0.5s ease-in;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link {
-  font-family: "Abril Fatface", "Amiri";
+  font-family: "Amiri";
   font-size: 3rem;
-  letter-spacing: 0.4rem;
-  line-height: 1rem;
+  line-height: 1.5rem;
   color: pink;
 }
 .header__nav div .nav__linkcontainer .nav__links .nav__item .nav__link:hover {
@@ -140,6 +143,7 @@ body {
 
 .main {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -198,10 +202,9 @@ body {
 }
 .main__title {
   margin-top: 7rem;
-  width: 100vw;
   justify-self: center;
   font-family: "Antic Didone";
-  font-size: 1rem;
+  font-size: 3.5rem;
   text-align: center;
   letter-spacing: 0.5rem;
   color: white;
@@ -401,7 +404,7 @@ en la hoja de SASS */
 .card {
   position: relative;
   width: 12.5rem;
-  height: 21.875rem;
+  height: 21.9rem;
   background-color: white;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
@@ -667,7 +670,7 @@ en la hoja de SASS */
   bottom: 2rem;
   width: 20rem;
   padding: 0.5rem;
-  font-family: "SuperLegendBoy";
+  font-family: "Amiri";
   font-size: 1rem;
   text-align: center;
   align-self: center;
@@ -676,7 +679,7 @@ en la hoja de SASS */
   border: 0.125rem solid black;
 }
 
-/* Galería de Sounds*/
+/* SOLO PAGINA SOUNDS Galería de Sounds*/
 .soundworks {
   display: flex;
   flex-direction: column;
@@ -707,61 +710,53 @@ en la hoja de SASS */
   width: 17rem;
 }
 
-/* REPRODUCTOR DE SONIDO 
-(POR AHORA SOLO EN PAGINA => MUSIC */
+/* REPRODUCTOR DE SONIDO SOLO PAGINA MUSIC */
 .sound-container {
-  align-self: center;
   height: 100vh;
+  align-self: center;
   padding: 1rem;
   display: flex;
   justify-content: center;
   user-select: none;
-  background-color: black;
+  overflow: hidden;
+  background-color: #e27eda;
 }
 .sound-container .music-player {
   align-self: center;
-  height: 20rem;
-  max-width: 32rem;
-  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 3rem 2fr 1fr;
-  grid-template-areas: "player player" "controls controls" "playlist playlist" "button button";
   justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4rem 13rem 2fr 1fr;
+  grid-template-areas: "player player" "playlist playlist" "controls controls" "button button";
 }
 .sound-container .music-player .player {
   grid-area: player;
   display: flex;
-  justify-content: center;
-  background-image: url("../../assets/multi-img/giphy.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.8;
 }
 .sound-container .music-player .player .player-title {
-  justify-self: center;
-  align-self: center;
-  font-family: "SuperLegendBoy";
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 1px white;
-  background-color: rgba(255, 255, 255, 0.7);
+  /* TITULO DE LA CANCION EN REPRODUCCIÓN */
+  font-family: "Abril Fatface";
+  font-size: 3rem;
 }
 .sound-container .music-player .playlist {
   grid-area: playlist;
-  height: 6rem;
+  height: 12rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(190, 36, 88, 0.89);
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #2431a0;
+  box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.582);
 }
 .sound-container .music-player .playlist h2 {
-  font-family: "SuperLegendBoy";
-  font-size: 1.3em;
+  padding: 1rem;
+  align-self: center;
+  font-family: "Antic Didone";
+  font-size: 2rem;
+  letter-spacing: 1rem;
   text-align: center;
   text-transform: uppercase;
   color: white;
-  text-shadow: 3px 3px 0px purple, 5px 5px 0px green, 7px 7px 0px darkred;
 }
 .sound-container .music-player .playlist .player-title {
   color: white;
@@ -772,25 +767,31 @@ en la hoja de SASS */
   list-style-type: none;
 }
 .sound-container .music-player .playlist ul li {
+  margin-top: 0.2rem;
   padding: 5px;
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
+  font-family: "Antic Didone";
+  font-size: 2rem;
   color: #fffbfb;
-  border-bottom: 1px solid #ddd;
-  text-shadow: 1px 1px 1px black;
-  cursor: pointer;
+  background: black;
+  width: 20rem;
+  box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.329);
 }
 .sound-container .music-player .playlist ul li:hover {
   color: grey;
 }
 .sound-container .music-player .controls {
   grid-area: controls;
+  padding: 1rem;
+  margin-top: 1rem;
+  height: 3rem;
+  width: 20 rem;
+  justify-self: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 3rem;
-  background-image: url("../../assets/multi-img/player-texture.gif");
+  background-color: darkred;
   opacity: 0.8;
+  box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.521);
 }
 .sound-container .music-player .controls button {
   outline: none;
@@ -800,24 +801,22 @@ en la hoja de SASS */
   padding: 0.5rem;
 }
 .sound-container .music-player .controls .control-btn {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: white;
-  text-shadow: 3px 3px 0px purple, 5px 5px 0px green, 7px 7px 0px darkred;
 }
 .sound-container .music-player .controls .playpause-btn {
   font-size: 1.5rem;
   color: white;
-  text-shadow: 3px 3px 0px purple, 5px 5px 0px green, 7px 7px 0px darkred;
 }
 .sound-container .music-player .controls .slidecontainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .sound-container .music-player .controls .slidecontainer .slide-icon {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 .sound-container .music-player .controls .slidecontainer .slider {
   -webkit-appeance: none;
@@ -832,19 +831,6 @@ en la hoja de SASS */
 }
 .sound-container .music-player .controls .slidecontainer .slider:hover {
   opacity: 1;
-}
-.sound-container .music-player__link-button {
-  grid-area: button;
-  width: 12rem;
-  padding: 0.5rem;
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
-  text-align: center;
-  align-self: center;
-  justify-self: center;
-  color: black;
-  background-color: #f17aec;
-  border: 0.125rem solid white;
 }
 
 .footer__rrss {
@@ -1210,6 +1196,7 @@ MUSICA, CURSOS, CONTACTO-
 .page-footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
   background-color: #e27eda;
 }
@@ -1221,7 +1208,7 @@ MUSICA, CURSOS, CONTACTO-
   color: black;
 }
 .page-footer__rrss {
-  padding: 0.1rem;
+  padding: 0.2rem;
   display: flex;
   justify-content: space-around;
   width: 20rem;
@@ -1299,7 +1286,7 @@ MUSICA, CURSOS, CONTACTO-
 /*--------------------------------------------*/
 /*             MEDIA QUERIES                  */
 /*--------------------------------------------*/
-/* NAVBAR */
+/* BARRA DE NAVEGACION (USO SOLO MENU HAMBURGUESA */
 @media (min-width: 768px) {
   .header__nav div .navbar-toggler {
     width: 4rem;
@@ -1335,7 +1322,8 @@ MUSICA, CURSOS, CONTACTO-
   }
 }
 
-/* FOOTERS */
+/* ----------------------------------------------------------------------------------------*/
+/* FOOTER INDEX */
 @media (min-width: 1224px) {
   .footer {
     height: 100vh;
@@ -1376,49 +1364,6 @@ MUSICA, CURSOS, CONTACTO-
     height: 2rem;
   }
 }
-@media (min-width: 1224px) {
-  .footer .form {
-    grid-column: 1/3;
-    grid-row: 2/4;
-  }
-}
-@media (min-width: 1224px) {
-  .footer .form__container {
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-  }
-}
-@media (min-width: 1224px) {
-  .footer .form__container--title {
-    color: white;
-    font-family: "Antic Didone";
-    font-size: 6rem;
-    letter-spacing: 3px;
-    transform: scaleY(0.98);
-  }
-}
-@media (min-width: 1224px) {
-  .footer .form__container--fill {
-    display: none;
-  }
-}
-@media (min-width: 1224px) {
-  .footer .form__container--textarea {
-    height: 20rem;
-    width: 40rem;
-  }
-}
-@media (min-width: 1224px) {
-  .footer .form__container div .form__button {
-    width: 8rem;
-    font-size: 2rem;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
-  }
-}
 .footer .form__ico--arriba {
   grid-column: 1/3;
   grid-row: 3/4;
@@ -1429,6 +1374,116 @@ MUSICA, CURSOS, CONTACTO-
   color: white;
 }
 
+/* formulario */
+@media (min-width: 1224px) {
+  .form {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+}
+@media (min-width: 1224px) {
+  .form__container {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+}
+@media (min-width: 1224px) {
+  .form__container--title {
+    color: white;
+    font-family: "Antic Didone";
+    font-size: 6rem;
+    letter-spacing: 3px;
+    transform: scaleY(0.98);
+  }
+}
+@media (min-width: 1224px) {
+  .form__container--fill {
+    display: none;
+  }
+}
+@media (min-width: 1224px) {
+  .form__container--textarea {
+    height: 20rem;
+    width: 40rem;
+  }
+}
+@media (min-width: 1224px) {
+  .form__container div .form__button {
+    width: 8rem;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/*------------------*/
+/*FOOTER DE PAGES - Page-Footer - */
+@media (min-width: 768px) {
+  .page-footer__title {
+    align-self: center;
+    font-family: "Amiri";
+    font-size: 8rem;
+    text-align: center;
+    color: black;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer__rrss {
+    width: 42rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .page-footer__rrss img {
+    width: 3rem;
+    height: 4rem;
+    align-self: center;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer__arrow i {
+    font-size: 5rem;
+  }
+}
+
+/* formulario */
+@media (min-width: 768px) {
+  .page-form__container--title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .page-form__container--fill {
+    height: 4rem;
+    width: 24rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .page-form__container--fill2 {
+    height: 4rem;
+    width: 24rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .page-form__container--textarea {
+    height: 15rem;
+    width: 24rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .page-form__container div .page-form__button {
+    height: 5rem;
+    width: 12rem;
+    font-size: 3rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------*/
 /* INDEX MAIN */
 @media (min-width: 480px) {
   .main__title {
@@ -1714,9 +1769,9 @@ MUSICA, CURSOS, CONTACTO-
   }
 }
 
-/*  Hay una inconveniencia en el Scope, esto debería ir en otro padre
-por cuestiones de deadline no llego a corregirlo, por eso lo separo
-en la hoja de SASS */
+/*  Hay una inconveniencia en el Scope, los estilos a continuación 
+deberían ir en otro padre pero por cuestiones de deadline no llego 
+a corregirlo, por eso lo separo en la hoja de SASS */
 @media (min-width: 1224px) {
   .isection__arrowL, .isection__arrowR {
     display: none;
@@ -1728,13 +1783,81 @@ en la hoja de SASS */
   }
 }
 
-/* Tarjetas */
+/* TARJETAS (JS) */
 @media (min-width: 1224px) {
   .card {
     display: none;
   }
 }
 
-/* PAGINAS SONIDO - MUSICA */
+/*---------------------------------------------------------------------------------------*/
+/* ESTILOS PAGINAS SOUND Y MUSIC */
+/* MAIN*/
+@media (min-width: 768px) {
+  .multimedia__title {
+    margin-top: 4rem;
+    font-size: 10rem;
+  }
+}
+@media (min-width: 768px) {
+  .multimedia__animation {
+    width: 60%;
+    border: 0.25rem solid #533452;
+    object-fit: cover;
+  }
+}
+@media (min-width: 768px) {
+  .multimedia__descripcion {
+    padding: 6rem;
+    font-size: 3rem;
+    line-height: 2.2rem;
+  }
+}
+.multimedia__link-button {
+  /* Pagina MUSIC */
+  position: absolute;
+  bottom: 2rem;
+  width: 20rem;
+  padding: 0.5rem;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  text-align: center;
+  align-self: center;
+  color: black;
+  background-color: #f17aec;
+  border: 0.125rem solid black;
+}
+
+/* SECCION Galería de Pagina SOUNDS*/
+.soundworks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e27eda;
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .soundworks__title {
+    height: 100vh;
+    width: 40rem;
+    justify-self: center;
+    font-size: 9rem;
+    text-align: center;
+  }
+}
+.soundworks__work {
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .soundworks__work--title {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .soundworks__work--img {
+    width: 35rem;
+    justify-self: center;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 @import "../base/mixins";
 @import "../base/extends";
-@import "../base/variables";
+
 
 .header__nav{
     position: fixed;
@@ -50,16 +50,19 @@
                 position:absolute;
                 margin-top: 0px;
                 transform: rotate(135deg);
+                border-radius: 50px;
             }
             
             .middle-bar{
                 opacity: 0;
                 filter: alpha(opacity=0);
+                border-radius: 50px;
             }
             
             .bottom-bar {
                 margin-top: 0;
                 transform: rotate(-135deg);
+                border-radius: 50px;
             }    
         }
         .collapsed {
@@ -83,7 +86,9 @@
         }
         .nav__linkcontainer{
             background-color: rgba(0, 0, 0, 0.95);
-            height: 30rem;
+            padding: 1rem;
+            height: 26rem;
+            width: 15rem;
             .nav__links{
                 .nav__item{
                     padding: 15px;
@@ -91,10 +96,9 @@
                         transition: .5s ease-in;
                     }
                     .nav__link{
-                        font-family: 'Abril Fatface', 'Amiri';
+                        font-family: 'Amiri';
                         font-size: 3rem;
-                        letter-spacing: .4rem;
-                        line-height: 1rem;
+                        line-height: 1.5rem;
                         color: pink;
                         &:hover{
                             border: .5px solid white;

@@ -61,7 +61,7 @@
         bottom: 2rem;
         width: 20rem;
         padding: .5rem;
-        font-family: "SuperLegendBoy";
+        font-family: "Amiri";
         font-size: 1rem;
         text-align: center;
         align-self: center;
@@ -72,7 +72,9 @@
 }
 
 
-/* Galería de Sounds*/
+
+
+/* SOLO PAGINA SOUNDS Galería de Sounds*/
 .soundworks{
     display: flex;
     flex-direction: column;
@@ -105,65 +107,54 @@
 
 
 
-/* REPRODUCTOR DE SONIDO 
-(POR AHORA SOLO EN PAGINA => MUSIC */
+/* REPRODUCTOR DE SONIDO SOLO PAGINA MUSIC */
 .sound-container {
-    align-self: center;
     height: 100vh;
+    align-self: center;
     padding: 1rem;
     display: flex;
     justify-content: center;
     user-select: none;
-    background-color: black;
+    overflow: hidden;
+    background-color: map-get($sections, colorpink);
     .music-player{
         align-self: center;
-        height: 20rem;
-        max-width: 32rem;
-        overflow: hidden;
         display: grid;
+        justify-content: center;
+        align-items: center;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 3rem 2fr 1fr;
+        grid-template-rows: 4rem 13rem 2fr 1fr;
         grid-template-areas: 
         "player player"
-        "controls controls"
         "playlist playlist"
+        "controls controls"
         "button button"
         ;
-        justify-content: center;
         .player {
             grid-area: player;
             display: flex;
-            justify-content: center;
-            background-image: url("../../assets/multi-img/giphy.gif");
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: .8;
-            .player-title {
-                justify-self: center;
-                align-self: center;
-                font-family: "SuperLegendBoy";
-                font-size: 1.5rem;
-                text-shadow: 2px 2px 1px white;
-                background-color: rgba(255, 255, 255, .7);
+            .player-title { /* TITULO DE LA CANCION EN REPRODUCCIÓN */
+                font-family: "Abril Fatface";
+                font-size: 3rem;
             }
         }
         .playlist {
             grid-area: playlist;
-            height: 6rem;
+            height: 12rem;
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(190, 36, 88, 0.89);
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: map-get($sections, colorblue);
+            box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.582);
             h2{
-                font-family: "SuperLegendBoy";
-                font-size: 1.3em;
+                padding: 1rem;
+                align-self: center;
+                font-family: "Antic Didone";
+                font-size: 2rem;
+                letter-spacing: 1rem;
                 text-align: center;
                 text-transform: uppercase;
                 color: white;
-                text-shadow: 3px 3px 0px purple,
-                5px 5px 0px green, 
-                7px 7px 0px darkred;
             }
             .player-title {
                 color: rgb(255, 255, 255);
@@ -173,13 +164,14 @@
                 margin-right: 20px;
                 list-style-type: none;
                 li{
+                    margin-top: .2rem;
                     padding: 5px;
-                    font-family: "SuperLegendBoy";
-                    font-size: 1rem;
+                    font-family: "Antic Didone";
+                    font-size: 2rem;
                     color: rgb(255, 251, 251);
-                    border-bottom: 1px solid #ddd;
-                    text-shadow: 1px 1px 1px rgb(0, 0, 0);
-                    cursor: pointer;               
+                    background: black; 
+                    width: 20rem;
+                    box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.329);       
                     &:hover{
                         color: grey;
                     }
@@ -188,12 +180,17 @@
         }
         .controls {
             grid-area: controls;
+            padding: 1rem;
+            margin-top: 1rem;
+            height: 3rem;
+            width: 20 rem;
+            justify-self: center;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 3rem;
-            background-image: url('../../assets/multi-img/player-texture.gif');
+            background-color: darkred;
             opacity: .8;
+            box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.521);
             button {
                 outline: none;
                 border: none;
@@ -202,27 +199,21 @@
                 padding: .5rem;
             }
             .control-btn {
-                font-size: 2rem;
+                font-size: 1.2rem;
                 color: white;
-                text-shadow: 3px 3px 0px purple,
-                5px 5px 0px green, 
-                7px 7px 0px darkred;
             }
             .playpause-btn {
                 font-size: 1.5rem;
                 color: white;
-                text-shadow: 3px 3px 0px purple,
-                5px 5px 0px green, 
-                7px 7px 0px darkred;
             }
             .slidecontainer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 1rem;
+                padding: .5rem;
                 .slide-icon {
                     color: #ffffff;
-                    font-size: 2rem;
+                    font-size: 1.2rem;
                 }        
                 .slider {             
                     -webkit-appeance: none;       
@@ -239,19 +230,6 @@
                     }        
                 }
             }
-        }
-        &__link-button{
-            grid-area: button;
-            width: 12rem;
-            padding: .5rem;
-            font-family: "SuperLegendBoy";
-            font-size: 1rem;
-            text-align: center;
-            align-self: center;
-            justify-self: center;
-            color: black;
-            background-color: rgb(241, 122, 236);
-            border: 0.125rem solid rgb(255, 255, 255);
         }
     }
 }

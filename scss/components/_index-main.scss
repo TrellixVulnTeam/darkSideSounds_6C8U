@@ -2,16 +2,16 @@
 
 .main{
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
     &__title{
         margin-top: 7rem;
-        width: 100vw;
         justify-self: center;
         font-family: "Antic Didone";
-        font-size: 1rem;
+        font-size:3.5rem;
         text-align: center;
         letter-spacing: .5rem;
         color: white;
