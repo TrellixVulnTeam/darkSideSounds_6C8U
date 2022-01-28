@@ -20,9 +20,10 @@
     }
     &__subtitle{
         font-family: 'Antic Didone';
+        font-size: 1rem;
         text-align: center;
         color: map-get($sections, colorpink);
-        line-height: 1.1rem;
+        line-height: 1rem;
     }
     
     /*NOTA: Por ahora no utilizaré este

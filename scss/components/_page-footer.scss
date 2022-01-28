@@ -29,13 +29,13 @@
         }
     }
 }
-
 .page-form{
     grid-area: formulario;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: map-get($sections, bg-colorpink);
     &__container{
         display: flex;
         flex-direction: column;
@@ -82,6 +82,7 @@
         }    
     }
 }  
+
 
 /*--------------------------------------------------------------------------*/
 

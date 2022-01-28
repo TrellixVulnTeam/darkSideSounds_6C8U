@@ -29,7 +29,7 @@
         }
         &--emptybox1{
             position: absolute;
-            left: 60%;
+            right: -10rem;
             top: 5rem;
             width:22rem;
             height: 16rem;
@@ -47,14 +47,14 @@
         &--p2{
             z-index: 999;
             align-self: flex-end;
-            width: 10rem;   
+            width: 8rem;   
             line-height: 1.5rem;
             text-align: end;
             margin-bottom: 12rem;
         }
         &--emptybox2{
             position: absolute;
-            right: 60%;
+            left: -10rem;
             top: -2rem;
             width:22rem;
             height: 18rem;

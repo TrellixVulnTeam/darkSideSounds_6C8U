@@ -133,55 +133,60 @@
         </article>
     </section>
     <footer class="footer">
-        <h3 class="footer__title">CONTACT</h3>
-        <ul class="footer__rrss">
-            <li>
-                <a href="https://www.youtube.com/" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/youTube.svg" alt="youtube">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/facebook.svg" alt="facebook">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/instagram.svg" alt="instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.twitter.com/?lang=es" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/twitter.svg" alt="twitter">
-                </a></li>
-            <li>
-                <a href="https://www.soundcloud.com/" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/soundCloud.svg" alt="soundcloud">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.bandcamp.com/" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/bandCamp.svg" alt="bandcamp">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.spotify.com/ar/" target="_blank">
-                    <img class="form__ico--img" src="./assets/ico/spotify.svg" alt="spotify">
-                </a>
-            </li>
-        </ul>
-        <form class="form" action="servidor.php" method="post">
-            <div class="form__container">
-                <h4 class="form__container--title">Leave us a Message</h4>                
-                <label for="nombre"></label>  
-                <input class="form__container--fill" type="text" name="nombre" placeholder="Your name" required>
-                <label for="email"></label>  
-                <input class="form__container--fill" type="email" name="email" placeholder="Your E-mail" required>
-                <textarea class="form__container--textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
-                <div>
-                    <input class="form__button" type="submit" value="SEND">
-                    <input class="form__button" type="reset" value="RESET">
-                </div>
+        <div class="footer__header">
+            <h3 class="footer__header--title">CONTACT</h3>
+            <ul class="footer__header--rrss">
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/?lang=es" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a></li>
+                <li>
+                    <a href="https://www.soundcloud.com/" target="_blank">
+                        <i class="fab fa-soundcloud"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bandcamp.com/" target="_blank">
+                        <i class="fab fa-bandcamp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.spotify.com/ar/" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="footer__form" action="servidor.php" method="post">
+            <h4 class="footer__form--title">Leave us a Message</h4>                
+            <label for="nombre"></label>  
+            <input class="footer__form--name" type="text" name="nombre" placeholder="Your name" required>
+            <label for="email"></label>  
+            <input class="footer__form--email" type="email" name="email" placeholder="Your E-mail" required>
+            <textarea class="footer__form--textarea" name="comentario" id="comentario" cols="20" rows="10" placeholder="Leave us a comment here..."></textarea>
+            <div class="footer__form--buttons">
+                <input type="submit" value="SEND">
+                <input type="reset" value="RESET">
             </div>
         </form>
         <a class="footer__ico" href="#top">
