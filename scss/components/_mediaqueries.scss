@@ -8,7 +8,6 @@
 
 /* BARRA DE NAVEGACION (USO SOLO MENU HAMBURGUESA */
 
-
 .header__nav{
     div{
         .navbar-toggler{
@@ -16,6 +15,9 @@
                 @include w-h-pad(4rem, 80px, 20px);
                 right: 20px;
                 top: 20px;
+            }
+            @media (min-width: 1224px){
+                @include w-h-pad(6rem, 100px, 20px);
             }
         }
         .top-bar{
@@ -38,20 +40,28 @@
                 @media (min-width: 768px){
                     margin-top: -30px;    
                 }
+                @media (min-width: 1224px){
+                    margin-top: -50px;
+                }
             }
             .bottom-bar {
                 @media (min-width: 768px){
                     margin-top: 30px;
+                }
+                @media (min-width: 1224px){
+                    margin-top: 50px;
                 }
             }    
         }
     }
 }
 
+
+
 /* ----------------------------------------------------------------------------------------*/
 /* FOOTER INDEX */
 .footer{
-    height: 100vh;
+    padding: 2rem;
     &__header{
         &--title{  
             @media(min-width: 768px){
@@ -95,10 +105,8 @@
             @media(min-width: 768px){
                 grid-column: 1 / 2;
                 grid-row: 1 / 2;
-                font-family: 'Abril Fatface';
                 font-size: 2rem;
                 letter-spacing: .1rem;
-                color: white;
                 text-align: center;
             }
             @media(min-width: 1224px){
@@ -144,7 +152,6 @@
                 text-align: center;
                 width: 30rem;
                 height: 20rem;
-                border-radius: 20px;
             }
         }
         &--buttons{
@@ -167,20 +174,14 @@
             margin-bottom: 2rem ;
         }
         i{
-            @media(min-width: 768px){
+            @media(min-width: 1224px){
                 font-size: 3rem;
                 color: rgb(255, 255, 255);
             }
         }
     }
     &__devsign{
-        grid-area: devsign;
         height: 4rem;
-        width: 100vw;
-        align-self: flex-end;
-        text-align: center;
-        font-family: "Abril Fatface";
-        letter-spacing: .2rem;
         font-size: 10rem;
         background-color: rgb(226, 126, 218);
     } 
@@ -188,6 +189,7 @@
 /*------------------*/
 /*FOOTER DE PAGES - Page-Footer - */
 .page-footer{
+    padding: 8rem;
     &__title{
         @media (min-width: 768px){
             align-self: center;
@@ -260,6 +262,8 @@
 
 
 
+
+
 /* ---------------------------------------------------------------------------------------*/
 /* INDEX MAIN */
 .main{
@@ -271,12 +275,18 @@
             font-size: 2.2rem;    
         }
         @media (min-width: 1224px){
-            margin-top: 15rem;
-            font-size: 4rem;    
+            margin-top: 10rem;
+            font-size: 6rem;    
             letter-spacing: 1rem;
             color: rgba(241, 184, 211, 1);
         }
     }    
+    &__subtitle{
+        @media (min-width: 1224px){
+            font-size: 2rem;
+            margin-top: 4rem;  
+        }
+    }
     /* &__sub{ Subtitulo con formato de logo, por ahora no se usará 
     @media (min-width: 480px){
             grid-template-columns: 10px, 10px;
@@ -385,6 +395,7 @@
         &--emptybox1{
             @media (min-width: 480px){
                 height: 20rem;
+                width: 22rem;
             }
             @media (min-width: 768px){
                 height: 25rem;
@@ -412,6 +423,7 @@
                 font-size: 3.5rem;
                 line-height: 2.3rem;
                 margin-top: 20rem;
+                width: 24rem;
             }
             @media (min-width: 1224px){
                 width: 40rem;
@@ -420,16 +432,19 @@
         }
         &--emptybox2{
             @media (min-width: 480px){
-                right: 50%;
+                right: 70%;
                 top: 0;
                 height: 25rem;
+                width: 30rem;
             }        
             @media (min-width: 768px){
-                right: 60%;
+                right: 70%;
                 top: 14rem;
                 height: 35rem;
+                width: 26rem;
             }        
             @media (min-width: 1224px){
+                left: 1;
                 right: 0;
                 top: 55%;
                 height: 20rem;
@@ -525,6 +540,8 @@ a corregirlo, por eso lo separo en la hoja de SASS */
 
 
 
+
+
 /*---------------------------------------------------------------------------------------*/
 /* ESTILOS PAGINAS SOUND Y MUSIC */
 /* MAIN*/
@@ -534,12 +551,18 @@ a corregirlo, por eso lo separo en la hoja de SASS */
             margin-top: 4rem;
             font-size: 10rem;
         }
+        @media (min-width: 1224px){
+            font-size: 10rem;
+        }
     }
     &__animation{
         @media (min-width: 768px){
-            width: 60%;
+            width: 50%;
             border: 0.25rem solid rgb(83, 52, 82);
             object-fit: cover;
+        }
+        @media (min-width: 768px){
+            width: 40%;
         }
     }
     &__descripcion{
@@ -547,6 +570,10 @@ a corregirlo, por eso lo separo en la hoja de SASS */
             padding: 6rem;
             font-size: 3rem;
             line-height: 2.2rem;
+        }
+        @media (min-width: 1224px){
+            font-size: 4rem;
+            line-height: 4rem;
         }
     }
     &__link-button{
@@ -572,12 +599,18 @@ a corregirlo, por eso lo separo en la hoja de SASS */
     background-color: rgb(226, 126, 218);
     padding-bottom: 4rem;
     &__title{
-        @media (min-width: 768px){
-            height: 100vh;
-            width: 40rem;
-            justify-self: center;
-            font-size: 9rem;
-            text-align: center;
+        @media (min-width: 1224px){
+            padding: 10%;
+        }            
+        h2{
+            @media (min-width: 768px){
+                font-size: 13rem;
+                text-align: center;           
+            }
+            @media (min-width: 1224px){
+                line-height: 8.6rem;
+                font-size: 18;
+            }            
         }
     }
     &__work{
@@ -591,29 +624,117 @@ a corregirlo, por eso lo separo en la hoja de SASS */
             @media (min-width: 768px){
                 width: 35rem;
                 justify-self: center;
-
+            }
+        }
+    }
+}
+/*  REPRODUCTOR DE AUDIO*/
+.sound-container {
+    .music-player{
+        @media (min-width: 768px){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 4rem 22rem 2fr 1fr;
+        }
+        .player {
+            .player-title { /* TITULO DE LA CANCION EN REPRODUCCIÓN */
+                @media (min-width: 768px){
+                    font-size: 4rem;
+                }
+                @media (min-width: 1224px){
+                    font-size: 6rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .playlist {
+            @media (min-width: 768px){
+                width: 29rem;
+            }
+            @media (min-width: 1224px){
+                width: 40rem;
+            }
+            h2{
+                @media (min-width: 768px){
+                    font-size: 3rem;
+                }
+                @media (min-width: 1224px){
+                    width: 40rem;
+                }
+            }
+            ul {
+                li{
+                    @media (min-width: 768px){
+                        font-size: 3rem;
+                        width: 29rem;
+                    }
+                    @media (min-width: 1224px){
+                        width: 40rem;
+                    }
+                }
+            }
+        }
+        .controls {
+            button {
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background: none;
+                padding: .5rem;
+            }
+            .control-btn {
+                font-size: 1.2rem;
+                color: white;
+            }
+            .playpause-btn {
+                font-size: 1.5rem;
+                color: white;
+            }
+            .slidecontainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem;
+                .slide-icon {
+                    color: #ffffff;
+                    font-size: 1.2rem;
+                }        
+                .slider {             
+                    -webkit-appeance: none;       
+                    background: #fff;
+                    outline: none;
+                    opacity: .7;
+                    -webkit-transition: .2s;
+                    transition: .2;
+                    border-radius: 10px;
+                    margin: 0 1.25rem;
+                    font-size: .5rem;
+                    &:hover {
+                        opacity: 1;
+                    }        
+                }
             }
         }
     }
 }
 
 
+
+
 /*---------------------------------------------------------------------------------------*/
-
 /* ABOUT US */
-
 .aboutus{
     @media (min-width:1224px){
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 10rem;
     }
     &__title{
         @media (min-width:480px){
             font-size: 5rem
         }
         @media (min-width:1224px){
-            font-size: 10rem;
+            font-size: 8rem;
         }
     }
     &__descripcion{
@@ -623,7 +744,6 @@ a corregirlo, por eso lo separo en la hoja de SASS */
         @media (min-width:1224px){
             justify-self: center;
             font-size: 3.2rem;
-            width: 1000px;
         }
         
     }

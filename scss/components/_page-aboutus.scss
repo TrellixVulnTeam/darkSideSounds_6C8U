@@ -1,13 +1,9 @@
 .aboutus{
-    height: 100vh;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-around;
-    padding:10px;
+    background-color: black;
     &__title{
-        margin-top: 2rem;
         font-family: "Amiri";
         font-size: 4rem;
         text-align: center;

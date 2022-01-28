@@ -4,8 +4,7 @@
 /* INDEX FOOTER */
 
 .footer{
-    height: 100vh;
-    background-color: map-get($sections, bg-colorblack);
+    background-color: map-get($sections, bg-colorpink);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -19,7 +18,7 @@
             font-family: 'Amiri';
             font-size: 4rem;
             text-align: center;
-            color: white;
+            color: rgb(0, 0, 0);
         }
         &--rrss{
             margin-top: -2rem;
@@ -32,7 +31,7 @@
                 text-decoration: none;
                 i{  
                     font-size: 1.5rem;
-                    color: map-get($sections, colorpink);
+                    color: black;
                     transition: .3s;
                     &:hover{
                         transform: scale(1.2);
@@ -52,10 +51,10 @@
         &--title{
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            font-family: 'Abril Fatface';
+            font-family: 'Antic Didone';
             font-size: 1.5rem;
             letter-spacing: .1rem;
-            color: white;
+            color: rgb(0, 0, 0);
             text-align: center;
         }
         &--name{
@@ -64,10 +63,11 @@
             font-family: 'Antic Didone';
             font-size: 1.2rem;
             text-align: center;
-            color:white;
-            border: 0;
-            background-color: map-get($sections, colorpink);
-            box-shadow: inset 1px 1px 40px rgba(83, 85, 226, 0.3);
+            color:rgb(0, 0, 0);
+            background-color: map-get($sections, colorwhite);
+            border: 1px solid black ;
+            border-radius: 5px;
+            box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
         }
         &--email{
             grid-column: 1 / 2;
@@ -75,20 +75,22 @@
             font-family: 'Antic Didone';
             font-size: 1.2rem;
             text-align: center;
-            color:white;
-            background-color: map-get($sections, colorpink);
-            border: 0;
-            box-shadow: inset 1px 1px 40px rgba(83, 85, 226, 0.3);
+            color:rgb(0, 0, 0);
+            background-color: map-get($sections, colorwhite);
+            border: 1px solid black ;
+            border-radius: 5px;
+            box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
         }
         &--textarea{
             grid-column: 1 / 2;
             grid-row: 4 / 5;
-            font-family: 'Antic Didone';
+            font-family: 'Times New Roman', Times, serif;
             font-size: 1.2rem;
-            color:white;
-            background-color: map-get($sections, colorpink);
-            border: 0;
-            box-shadow: inset 2px 2px 100px rgba(83, 85, 226, 0.8);
+            color:rgb(0, 0, 0);
+            background-color: map-get($sections, colorwhite);
+            border: 1px solid black ;
+            border-radius: 5px;
+            box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
         }
         &--buttons{
             grid-column: 1 / 2;
@@ -96,29 +98,29 @@
             input{
                 font-family: "Amiri";
                 font-size: 1.5rem;
-                color: white;
+                color: rgb(0, 0, 0);
                 border: 0;
                 width: 5.5rem;
-                background-color: map-get($sections, colorpink);
-                box-shadow: inset 1px 1px 20px rgba(83, 85, 226, 0.3);
+                background-color: map-get($sections, colorwhite);
+                border: 1px solid black ;
+                border-radius: 5px;
+                box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
             }
         }
     }
     &__ico{
         align-self: center;
-        margin-bottom: 2rem ;
+        margin-bottom: 2rem;
         i{
             font-size: 3rem;
             color: rgb(255, 255, 255);
         }
     }
     &__devsign{
-        grid-area: devsign;
-        height: 4rem;
-        width: 100vw;
         align-self: flex-end;
+        height: 4rem;
         text-align: center;
-        font-family: "Abril Fatface";
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         letter-spacing: .2rem;
         font-size: 10rem;
         background-color: rgb(226, 126, 218);
