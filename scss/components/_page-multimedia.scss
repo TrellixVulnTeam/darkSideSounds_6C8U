@@ -4,7 +4,6 @@
 .sound__section{
     display: flex;
     flex-direction: column;
-    height: 600px;
     background-color: map-get($sections, bg-colorpink);
     color: rgb(0, 0, 0);
     justify-content: space-evenly;
@@ -56,19 +55,6 @@
         text-align: center;
         color:black;
     }
-    &__link-button{
-        position: absolute;
-        bottom: 2rem;
-        width: 20rem;
-        padding: .5rem;
-        font-family: "Amiri";
-        font-size: 1rem;
-        text-align: center;
-        align-self: center;
-        color: black;
-        background-color: rgb(241, 122, 236);
-        border: 0.125rem solid black;
-    }
 }
 
 
@@ -82,9 +68,9 @@
     background-color: rgb(226, 126, 218);
     padding-bottom: 4rem;
     &__title{
-        padding: 50%;
-        height: 100vh;
-        width: 100%rem;
+        padding: 5%;
+        height: 100%;
+        width: 100%;
         margin-top: 6rem;
         margin-bottom: 6rem;
         h2{
@@ -112,7 +98,6 @@
 
 
 /* REPRODUCTOR DE SONIDO SOLO PAGINA MUSIC */
-
 /* Nota: es intencional que en 320px el reproductor
 se oculte en el overflow de la pantalla, luego, a 
 medida que se amplia el ancho de la misma aparece 
@@ -120,7 +105,7 @@ completo y se centra. Esto sucedió por accidente pero
 luego de corregirlo decidí volver a dejarlo como estaba.*/
 
 .sound-container {
-    height: 100vh;
+    height: 100%;
     align-self: center;
     padding: 1rem;
     display: flex;
@@ -129,6 +114,7 @@ luego de corregirlo decidí volver a dejarlo como estaba.*/
     overflow: hidden;
     background-color: map-get($sections, colorpink);
     .music-player{
+        height: 100%;
         align-self: center;
         display: grid;
         justify-content: center;

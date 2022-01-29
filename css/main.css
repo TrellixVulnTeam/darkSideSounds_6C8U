@@ -51,16 +51,16 @@ body {
 .header__nav div .navbar-toggler .toggler-icon {
   width: 100%;
   height: 3px;
-  padding: 0;
+  padding: 2px;
   margin: 0;
   display: block;
   position: absolute;
-  background-color: #f1b8d3;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
-  border: 2px solid #f1b8d3;
+  background-color: #fdff89;
+  box-shadow: 1px 1px 4px white;
 }
 .header__nav div .navbar-toggler .toggler-icon:focus {
   outline: none;
@@ -127,6 +127,322 @@ body {
   color: white;
 }
 
+/* NAVBAR SETTINGS PARA PAGES */
+/* cambio de color al boton del menu hamburguesa*/
+.pages-toggler-icon {
+  width: 100%;
+  height: 3px;
+  padding: 3px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  display: block;
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  background-color: #fdff89;
+  box-shadow: 1px 1px 4px white;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.pages-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+/* MAPS */
+/* INDEX FOOTER */
+.footer {
+  background-color: #e27eda;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.footer__header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.footer__header--title {
+  margin-top: 3.5rem;
+  font-family: "Amiri";
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+}
+.footer__header--rrss {
+  margin-top: -2rem;
+  align-self: center;
+  width: 22rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.footer__header--rrss a {
+  text-decoration: none;
+}
+.footer__header--rrss a i {
+  font-size: 1.5rem;
+  color: black;
+  transition: 0.3s;
+}
+.footer__header--rrss a i:hover {
+  transform: scale(1.2);
+}
+.footer__form {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 3fr 0.5fr;
+  gap: 1rem;
+  justify-items: center;
+  align-content: center;
+}
+.footer__form--title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: "Antic Didone";
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: black;
+  text-align: center;
+}
+.footer__form--name {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-family: "Antic Didone";
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
+}
+.footer__form--email {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  font-family: "Antic Didone";
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
+}
+.footer__form--textarea {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
+}
+.footer__form--buttons {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+.footer__form--buttons input {
+  font-family: "Amiri";
+  font-size: 1.5rem;
+  color: black;
+  border: 0;
+  width: 5.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
+}
+.footer__ico {
+  align-self: center;
+  margin-bottom: 2rem;
+}
+.footer__ico i {
+  font-size: 3rem;
+  color: white;
+}
+.footer__devsign {
+  align-self: flex-end;
+  height: 4rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 10rem;
+  background-color: #e27eda;
+}
+
+/* FOOTER SOUNDS MUSIC ABOUT US */
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #e27eda;
+}
+.page-footer__title {
+  align-self: center;
+  font-family: "Amiri";
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+}
+.page-footer__rrss {
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+}
+.page-footer__arrow {
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+.page-footer__arrow i {
+  font-size: 3rem;
+  color: black;
+  transition: 0.5s ease-in;
+}
+
+.page-form {
+  grid-area: formulario;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e27eda;
+}
+.page-form__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+.page-form__container--title {
+  font-family: "Amiri";
+  font-size: 3rem;
+  text-align: start;
+  color: black;
+}
+.page-form__container--fill {
+  align-self: center;
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "Antic Didone";
+}
+.page-form__container--fill2 {
+  align-self: center;
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "Antic Didone";
+}
+.page-form__container--textarea {
+  align-self: center;
+  font-family: "Antic Didone";
+  font-size: 1rem;
+  height: 9.375rem;
+  width: 12.5rem;
+}
+.page-form__container div {
+  align-self: center;
+}
+.page-form__container div .page-form__button {
+  height: 1.5rem;
+  width: 6rem;
+  font-family: "Amiri";
+  font-weight: bolder;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: #310a64;
+}
+
+/*--------------------------------------------------------------------------*/
+/* FOOTER SHOP "PIXEL ART" */
+.shop-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f02630;
+}
+.shop-footer__title {
+  padding: 1rem;
+  align-self: center;
+  font-family: "SuperLegendBoy";
+  font-size: 2.5rem;
+  text-align: center;
+  color: black;
+}
+.shop-footer__rrss {
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+}
+.shop-footer__arrow {
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+.shop-footer__arrow i {
+  font-size: 3rem;
+  color: black;
+  transition: 0.5s ease-in;
+}
+
+.shop-form {
+  grid-area: formulario;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop-form__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+.shop-form__container--title {
+  font-family: "SuperLegendBoy";
+  font-size: 2rem;
+  text-align: start;
+  color: black;
+}
+.shop-form__container--fill {
+  align-self: center;
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.shop-form__container--fill2 {
+  align-self: center;
+  height: 2rem;
+  width: 12.5rem;
+  font-family: "SuperLegendBoy";
+}
+.shop-form__container--textarea {
+  align-self: center;
+  font-family: "SuperLegendBoy";
+  font-size: 1rem;
+  height: 9.375rem;
+  width: 12.5rem;
+}
+.shop-form__container div {
+  align-self: center;
+}
+.shop-form__container div .shop-form__button {
+  height: 1.5rem;
+  width: 6rem;
+  font-family: "SuperLegendBoy";
+  font-weight: bolder;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: #f02630;
+}
+
 /* MAPS */
 .main {
   height: 100vh;
@@ -191,7 +507,7 @@ body {
   margin-top: 7rem;
   justify-self: center;
   font-family: "Antic Didone";
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   text-align: center;
   letter-spacing: 0.5rem;
   color: white;
@@ -199,7 +515,7 @@ body {
 }
 .main__subtitle {
   font-family: "Antic Didone";
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #e27eda;
   line-height: 1rem;
@@ -504,132 +820,10 @@ en la hoja de SASS */
   z-index: 10;
 }
 
-/* INDEX FOOTER */
-.footer {
-  background-color: #e27eda;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-.footer__header {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-.footer__header--title {
-  margin-top: 3.5rem;
-  font-family: "Amiri";
-  font-size: 4rem;
-  text-align: center;
-  color: black;
-}
-.footer__header--rrss {
-  margin-top: -2rem;
-  align-self: center;
-  width: 22rem;
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
-}
-.footer__header--rrss a {
-  text-decoration: none;
-}
-.footer__header--rrss a i {
-  font-size: 1.5rem;
-  color: black;
-  transition: 0.3s;
-}
-.footer__header--rrss a i:hover {
-  transform: scale(1.2);
-}
-.footer__form {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 3fr 0.5fr;
-  gap: 1rem;
-  justify-items: center;
-  align-content: center;
-}
-.footer__form--title {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-family: "Antic Didone";
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-  color: black;
-  text-align: center;
-}
-.footer__form--name {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  font-family: "Antic Didone";
-  font-size: 1.2rem;
-  text-align: center;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
-}
-.footer__form--email {
-  grid-column: 1/2;
-  grid-row: 3/4;
-  font-family: "Antic Didone";
-  font-size: 1.2rem;
-  text-align: center;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
-}
-.footer__form--textarea {
-  grid-column: 1/2;
-  grid-row: 4/5;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.2rem;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
-}
-.footer__form--buttons {
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
-.footer__form--buttons input {
-  font-family: "Amiri";
-  font-size: 1.5rem;
-  color: black;
-  border: 0;
-  width: 5.5rem;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: inset 8px 8px 100px rgba(0, 0, 0, 0.2);
-}
-.footer__ico {
-  align-self: center;
-  margin-bottom: 2rem;
-}
-.footer__ico i {
-  font-size: 3rem;
-  color: white;
-}
-.footer__devsign {
-  align-self: flex-end;
-  height: 4rem;
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 0.2rem;
-  font-size: 10rem;
-  background-color: #e27eda;
-}
-
 /* MAPS */
 .sound__section {
   display: flex;
   flex-direction: column;
-  height: 600px;
   background-color: #e27eda;
   color: black;
   justify-content: space-evenly;
@@ -683,19 +877,6 @@ en la hoja de SASS */
   text-align: center;
   color: black;
 }
-.multimedia__link-button {
-  position: absolute;
-  bottom: 2rem;
-  width: 20rem;
-  padding: 0.5rem;
-  font-family: "Amiri";
-  font-size: 1rem;
-  text-align: center;
-  align-self: center;
-  color: black;
-  background-color: #f17aec;
-  border: 0.125rem solid black;
-}
 
 /* SOLO PAGINA SOUNDS Galería de Sounds*/
 .soundworks {
@@ -706,9 +887,9 @@ en la hoja de SASS */
   padding-bottom: 4rem;
 }
 .soundworks__title {
-  padding: 50%;
-  height: 100vh;
-  width: 100% rem;
+  padding: 5%;
+  height: 100%;
+  width: 100%;
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
@@ -739,7 +920,7 @@ medida que se amplia el ancho de la misma aparece
 completo y se centra. Esto sucedió por accidente pero 
 luego de corregirlo decidí volver a dejarlo como estaba.*/
 .sound-container {
-  height: 100vh;
+  height: 100%;
   align-self: center;
   padding: 1rem;
   display: flex;
@@ -749,6 +930,7 @@ luego de corregirlo decidí volver a dejarlo como estaba.*/
   background-color: #e27eda;
 }
 .sound-container .music-player {
+  height: 100%;
   align-self: center;
   display: grid;
   justify-content: center;
@@ -859,29 +1041,6 @@ luego de corregirlo decidí volver a dejarlo como estaba.*/
 /*------------------*/
 /*       SHOP       */
 /*------------------*/
-/* NAVBAR SETTINGS PARA EL SHOP */
-/* cambio de color al boton del menu hamburguesa*/
-.pages-toggler-icon {
-  width: 100%;
-  height: 3px;
-  padding: 3px;
-  margin-right: 15px;
-  margin-bottom: 10px;
-  display: block;
-  position: absolute;
-  background-color: black;
-  opacity: 1;
-  left: 0;
-  box-shadow: 2px 2px 1px white;
-  transform: rotate(0deg);
-  transition: 0.25s ease-in-out;
-}
-.pages-toggler-icon:focus {
-  outline: none;
-  box-shadow: none;
-  border: 0;
-}
-
 /* SHOP MAIN MENU */
 .shop-main {
   height: 100vh;
@@ -940,7 +1099,7 @@ SHOP - SECCIONES: MERCH, SONIDOS
 MUSICA, CURSOS, CONTACTO-
 */
 .shop {
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 3.75rem 2fr 3rem;
@@ -1204,176 +1363,6 @@ MUSICA, CURSOS, CONTACTO-
   color: white;
 }
 
-/* FOOTER ROJO - SOUNDS MUSIC ABOUT US SHOP*/
-.page-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  background-color: #e27eda;
-}
-.page-footer__title {
-  align-self: center;
-  font-family: "Amiri";
-  font-size: 4rem;
-  text-align: center;
-  color: black;
-}
-.page-footer__rrss {
-  padding: 0.2rem;
-  display: flex;
-  justify-content: space-around;
-  width: 20rem;
-}
-.page-footer__arrow {
-  align-self: center;
-  margin-bottom: 0.5rem;
-}
-.page-footer__arrow i {
-  font-size: 3rem;
-  color: black;
-  transition: 0.5s ease-in;
-}
-
-.page-form {
-  grid-area: formulario;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e27eda;
-}
-.page-form__container {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 0.4rem;
-  overflow: hidden;
-}
-.page-form__container--title {
-  font-family: "Amiri";
-  font-size: 3rem;
-  text-align: start;
-  color: black;
-}
-.page-form__container--fill {
-  align-self: center;
-  height: 2rem;
-  width: 12.5rem;
-  font-family: "Antic Didone";
-}
-.page-form__container--fill2 {
-  align-self: center;
-  height: 2rem;
-  width: 12.5rem;
-  font-family: "Antic Didone";
-}
-.page-form__container--textarea {
-  align-self: center;
-  font-family: "Antic Didone";
-  font-size: 1rem;
-  height: 9.375rem;
-  width: 12.5rem;
-}
-.page-form__container div {
-  align-self: center;
-}
-.page-form__container div .page-form__button {
-  height: 1.5rem;
-  width: 6rem;
-  font-family: "Amiri";
-  font-weight: bolder;
-  font-size: 1rem;
-  color: white;
-  border: none;
-  background-color: #310a64;
-}
-
-/*--------------------------------------------------------------------------*/
-.shop-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  background-color: #f02630;
-}
-.shop-footer__title {
-  padding: 1rem;
-  align-self: center;
-  font-family: "SuperLegendBoy";
-  font-size: 2.5rem;
-  text-align: center;
-  color: black;
-}
-.shop-footer__rrss {
-  padding: 0.2rem;
-  display: flex;
-  justify-content: space-around;
-  width: 20rem;
-}
-.shop-footer__arrow {
-  align-self: center;
-  margin-bottom: 0.5rem;
-}
-.shop-footer__arrow i {
-  font-size: 3rem;
-  color: black;
-  transition: 0.5s ease-in;
-}
-
-.shop-form {
-  grid-area: formulario;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.shop-form__container {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 0.4rem;
-  overflow: hidden;
-}
-.shop-form__container--title {
-  font-family: "SuperLegendBoy";
-  font-size: 2rem;
-  text-align: start;
-  color: black;
-}
-.shop-form__container--fill {
-  align-self: center;
-  height: 2rem;
-  width: 12.5rem;
-  font-family: "SuperLegendBoy";
-}
-.shop-form__container--fill2 {
-  align-self: center;
-  height: 2rem;
-  width: 12.5rem;
-  font-family: "SuperLegendBoy";
-}
-.shop-form__container--textarea {
-  align-self: center;
-  font-family: "SuperLegendBoy";
-  font-size: 1rem;
-  height: 9.375rem;
-  width: 12.5rem;
-}
-.shop-form__container div {
-  align-self: center;
-}
-.shop-form__container div .shop-form__button {
-  height: 1.5rem;
-  width: 6rem;
-  font-family: "SuperLegendBoy";
-  font-weight: bolder;
-  font-size: 1rem;
-  color: white;
-  border: none;
-  background-color: #f02630;
-}
-
 /*--------------------------------------------*/
 /*             MEDIA QUERIES                  */
 /*--------------------------------------------*/
@@ -1395,17 +1384,24 @@ MUSICA, CURSOS, CONTACTO-
   }
 }
 @media (min-width: 768px) {
-  .header__nav div .top-bar {
+  .header__nav div .navbar-toggler .toggler-icon {
+    width: 100%;
+    height: 3px;
+    padding: 2px;
+  }
+}
+@media (min-width: 768px) {
+  .header__nav div .navbar-toggler .top-bar {
     height: 0.6rem;
   }
 }
 @media (min-width: 768px) {
-  .header__nav div .middle-bar {
+  .header__nav div .navbar-toggler .middle-bar {
     height: 0.6rem;
   }
 }
 @media (min-width: 768px) {
-  .header__nav div .bottom-bar {
+  .header__nav div .navbar-toggler .bottom-bar {
     height: 0.6rem;
   }
 }
@@ -1687,12 +1683,12 @@ MUSICA, CURSOS, CONTACTO-
 }
 @media (min-width: 480px) {
   .main__title {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 768px) {
   .main__title {
-    font-size: 2.2rem;
+    font-size: 5rem;
   }
 }
 @media (min-width: 1224px) {
@@ -2011,6 +2007,13 @@ a corregirlo, por eso lo separo en la hoja de SASS */
 @media (min-width: 1224px) {
   .soundworks__title {
     padding: 10%;
+  }
+}
+@media (min-width: 480px) {
+  .soundworks__title h2 {
+    font-size: 10rem;
+    text-align: center;
+    line-height: 7rem;
   }
 }
 @media (min-width: 768px) {

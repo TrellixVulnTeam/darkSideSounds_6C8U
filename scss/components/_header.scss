@@ -27,16 +27,16 @@
                 border: 0;
             }
             .toggler-icon{    
-                @include w-h-pad(100%, 3px, 0);
+                @include w-h-pad(100%, 3px, 2px);
                 margin: 0;
                 display: block;
                 position: absolute;
-                background-color: rgba(241, 184, 211, 1);
                 opacity: 1;
                 left: 0;
                 transform: rotate(0deg);
                 transition: .25s ease-in-out;
-                border: 2px solid rgba(241, 184, 211, 1);
+                background-color: rgb(253, 255, 137);
+                box-shadow: 1px 1px 4px white;
                 &:focus {
                     outline: none;
                     box-shadow: none;
@@ -112,3 +112,23 @@
     }
 }
 
+/* NAVBAR SETTINGS PARA PAGES */
+/* cambio de color al boton del menu hamburguesa*/
+.pages-toggler-icon{    
+    @include w-h-pad(100%, 3px, 3px);
+    margin-right: 15px;
+    margin-bottom: 10px;
+    display: block;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    background-color: rgb(253, 255, 137);
+    box-shadow: 1px 1px 4px white;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    }
+}
