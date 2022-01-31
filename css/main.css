@@ -518,7 +518,7 @@ body {
   font-size: 1.5rem;
   text-align: center;
   color: #e27eda;
-  line-height: 1rem;
+  line-height: 1.2rem;
 }
 .main__ico {
   margin-bottom: 2rem;
@@ -1344,6 +1344,7 @@ MUSICA, CURSOS, CONTACTO-
     }
 }     */
 .aboutus {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -1693,8 +1694,8 @@ MUSICA, CURSOS, CONTACTO-
 }
 @media (min-width: 1224px) {
   .main__title {
-    margin-top: 10rem;
-    font-size: 6rem;
+    margin-top: 7rem;
+    font-size: 4.5rem;
     letter-spacing: 1rem;
     color: #f1b8d3;
   }
@@ -1702,7 +1703,8 @@ MUSICA, CURSOS, CONTACTO-
 @media (min-width: 1224px) {
   .main__subtitle {
     font-size: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    line-height: 1.8rem;
   }
 }
 @media (min-width: 480px) {
@@ -1718,7 +1720,7 @@ MUSICA, CURSOS, CONTACTO-
 @media (min-width: 1224px) {
   .main__ico {
     width: 25rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 }
 @media (min-width: 480px) {

@@ -279,8 +279,8 @@
             font-size: 5rem;    
         }
         @media (min-width: 1224px){
-            margin-top: 10rem;
-            font-size: 6rem;    
+            margin-top: 7rem;
+            font-size: 4.5rem;    
             letter-spacing: 1rem;
             color: rgba(241, 184, 211, 1);
         }
@@ -288,7 +288,8 @@
     &__subtitle{
         @media (min-width: 1224px){
             font-size: 2rem;
-            margin-top: 4rem;  
+            margin-top: 2rem;
+            line-height: 1.8rem;  
         }
     }
     /* &__sub{ Subtitulo con formato de logo, por ahora no se usará 
@@ -346,7 +347,7 @@
         }
         @media (min-width: 1224px){
             width: 25rem;
-            margin-top: 10rem;
+            margin-top: 5rem;
         }
         
         &--mod1 {
